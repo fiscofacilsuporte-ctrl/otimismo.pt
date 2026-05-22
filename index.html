@@ -502,40 +502,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ── CARREGAR NOTÍCIAS COM DEBUG ─────────────────────────
-async function fetchAINews() { 
+async function fetchAINews() {
   try {
-    // 1. Tenta carregar o ficheiro JSON
+    // Carrega o ficheiro local em vez da API externa
     const res = await fetch('noticias.json');
-    if (!res.ok) throw new Error('Ficheiro não encontrado');
+    if (!res.ok) throw new Error('Erro ao carregar ficheiro');
     
     const data = await res.json();
     
-    // 2. Garante que temos uma lista de notícias, independentemente do nome do campo
-    const listaNoticias = data.articles || data.noticias || data.news || [];
+    // Extrai as notícias do campo correto (suporta vários nomes)
+    const newItems = data.articles || data.noticias || data.news || [];
     
-    if (listaNoticias.length > 0) {
-      NEWS.length = 0; // Limpa o que lá estava
-      listaNoticias.forEach(n => {
+    if (newItems.length > 0) {
+      NEWS.length = 0; // Limpa os dados atuais
+      newItems.forEach((item, i) => {
         NEWS.push({
-          title: n.title || "Sem título",
-          summary: n.summary || "",
-          source: n.source || "Fonte desconhecida",
-          cat: n.cat || n.category || "geral",
-          score: n.score || 0.8,
-          date: n.date || "Hoje"
+          id: i + 1,
+          cat: item.cat || item.category || 'geral',
+          title: item.title || 'Sem título',
+          summary: item.summary || '',
+          source: item.source || 'Fonte',
+          date: item.date || 'Hoje',
+          url: item.url || '#',
+          score: item.score || 0.9
         });
       });
       
-      // 3. Renderiza no site
+      // Chama as funções de renderização que já tens no teu ficheiro original
       renderFeatured();
       renderGrid(true);
       renderTrending();
       renderTicker();
     }
   } catch (e) {
-    console.error("Erro ao carregar notícias:", e);
+    console.error("Erro na leitura local:", e);
+    toast("Erro ao ler notícias locais.");
   }
 }
+      
     const data = await res.json();
     console.log('Dados recebidos:', data); // Abre a consola (F12) para ver isto
     
