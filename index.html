@@ -500,40 +500,40 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchAINews();
 });
 
-// ── AI NEWS FETCH ─────────────────────────────────────────
-async function fetchAINews() {
+
+// ── CARREGAR NOTÍCIAS COM DEBUG ─────────────────────────
+async function fetchAINews() { 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{
-          role: 'user',
-          content: `Gera 12 notícias positivas e inspiradoras em português (de Portugal) para hoje, ${new Date().toLocaleDateString('pt-PT')}. Responde APENAS com JSON válido, sem markdown nem backticks. Formato exato:
-[{"id":1,"cat":"ciencia","title":"string","summary":"string de 2 frases","source":"Público|Expresso|Observador|RTP|TSF|Record|Jornal de Negócios|Dinheiro Vivo","date":"${new Date().toISOString()}","url":"#","img":"https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?w=500&q=80","score":0.92}]
-Categorias: ciencia, saude, tecnologia, ambiente, sociedade, economia, desporto, cultura
-Variar categorias (pelo menos 1 de cada), fontes e imagens Unsplash relevantes. Notícias sobre avanços científicos, saúde, inovação, ambiente, desporto, cultura, economia positiva. Score entre 0.75 e 0.98.`
-        }]
-      })
-    });
+    const res = await fetch('noticias.json');
+    if (!res.ok) throw new Error('Erro ao carregar noticias.json: ' + res.status);
+    
     const data = await res.json();
-    const text = data.content.map(b => b.text || '').join('');
-    const clean = text.replace(/```json|```/g, '').trim();
-    const aiNews = JSON.parse(clean);
-    if (Array.isArray(aiNews) && aiNews.length > 0) {
+    console.log('Dados recebidos:', data); // Abre a consola (F12) para ver isto
+    
+    const loadedNews = data.articles || data.news || data.noticias || [];
+    
+    if (loadedNews.length > 0) {
       NEWS.length = 0;
-      aiNews.forEach(n => NEWS.push(n));
+      loadedNews.forEach((item, index) => {
+        NEWS.push({
+          id: index + 1,
+          cat: item.cat || item.category || 'sociedade',
+          title: item.title || '',
+          summary: item.summary || item.description || '',
+          source: item.source || 'Notícia',
+          date: item.date || item.time || new Date().toISOString(),
+          url: item.url || item.link || '#',
+          img: item.img || item.image || '',
+          score: item.score || 0.95
+        });
+      });
+      renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
     }
   } catch(e) {
-    console.log('AI fetch failed, using demo data:', e);
+    console.error('Falha crítica:', e);
+    toast('Erro ao carregar notícias. Verifica a consola.');
   }
-  filtered = [...NEWS];
-  document.getElementById('statTotal').textContent = NEWS.length;
-  renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
 }
-
 function checkMobile() {
   const mob = window.innerWidth < 768;
   const nav = document.querySelector('.main-nav');
