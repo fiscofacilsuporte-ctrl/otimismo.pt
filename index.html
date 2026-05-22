@@ -504,9 +504,38 @@ document.addEventListener('DOMContentLoaded', () => {
 // ── CARREGAR NOTÍCIAS COM DEBUG ─────────────────────────
 async function fetchAINews() { 
   try {
+    // 1. Tenta carregar o ficheiro JSON
     const res = await fetch('noticias.json');
-    if (!res.ok) throw new Error('Erro ao carregar noticias.json: ' + res.status);
+    if (!res.ok) throw new Error('Ficheiro não encontrado');
     
+    const data = await res.json();
+    
+    // 2. Garante que temos uma lista de notícias, independentemente do nome do campo
+    const listaNoticias = data.articles || data.noticias || data.news || [];
+    
+    if (listaNoticias.length > 0) {
+      NEWS.length = 0; // Limpa o que lá estava
+      listaNoticias.forEach(n => {
+        NEWS.push({
+          title: n.title || "Sem título",
+          summary: n.summary || "",
+          source: n.source || "Fonte desconhecida",
+          cat: n.cat || n.category || "geral",
+          score: n.score || 0.8,
+          date: n.date || "Hoje"
+        });
+      });
+      
+      // 3. Renderiza no site
+      renderFeatured();
+      renderGrid(true);
+      renderTrending();
+      renderTicker();
+    }
+  } catch (e) {
+    console.error("Erro ao carregar notícias:", e);
+  }
+}
     const data = await res.json();
     console.log('Dados recebidos:', data); // Abre a consola (F12) para ver isto
     
