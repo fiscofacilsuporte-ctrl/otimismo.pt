@@ -500,55 +500,40 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchAINews();
 });
 
-
-// ── CARREGAR NOTÍCIAS COM DEBUG ─────────────────────────
-
-      async function fetchAINews() {
-  console.log("A carregar notícias de forma segura...");
-  
-  // As tuas notícias definidas diretamente aqui:
-  const minhasNoticias = [
-    {
-      "cat": "economia",
-      "title": "Portugal regista crescimento económico sustentável",
-      "summary": "O país apresenta indicadores positivos no setor da inovação.",
-      "source": "Expresso",
-      "score": 0.95,
-      "date": "22/05/2026"
-    },
-    {
-      "cat": "tecnologia",
-      "title": "Inovação tecnológica transforma janelas em painéis solares",
-      "summary": "Uma startup portuguesa criou uma solução que promete revolucionar a eficiência energética.",
-      "source": "Público",
-      "score": 0.92,
-      "date": "22/05/2026"
-    }
-  ];
-
-  // Injetar diretamente no NEWS
-  NEWS.length = 0;
-  minhasNoticias.forEach((n, i) => {
-    NEWS.push({
-      id: i + 1,
-      cat: n.cat,
-      title: n.title,
-      summary: n.summary,
-      source: n.source,
-      date: n.date,
-      url: '#',
-      score: n.score
+// ── AI NEWS FETCH ─────────────────────────────────────────
+async function fetchAINews() {
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{
+          role: 'user',
+          content: `Gera 12 notícias positivas e inspiradoras em português (de Portugal) para hoje, ${new Date().toLocaleDateString('pt-PT')}. Responde APENAS com JSON válido, sem markdown nem backticks. Formato exato:
+[{"id":1,"cat":"ciencia","title":"string","summary":"string de 2 frases","source":"Público|Expresso|Observador|RTP|TSF|Record|Jornal de Negócios|Dinheiro Vivo","date":"${new Date().toISOString()}","url":"#","img":"https://images.unsplash.com/photo-1584949091598-c31daaaa4aa9?w=500&q=80","score":0.92}]
+Categorias: ciencia, saude, tecnologia, ambiente, sociedade, economia, desporto, cultura
+Variar categorias (pelo menos 1 de cada), fontes e imagens Unsplash relevantes. Notícias sobre avanços científicos, saúde, inovação, ambiente, desporto, cultura, economia positiva. Score entre 0.75 e 0.98.`
+        }]
+      })
     });
-  });
-
-  // Renderizar
-  renderFeatured();
-  renderGrid(true);
-  renderTrending();
-  renderTicker();
-  console.log("Renderização concluída!");
-}   
+    const data = await res.json();
+    const text = data.content.map(b => b.text || '').join('');
+    const clean = text.replace(/```json|```/g, '').trim();
+    const aiNews = JSON.parse(clean);
+    if (Array.isArray(aiNews) && aiNews.length > 0) {
+      NEWS.length = 0;
+      aiNews.forEach(n => NEWS.push(n));
+    }
+  } catch(e) {
+    console.log('AI fetch failed, using demo data:', e);
+  }
+  filtered = [...NEWS];
+  document.getElementById('statTotal').textContent = NEWS.length;
+  renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
 }
+
 function checkMobile() {
   const mob = window.innerWidth < 768;
   const nav = document.querySelector('.main-nav');
