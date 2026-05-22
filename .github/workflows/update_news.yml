@@ -1,0 +1,40 @@
+name: Atualização Diária de Notícias Positivas
+
+on:
+  schedule:
+    # Corre todos os dias às 08:00 AM UTC (aprox. 09:00 AM em Portugal)
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Permite que você corra o script manualmente quando quiser
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permissão para o robô gravar o ficheiro de notícias no repositório
+
+    steps:
+    - name: Checkout do repositório
+      uses: actions/checkout@v4
+
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Instalar dependências
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Executar script de notícias
+      env:
+        NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+      run: python fetch_news.py
+
+    - name: Guardar alterações no GitHub
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add noticias.json
+        git commit -m "Automated: Atualização diária de notícias positivas" || echo "Sem alterações para commit"
+        git push
