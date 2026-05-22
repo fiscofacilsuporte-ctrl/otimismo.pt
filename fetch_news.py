@@ -2,6 +2,9 @@ import os
 import requests
 import json
 from datetime import datetime
+import feedparser
+from dateutil import parser
+
 
 # Mapeamento de fontes para categorias (melhor que depender do newsapi)
 SOURCE_CATEGORY_MAP = {
@@ -53,82 +56,77 @@ def detect_category(title, description, source_name):
 
     return 'sociedade'
 
+def translate_text(text, target_lang='pt'):
+    # Simplified translation using a public API (MyMemory)
+    try:
+        url = f"https://api.mymemory.translated.net/get?q={text}&langpair=en|{target_lang}"
+        response = requests.get(url, timeout=5)
+        data = response.json()
+        if data.get('responseStatus') == 200:
+            return data.get('responseData').get('translatedText')
+    except:
+        pass
+    return text
+
+def fetch_rss_articles(rss_url, category, translate=False):
+    articles = []
+    try:
+        feed = feedparser.parse(rss_url)
+        for entry in feed.entries:
+            title = entry.title
+            summary = entry.summary if hasattr(entry, 'summary') else entry.title
+            
+            if translate:
+                title = translate_text(title)
+                summary = translate_text(summary[:500]) # Limit summary length for translation
+                
+            url = entry.link
+            published_date = parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat()
+            
+            # Since these are curated positive feeds, we can be more lenient or trust them
+            positive_keywords_check = ["bom", "positivo", "sucesso", "avanço", "esperança", "inspiração", "progresso", "good", "positive", "success", "hope", "inspire"]
+            negative_keywords_check = ["morte", "crime", "guerra", "crise", "bloqueio", "erro", "falha", "opinião", "colunista", "death", "war", "crisis"]
+
+            is_positive = any(kw in title.lower() or kw in summary.lower() for kw in positive_keywords_check)
+            is_negative = any(kw in title.lower() or kw in summary.lower() for kw in negative_keywords_check)
+
+            # For specialized feeds like Razões para Acreditar, we trust more
+            if "razoesparaacreditar" in rss_url or (is_positive and not is_negative):
+                articles.append({
+                    'title': title,
+                    'summary': summary,
+                    'url': url,
+                    'img': entry.media_content[0]['url'] if hasattr(entry, 'media_content') and len(entry.media_content) > 0 else None,
+                    'source': feed.feed.title if hasattr(feed.feed, 'title') else 'Desconhecido',
+                    'cat': category,
+                    'date': published_date,
+                    'score': 0.98 if "razoesparaacreditar" in rss_url else 0.95,
+                })
+    except Exception as e:
+        print(f"Erro ao buscar RSS de {rss_url}: {e}")
+    return articles
+
 def fetch_positive_news():
-    api_key = os.getenv('NEWS_API_KEY')
 
-    if not api_key:
-        print("Erro: NEWS_API_KEY não encontrada.")
-        return
 
-    # Estratégia: buscar notícias positivas em português de TODO o mundo
-    # A NewsAPI com language=pt inclui fontes internacionais que escrevem em pt
-    # Usamos também domains específicos para cobrir Brasil, Angola, Moçambique
-    
     all_articles = []
 
-    # Query 1: Palavras-chave positivas em português (Portugal + Brasil + África)
-    positive_keywords = (
-        '("cura" OR "avanço" OR "solidariedade" OR "vitória" OR "sustentabilidade" OR '
-        '"descoberta" OR "inovação" OR "esperança" OR "conquista" OR "sucesso" OR '
-        '"premiado" OR "recorde" OR "celebração" OR "inauguração" OR "renovável" OR '
-        '"boas notícias" OR "inspiração" OR "exemplo" OR "progresso")'
-    )
-
-    # Lista de termos negativos para filtrar
-    negative_keywords = 'NOT (morte OR crime OR guerra OR crise OR bloqueio OR erro OR falha OR opinião OR colunista)'
-
-    queries = [
-        # Notícias positivas gerais em português
-        {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&language=pt&sortBy=publishedAt&pageSize=40&apiKey={api_key}',
-            'desc': 'positivas em português'
-        },
-        # Fontes brasileiras
-        {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&domains=globo.com,folha.uol.com.br,g1.globo.com,estadao.com.br,veja.abril.com.br&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
-            'desc': 'fontes brasileiras'
-        },
-        # Fontes portuguesas
-        {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&domains=publico.pt,observador.pt,expresso.pt,rtp.pt,tsf.pt,sicnoticias.pt,dn.pt&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
-            'desc': 'fontes portuguesas'
-        },
+    # RSS Feeds de notícias positivas
+    rss_feeds = [
+        {"url": "https://razoesparaacreditar.com/feed/", "cat": "sociedade", "translate": False},
+        {"url": "https://news.un.org/pt/news/topic/health/feed/rss.xml", "cat": "saude", "translate": False},
+        {"url": "https://news.un.org/pt/news/topic/culture-and-education/feed/rss.xml", "cat": "cultura", "translate": False},
+        {"url": "https://news.un.org/pt/news/topic/economic-development/feed/rss.xml", "cat": "economia", "translate": False},
+        {"url": "https://www.goodnewsnetwork.org/feed/", "cat": "sociedade", "translate": True},
+        {"url": "https://www.positive.news/feed/", "cat": "sociedade", "translate": True},
+        {"url": "https://reasonstobecheerful.world/feed/", "cat": "sociedade", "translate": True},
+        {"url": "https://www.optimistdaily.com/feed/", "cat": "sociedade", "translate": True},
     ]
 
-    seen_titles = set()
-
-    for q in queries:
-        try:
-            print(f"A pesquisar: {q['desc']}...")
-            response = requests.get(q['url'], timeout=10)
-            data = response.json()
-
-            if data.get('status') == 'ok':
-                for art in data.get('articles', []):
-                    title = art.get('title', '')
-                    if not title or title in seen_titles or '[Removed]' in title:
-                        continue
-                    seen_titles.add(title)
-
-                    source_name = art.get('source', {}).get('name', 'Desconhecido')
-                    description = art.get('description', '')
-                    category = detect_category(title, description, source_name)
-
-                    all_articles.append({
-                        'title': title,
-                        'summary': description or title,
-                        'url': art.get('url', '#'),
-                        'img': art.get('urlToImage'),
-                        'source': source_name,
-                        'cat': category,
-                        'date': art.get('publishedAt', datetime.now().isoformat()),
-                        'score': round(0.80 + (hash(title) % 18) / 100, 2),  # Score entre 0.80 e 0.98
-                    })
-            else:
-                print(f"Erro na API ({q['desc']}): {data.get('message')}")
-
-        except Exception as e:
-            print(f"Erro ao pesquisar '{q['desc']}': {e}")
+    for feed_info in rss_feeds:
+        translate = feed_info.get("translate", False)
+        # Fetch only top 5 articles from each feed to keep it fast
+        all_articles.extend(fetch_rss_articles(feed_info["url"], feed_info["cat"], translate=translate)[:5])
 
     # Limitar a 12 notícias, priorizando variedade de categorias
     final_articles = select_diverse(all_articles, 12)
@@ -138,15 +136,15 @@ def fetch_positive_news():
         return
 
     output = {
-        'last_update': datetime.now().strftime('%d/%m/%Y %H:%M'),
-        'news': final_articles
+        "last_update": datetime.now().strftime("%d/%m/%Y %H:%M"),
+        "news": final_articles
     }
 
-    with open('noticias.json', 'w', encoding='utf-8') as f:
+    with open("noticias.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
     print(f"Sucesso! {len(final_articles)} notícias guardadas em noticias.json")
-    cats = [a['cat'] for a in final_articles]
+    cats = [a["cat"] for a in final_articles]
     print(f"Categorias: {dict((c, cats.count(c)) for c in set(cats))}")
 
 

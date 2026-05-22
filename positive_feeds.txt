@@ -1,0 +1,13 @@
+# Fontes de Notícias Positivas e Inspiradoras
+
+## Português (Brasil/Portugal)
+- Razões para Acreditar: https://razoesparaacreditar.com/feed/
+- ONU News (Saúde): https://news.un.org/feed/subscribe/pt/news/topic/health/feed/rss.xml
+- ONU News (Cultura): https://news.un.org/feed/subscribe/pt/news/topic/culture-and-education/feed/rss.xml
+- ONU News (Desenvolvimento): https://news.un.org/feed/subscribe/pt/news/topic/economic-development/feed/rss.xml
+
+## Inglês (Mundo - Requer Tradução ou Curadoria)
+- Good News Network: https://www.goodnewsnetwork.org/feed/
+- Positive News: https://www.positive.news/feed/
+- Reasons to be Cheerful: https://reasonstobecheerful.world/feed/
+- The Optimist Daily: https://www.optimistdaily.com/feed/
