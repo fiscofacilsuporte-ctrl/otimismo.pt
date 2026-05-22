@@ -489,41 +489,88 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ── CARREGAR NOTICIAS.JSON ────────────────────────────────
 async function loadNoticias() {
+  showSkeletons();
   try {
     const res = await fetch('noticias.json?t=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
+    if (!res.ok) throw new Error('Ficheiro não encontrado (HTTP ' + res.status + '). Certifica-te que noticias.json está na raiz do repositório.');
 
-    // Suporta {last_update, noticias:[...]} ou array direto
-    const items = Array.isArray(data)
-      ? data
-      : (data.noticias || data.articles || data.items || data.results || []);
-    const lastUpdate = !Array.isArray(data)
-      ? (data.last_update || data.updated_at || data.lastUpdate || null)
-      : null;
+    let data;
+    try { data = await res.json(); }
+    catch(e) { throw new Error('O ficheiro noticias.json existe mas não é JSON válido: ' + e.message); }
 
-    // Mostra timestamp de atualização na topbar
-    if (lastUpdate) {
-      const el = document.getElementById('lastUpdate');
-      if (el) {
-        const d = new Date(lastUpdate);
-        const opts = {day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit'};
-        el.textContent = '· Atualizado: ' + d.toLocaleDateString('pt-PT', opts);
+    // --- Deteta automaticamente a estrutura do JSON ---
+    let items = [];
+
+    if (Array.isArray(data)) {
+      // Formato: [ {...}, {...} ]
+      items = data;
+    } else if (data && typeof data === 'object') {
+      // Formato: { last_update: "...", noticias/articles/items: [...] }
+      const possibleKeys = ['noticias','articles','items','results','news','data','entries'];
+      for (const k of possibleKeys) {
+        if (Array.isArray(data[k])) { items = data[k]; break; }
+      }
+      // Se não encontrou array numa chave conhecida, tenta qualquer chave que seja array
+      if (!items.length) {
+        for (const k of Object.keys(data)) {
+          if (Array.isArray(data[k]) && data[k].length > 0) { items = data[k]; break; }
+        }
       }
     }
 
-    // Mapeia campos do JSON para o formato interno
+    if (!items.length) {
+      throw new Error('Não foram encontradas notícias no JSON. Estrutura detetada: ' + JSON.stringify(Object.keys(data || {})));
+    }
+
+    // --- Atualização timestamp ---
+    const lastUpdate = !Array.isArray(data)
+      ? (data.last_update || data.updated_at || data.lastUpdate || data.timestamp || null)
+      : null;
+    if (lastUpdate) {
+      const el = document.getElementById('lastUpdate');
+      if (el) {
+        el.textContent = '· Atualizado: ' + formatLastUpdate(lastUpdate);
+      }
+    }
+
+    // --- Mapeia para formato interno ---
     NEWS.length = 0;
-    items.forEach((item, i) => NEWS.push(mapNoticia(item, i)));
+    items.forEach((item, i) => { if(item && typeof item === 'object') NEWS.push(mapNoticia(item, i)); });
+
+    if (!NEWS.length) throw new Error('As notícias foram encontradas mas não foi possível mapeá-las. Primeiro item: ' + JSON.stringify(items[0]));
 
   } catch(e) {
-    console.warn('Erro ao carregar noticias.json:', e);
-    toast('⚠️ Não foi possível carregar as notícias. Verifica o ficheiro noticias.json.');
+    console.error('loadNoticias:', e);
+    showError(e.message);
+    return;
   }
 
   filtered = [...NEWS];
-  document.getElementById('statTotal').textContent = NEWS.length || '—';
+  document.getElementById('statTotal').textContent = NEWS.length;
   renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
+}
+
+// ── SKELETONS (já existem no HTML, mas garante estado inicial) ────
+function showSkeletons() {
+  const g = document.getElementById('newsGrid');
+  if (g && !g.querySelector('.news-card')) {
+    g.innerHTML = [1,2,3,4,5,6].map(()=>'<div class="skel skel-card"></div>').join('');
+  }
+}
+
+// ── MOSTRA ERRO VISÍVEL NA PÁGINA ─────────────────────────
+function showError(msg) {
+  const g = document.getElementById('newsGrid');
+  if (g) g.innerHTML = `
+    <div style="grid-column:1/-1;background:#fff3f3;border:1.5px solid #fca5a5;border-radius:12px;padding:28px 24px;text-align:center;">
+      <div style="font-size:2rem;margin-bottom:10px;">⚠️</div>
+      <div style="font-family:var(--font-serif);font-size:1.1rem;color:#b91c1c;margin-bottom:8px;">Erro ao carregar as notícias</div>
+      <div style="font-size:.85rem;color:#6b7280;max-width:520px;margin:0 auto;line-height:1.6;">${msg}</div>
+      <button onclick="loadNoticias()" style="margin-top:16px;background:var(--blue-400);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font-sans);">↻ Tentar novamente</button>
+    </div>`;
+  const fg = document.getElementById('featuredGrid');
+  if (fg) fg.innerHTML = '';
+  document.getElementById('statTotal').textContent = '0';
 }
 
 // ── MAPEAMENTO DE CAMPOS ──────────────────────────────────
@@ -572,6 +619,7 @@ function scrollToNewsletter() {
 // ── FEATURED ─────────────────────────────────────────────
 function renderFeatured() {
   const top = [...NEWS].sort((a,b)=>b.score-a.score);
+  if (!top.length) return;
   const main = top[0], s1 = top[1], s2 = top[2];
   const grid = document.getElementById('featuredGrid');
   grid.innerHTML =
@@ -579,9 +627,10 @@ function renderFeatured() {
     +'<span class="feat-badge">'+CATS[main.cat]+'</span>'
     +'<div class="feat-title">'+main.title+'</div>'
     +'<div class="feat-meta"><span>'+main.source+'</span><span>·</span><span>'+fmtDate(main.date)+'</span>'
-    +'<span class="feat-score">'+Math.round(main.score*100)+'% positivo</span></div></a>'
+    +'<span class="feat-score">'+Math.round((main.score||0.85)*100)+'% positivo</span></div></a>'
     +'<div class="featured-side">'
-    +fsmCard(s1)+fsmCard(s2)
+    +(s1 ? fsmCard(s1) : '')
+    +(s2 ? fsmCard(s2) : '')
     +'</div>';
 }
 function fsmCard(n) {
@@ -673,6 +722,26 @@ function toast(msg) {
   if(!el){el=document.createElement('div');el.id='toast';el.className='toast';document.body.appendChild(el);}
   el.textContent=msg; el.classList.add('show');
   clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),3800);
+}
+
+// ── PARSE DATA last_update (suporta DD/MM/AAAA HH:MM e ISO) ──
+function formatLastUpdate(str) {
+  if (!str) return '';
+  // Formato português: "22/05/2026 16:32"
+  const ptMatch = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})\s+(\d{1,2}):(\d{2})/);
+  if (ptMatch) {
+    const [,d,m,y,h,min] = ptMatch;
+    return d+'/'+m+'/'+y+' às '+h+':'+min;
+  }
+  // Formato ISO: tenta converter
+  try {
+    const dt = new Date(str);
+    if (!isNaN(dt)) {
+      return dt.toLocaleDateString('pt-PT',{day:'2-digit',month:'short'})
+        +' às '+dt.toLocaleTimeString('pt-PT',{hour:'2-digit',minute:'2-digit'});
+    }
+  } catch(e) {}
+  return str; // fallback: mostra como está
 }
 
 // ── UTILS ────────────────────────────────────────────────
