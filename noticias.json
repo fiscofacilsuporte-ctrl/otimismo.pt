@@ -1,65 +1,125 @@
 {
-  "last_update": "22/05/2026 23:14",
+  "last_update": "22/05/2026 23:44",
   "news": [
     {
-      "title": "Cristiano Ronaldo volta a ser campeão nacional após cinco anos",
-      "summary": "Português conquista seu primeiro grande título na Arábia Saudita e chega à marca de 36 troféus na carreira",
-      "url": "https://www.terra.com.br/esportes/arabia-saudita/cristiano-ronaldo-volta-a-ser-campeao-nacional-apos-cinco-anos,44c27e04edae13815816a98b09fb8328jex0o6ri.html",
-      "img": "https://p2.trrsf.com/image/fget/cf/1200/630/middle/images.terra.com/2026/05/21/448181432-al-nassr-vs-damac-saudi-pro-league-610x400.jpg",
-      "source": "Terra.com.br",
-      "cat": "desporto",
-      "date": "2026-05-21T23:12:33Z",
-      "score": 0.8
+      "title": "Profissional da OMS na RD Congo explica ações para conter propagação do ebola",
+      "summary": "Agência da ONU está em campo apoiando rastreamento e isolamento de casos suspeitos; embora menos virulenta, variante identificada neste surto tem letalidade de 50%.&nbsp;",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853224",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "saude",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 0.95
     },
     {
-      "title": "Com decisão do STF, governo aguarda decisão do TCU sobre concessão da Ferrogrão",
-      "summary": "Por maioria, a Suprema Corte decidiu validar a lei que alterou a demarcação do Parque Nacional do Jamanxim, no Pará, para receber a ferrovia",
-      "url": "https://valor.globo.com/brasil/noticia/2026/05/21/com-deciso-do-stf-governo-aguarda-deciso-do-tcu-sobre-concesso-da-ferrogro.ghtml",
-      "img": "https://s2-valor.glbimg.com/WgfuwdrsRrhJoESttTYl93Eqb7M=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2025/v/u/WZpFAOTuipD8cyjoJDqg/1.jpg",
-      "source": "Globo",
-      "cat": "sociedade",
-      "date": "2026-05-21T23:10:42Z",
-      "score": 0.84
+      "title": "Brasileira ajuda a reunir evidências científicas sobre riscos e benefícios da IA",
+      "summary": "Pesquisadora Teresa Ludermir faz parte de Painel Científico Internacional Independente sobre Inteligência Artificial criado pela ONU; ela destacou preocupação com sistemas autônomos que tentam enganar usuários e desenvolvedores, mas ressaltou vantagens da tecnologia no avanço da medicina.&nbsp;",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853217",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "cultura",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 0.95
     },
     {
-      "title": "Erros foram encontrados em centenas de estudos sobre o nível do mar e esses novos dados podem alterar os mapas de risco costeiro em metade do globo sendo que essa correção está longe de ser pequena",
-      "summary": "Estudos apontam falhas graves em centenas de pesquisas sobre o nível do mar, alterando mapas de risco e ameaçando milhões de pessoas.\nO post Erros foram encontrados em centenas de estudos sobre o nível do mar e esses novos dados podem alterar os mapas de risc…",
-      "url": "https://catracalivre.com.br/noticias/erros-foram-encontrados-em-centenas-de-estudos-sobre-o-nivel-do-mar-e-esses-novos-dados-podem-alterar-os-mapas-de-risco-costeiro-em-metade-do-globo-sendo-que-essa-correcao-esta-longe-de-ser-pequena/",
-      "img": "https://catracalivre.com.br/i/Xa4N7fs1xg29ltNL8MoK6TtrYA3oaOMLNJMOzTxWpyA/rs:fill:1200:630:1/g:sm/q:80/bG9jYWw6Ly8vMjAyNi8wNS9nbG9iYWwtY29hc3RhbC1tYXAtc2VhLWxldmVsLTIwMjYwNTIwMTc1Ni5qcGVn",
-      "source": "Catracalivre.com.br",
-      "cat": "ciencia",
-      "date": "2026-05-21T23:07:53Z",
-      "score": 0.87
-    },
-    {
-      "title": "Ministro da Fazenda anuncia aumento no bloqueio do Orçamento da União",
-      "summary": "Dario Durigan confirma contenção adicional de gastos, conforme esperado pelo mercado. Valor do bloqueio será divulgado nesta sexta (22/5)",
-      "url": "https://www.metropoles.com/brasil/ministro-da-fazenda-anuncia-aumento-no-bloqueio-do-orcamento-da-uniao",
-      "img": "https://i.metroimg.com/WP9lijEtCWgZhYT1K7zwSqnBadRxYHrVh3Dz0OVQEx8/w:1200/q:90/f:webp/plain/https://images.metroimg.com/2026/04/ministros-da-fazenda-dario-durigan-metropoles-3-scaled.jpeg",
-      "source": "Metropoles.com",
+      "title": "OIT pede reforço de trabalho digno para trabalhadores migrantes",
+      "summary": "Procura por emprego e meios de subsistência impulsionam fluxos migratórios internacionais; declaração conjunta procura garantir canais de migração seguros, facilitando mobilidade e dignidade laboral",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853195",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
       "cat": "economia",
-      "date": "2026-05-21T22:46:20Z",
-      "score": 0.9
+      "date": "2026-05-20T12:00:00+00:00",
+      "score": 0.95
     },
     {
-      "title": "Portugal e a Universidade que ainda não existe",
-      "summary": "Durante décadas, no ensino superior, avaliou-se frequentemente a memória e chamou-se a isso conhecimento. O século XXI exige outra coisa.",
-      "url": "https://observador.pt/opiniao/portugal-e-a-universidade-que-ainda-nao-existe/",
-      "img": "https://wm.observador.pt/wm-op/wide-circle/https%3A%2F%2Fbordalo.observador.pt%2Fv2%2Frs%3Afill%3A900%2Fc%3A467%3A467%3Anowe%3A0%3A9%2Fq%3A70%2Ff%3Awebp%2Fplain%2Fhttps%3A%2F%2Fs3.observador.pt%2Fwp-content%2Fuploads%2F2024%2F11%2F25125246%2Ffmoreira.jpg",
-      "source": "Observador.pt",
+      "title": "AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay",
+      "summary": "<p>Scientists in California are using heat-sensing AI to save grey whales transiting through San Francisco Bay. More and more sightings of grey whales, a medium size baleen that can grow to between 40 and 50 feet, are being recorded in the bay, and conservationists are eager to develop methods to more consistently keep them safe [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/\">AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
+      "url": "https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/",
+      "img": null,
+      "source": "Good News Network",
       "cat": "sociedade",
-      "date": "2026-05-21T23:08:21Z",
-      "score": 0.97
+      "date": "2026-05-22T18:30:21+00:00",
+      "score": 0.95
     },
     {
-      "title": "De Nikitin à dupla conquista de Ormuz",
-      "summary": "O controlo de gargalos como Ormuz dita as regras do comércio mundial. A geografia física continua a impor a sua derradeira e incontestável vingança.",
-      "url": "https://observador.pt/opiniao/de-nikitin-a-dupla-conquista-de-ormuz-por-afonso-de-albuquerque-e-ao-duplo-bloqueio-naval-a-vinganca-da-geografia/",
-      "img": "https://wm.observador.pt/wm-op/wide-circle/https%3A%2F%2Fbordalo.observador.pt%2Fv2%2Frs%3Afill%3A900%2Fc%3A467%3A467%3Anowe%3A0%3A0%2Fq%3A70%2Ff%3Awebp%2Fplain%2Fhttps%3A%2F%2Fs3.observador.pt%2Fwp-content%2Fuploads%2F2026%2F05%2F21210847%2Fcarlos-manuel-baptista-valentim.jpg",
-      "source": "Observador.pt",
+      "title": "Para mulheres da área da saúde, gênero deve ser centro de discussões e decisões",
+      "summary": "Representantes do grupo lusófono&nbsp;Women in Global Health estão na Suíça para a Assembleia Mundial da Saúde, da OMS; para elas, mais precisa ser feito para acelerar alcance das metas de desenvolvimento.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853221",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "saude",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Uso de dispositivos em excesso compromete desenvolvimento infantil",
+      "summary": "Exposição demorada a telas afeta linguagem e capacidade de atenção; especialistas sublinham necessidade de equilíbrio digital no cotidiano das crianças.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853210",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "saude",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Uso de dispositivos em excesso compromete desenvolvimento infantil",
+      "summary": "Exposição demorada a telas afeta linguagem e capacidade de atenção; especialistas sublinham necessidade de equilíbrio digital no cotidiano das crianças.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853210",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "cultura",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Guterres pede reforço do investimento coletivo na conectividade digital",
+      "summary": "Chefe da ONU destaca infraestrutura digital como bem público essencial; vulnerabilidades digitais e assimetrias na qualidade e no acesso à internet são motivo de procupação; 2,2 bilhões de pessoas ainda permanecem offline.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853145",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "cultura",
+      "date": "2026-05-17T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Desigualdade econômica prejudica bem-estar de crianças até nos países mais ricos",
+      "summary": "Relatório do Unicef mostra que 20% dos menores analisados para o estudo vivem em pobreza monetária, o que significa que suas necessidades básicas não são garantidas.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853120",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "economia",
+      "date": "2026-05-13T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Em Nairóbi, chefe da ONU reitera potencial da África como motor da mudança",
+      "summary": "António Guterres pede justiça climática para a região em cúpula com dezenas de líderes; secretário-geral menciona vasto potencial de energia renovável, apesar de a região receber apenas 2% dos investimentos globais em energia limpa.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853106",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "economia",
+      "date": "2026-05-12T12:00:00+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Police Deputy Praised After ‘Run-of-the-Mill’ Call Turns into Emergency Baby Delivery",
+      "summary": "<p>A call about suspicious activity saw a California police officer race to save a newborn&#8217;s life. A woman was sitting between two bushes near a business in the Rancho Cordova, and Deputy Foster Tracy described the situation as &#8220;routine,&#8221; before it became anything but. &#8220;It was zero to a hundred really fast. It was one [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/police-deputy-praised-after-run-of-the-mill-call-turns-into-emergency-baby-delivery/\">Police Deputy Praised After &#8216;Run-of-the-Mill&#8217; Call Turns into Emergency Baby Delivery</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
+      "url": "https://www.goodnewsnetwork.org/police-deputy-praised-after-run-of-the-mill-call-turns-into-emergency-baby-delivery/",
+      "img": null,
+      "source": "Good News Network",
       "cat": "sociedade",
-      "date": "2026-05-21T23:07:07Z",
-      "score": 0.93
+      "date": "2026-05-22T15:30:26+00:00",
+      "score": 0.95
+    },
+    {
+      "title": "Britain’s Largest Iron Age Hoard on Display for the First Time Includes Evidence of First 4-Horse Carriage",
+      "summary": "<p>5 years after its discovery and 2 years after preservation, the largest collection of Iron age artifacts ever found in Britain is revealing its secrets. Found in the &#8220;rural backwater&#8221; of northern England&#8217;s county of Yorkshire, the mélange of horse tackle, carriage pieces, weapons, and home goods is proving the region was anything but. Now, [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/britains-largest-iron-age-hoard-on-display-for-the-first-time-includes-evidence-of-first-4-horse-carriage/\">Britain&#8217;s Largest Iron Age Hoard on Display for the First Time Includes Evidence of First 4-Horse Carriage</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
+      "url": "https://www.goodnewsnetwork.org/britains-largest-iron-age-hoard-on-display-for-the-first-time-includes-evidence-of-first-4-horse-carriage/",
+      "img": null,
+      "source": "Good News Network",
+      "cat": "sociedade",
+      "date": "2026-05-22T13:00:04+00:00",
+      "score": 0.95
     }
   ]
 }

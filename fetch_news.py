@@ -76,22 +76,19 @@ def fetch_rss_articles(rss_url, category, translate=False):
             title = entry.title
             summary = entry.summary if hasattr(entry, 'summary') else entry.title
             
-            if translate:
-                title = translate_text(title)
-                summary = translate_text(summary[:500]) # Limit summary length for translation
+            # Skipping translation to avoid timeout
+            # if translate:
+            #     title = translate_text(title)
+            #     summary = translate_text(summary[:500])
                 
             url = entry.link
             published_date = parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat()
             
-            # Since these are curated positive feeds, we can be more lenient or trust them
-            positive_keywords_check = ["bom", "positivo", "sucesso", "avanço", "esperança", "inspiração", "progresso", "good", "positive", "success", "hope", "inspire"]
+            # Trust curated feeds, but keep a light negative filter
             negative_keywords_check = ["morte", "crime", "guerra", "crise", "bloqueio", "erro", "falha", "opinião", "colunista", "death", "war", "crisis"]
-
-            is_positive = any(kw in title.lower() or kw in summary.lower() for kw in positive_keywords_check)
             is_negative = any(kw in title.lower() or kw in summary.lower() for kw in negative_keywords_check)
 
-            # For specialized feeds like Razões para Acreditar, we trust more
-            if "razoesparaacreditar" in rss_url or (is_positive and not is_negative):
+            if not is_negative:
                 articles.append({
                     'title': title,
                     'summary': summary,
@@ -125,8 +122,10 @@ def fetch_positive_news():
 
     for feed_info in rss_feeds:
         translate = feed_info.get("translate", False)
-        # Fetch only top 5 articles from each feed to keep it fast
-        all_articles.extend(fetch_rss_articles(feed_info["url"], feed_info["cat"], translate=translate)[:5])
+        # Fetch articles from each feed
+        articles = fetch_rss_articles(feed_info["url"], feed_info["cat"], translate=translate)
+        print(f"Feed {feed_info['url']}: {len(articles)} artigos encontrados")
+        all_articles.extend(articles)
 
     # Limitar a 12 notícias, priorizando variedade de categorias
     final_articles = select_diverse(all_articles, 12)
@@ -135,15 +134,21 @@ def fetch_positive_news():
         print("Sem notícias novas. Mantendo dados existentes.")
         return
 
+    now = datetime.now().strftime("%d/%m/%Y %H:%M")
     output = {
-        "last_update": datetime.now().strftime("%d/%m/%Y %H:%M"),
+        "last_update": now,
         "news": final_articles
     }
 
-    with open("noticias.json", "w", encoding="utf-8") as f:
+    # Use absolute path to ensure file is saved in the correct directory
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(script_dir, "noticias.json")
+    print(f"A tentar gravar em: {output_path}")
+    
+    with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"Sucesso! {len(final_articles)} notícias guardadas em noticias.json")
+    print(f"Sucesso! {len(final_articles)} notícias guardadas em noticias.json com data {now}")
     cats = [a["cat"] for a in final_articles]
     print(f"Categorias: {dict((c, cats.count(c)) for c in set(cats))}")
 
