@@ -502,84 +502,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ── CARREGAR NOTÍCIAS COM DEBUG ─────────────────────────
-async function fetchAINews() {
-  console.log("A carregar notícias diretamente do código...");
-  
-  // As tuas notícias estão aqui, dentro do próprio código:
-  const data = {
-    "articles": [
-      {
-        "title": "Portugal regista crescimento económico sustentável",
-        "summary": "O país apresenta indicadores positivos no setor da inovação.",
-        "source": "Expresso",
-        "category": "economia",
-        "score": 0.95,
-        "date": "22/05/2026"
-      },
-      {
-        "title": "Inovação tecnológica transforma janelas em painéis solares",
-        "summary": "Uma startup portuguesa criou uma solução que promete revolucionar a eficiência energética.",
-        "source": "Público",
-        "category": "tecnologia",
-        "score": 0.92,
-        "date": "22/05/2026"
-      }
-    ]
-  };
 
-  // Carrega os dados diretamente
-  const loadedNews = data.articles;
+      async function fetchAINews() {
+  console.log("A carregar notícias de forma segura...");
   
-  if (loadedNews.length > 0) {
-    NEWS.length = 0;
-    loadedNews.forEach((n, i) => {
-      NEWS.push({
-        id: i + 1,
-        cat: n.category || 'geral',
-        title: n.title || 'Sem título',
-        summary: n.summary || '',
-        source: n.source || 'Fonte',
-        date: n.date || 'Hoje',
-        url: '#',
-        score: n.score || 0.9
-      });
-    });
-    
-    // Renderiza
-    renderFeatured();
-    renderGrid(true);
-    renderTrending();
-    renderTicker();
-    console.log("Notícias renderizadas com sucesso!");
-  }
-}
-      
-    const data = await res.json();
-    console.log('Dados recebidos:', data); // Abre a consola (F12) para ver isto
-    
-    const loadedNews = data.articles || data.news || data.noticias || [];
-    
-    if (loadedNews.length > 0) {
-      NEWS.length = 0;
-      loadedNews.forEach((item, index) => {
-        NEWS.push({
-          id: index + 1,
-          cat: item.cat || item.category || 'sociedade',
-          title: item.title || '',
-          summary: item.summary || item.description || '',
-          source: item.source || 'Notícia',
-          date: item.date || item.time || new Date().toISOString(),
-          url: item.url || item.link || '#',
-          img: item.img || item.image || '',
-          score: item.score || 0.95
-        });
-      });
-      renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
+  // As tuas notícias definidas diretamente aqui:
+  const minhasNoticias = [
+    {
+      "cat": "economia",
+      "title": "Portugal regista crescimento económico sustentável",
+      "summary": "O país apresenta indicadores positivos no setor da inovação.",
+      "source": "Expresso",
+      "score": 0.95,
+      "date": "22/05/2026"
+    },
+    {
+      "cat": "tecnologia",
+      "title": "Inovação tecnológica transforma janelas em painéis solares",
+      "summary": "Uma startup portuguesa criou uma solução que promete revolucionar a eficiência energética.",
+      "source": "Público",
+      "score": 0.92,
+      "date": "22/05/2026"
     }
-  } catch(e) {
-    console.error('Falha crítica:', e);
-    toast('Erro ao carregar notícias. Verifica a consola.');
-  }
+  ];
+
+  // Injetar diretamente no NEWS
+  NEWS.length = 0;
+  minhasNoticias.forEach((n, i) => {
+    NEWS.push({
+      id: i + 1,
+      cat: n.cat,
+      title: n.title,
+      summary: n.summary,
+      source: n.source,
+      date: n.date,
+      url: '#',
+      score: n.score
+    });
+  });
+
+  // Renderizar
+  renderFeatured();
+  renderGrid(true);
+  renderTrending();
+  renderTicker();
+  console.log("Renderização concluída!");
+}   
 }
 function checkMobile() {
   const mob = window.innerWidth < 768;
