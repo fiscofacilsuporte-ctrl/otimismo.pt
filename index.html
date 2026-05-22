@@ -593,7 +593,7 @@ function renderGrid(reset) {
     const card = document.createElement('a');
     card.className='news-card'; card.href=n.url; card.target='_blank'; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
-    card.innerHTML=(n.img?'<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.outerHTML='<div class=thumb>'+catEmoji(n.cat)+'</div>'">'
+    card.innerHTML=(n.img?'<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.src=\'\';this.outerHTML=\'<div class=thumb>\'+catEmoji(\''+n.cat+'\')+\'</div>\'">'
       :'<div class="thumb">'+catEmoji(n.cat)+'</div>')
       +'<div class="body"><span class="cat-pill '+n.cat+'">'+CATS[n.cat]+'</span>'
       +'<div class="card-title">'+n.title+'</div>'
@@ -645,7 +645,7 @@ function selectAmount(btn, amt) {
 function donar() {
   toast('❤️ Obrigado pelo teu apoio de '+selectedAmt+'€! A redirecionar para pagamento seguro...');
   // Aqui integrarias PayPal, MB Way, Stripe, etc.
-  setTimeout(()=>window.open('https://paypal.me/otimismopt/'+selectedAmt,'_blank'),1200);
+  setTimeout(()=>window.open('https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID&amount='+selectedAmt,'_blank'),1200);
 }
 
 // ── NEWSLETTER ───────────────────────────────────────────

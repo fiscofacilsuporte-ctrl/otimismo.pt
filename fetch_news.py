@@ -11,9 +11,11 @@ SOURCE_CATEGORY_MAP = {
     'jornal de notícias': 'sociedade', 'correio da manhã': 'sociedade',
     'folha de s.paulo': 'sociedade', 'globo': 'sociedade', 'g1': 'sociedade',
     'uol': 'cultura', 'estadão': 'economia', 'veja': 'sociedade',
-    'valor econômico': 'economia', 'carta capital': 'política',
+    'valor econômico': 'economia', 'carta capital': 'sociedade',
     'jornal de angola': 'sociedade', 'o país': 'sociedade',
     'o país moçambique': 'sociedade', 'savana': 'sociedade',
+    'sic notícias': 'sociedade', 'diário de notícias': 'sociedade',
+    'bola': 'desporto', 'ojogo': 'desporto',
 }
 
 KEYWORD_CATEGORY_MAP = {
@@ -31,6 +33,7 @@ KEYWORD_CATEGORY_MAP = {
     'invest': 'economia', 'mercado': 'economia', 'exportaç': 'economia',
     'cultur': 'cultura', 'arte': 'cultura', 'música': 'cultura',
     'cinema': 'cultura', 'teatro': 'cultura', 'patrimônio': 'cultura',
+    'festival': 'cultura', 'exposição': 'cultura',
 }
 
 def detect_category(title, description, source_name):
@@ -65,25 +68,29 @@ def fetch_positive_news():
 
     # Query 1: Palavras-chave positivas em português (Portugal + Brasil + África)
     positive_keywords = (
-        '(cura OR avanço OR solidariedade OR vitória OR sustentabilidade OR '
-        'descoberta OR inovação OR esperança OR conquista OR sucesso OR '
-        'premiado OR recordes OR celebração OR inauguração OR renovável)'
+        '("cura" OR "avanço" OR "solidariedade" OR "vitória" OR "sustentabilidade" OR '
+        '"descoberta" OR "inovação" OR "esperança" OR "conquista" OR "sucesso" OR '
+        '"premiado" OR "recorde" OR "celebração" OR "inauguração" OR "renovável" OR '
+        '"boas notícias" OR "inspiração" OR "exemplo" OR "progresso")'
     )
+
+    # Lista de termos negativos para filtrar
+    negative_keywords = 'NOT (morte OR crime OR guerra OR crise OR bloqueio OR erro OR falha OR opinião OR colunista)'
 
     queries = [
         # Notícias positivas gerais em português
         {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&language=pt&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&language=pt&sortBy=publishedAt&pageSize=40&apiKey={api_key}',
             'desc': 'positivas em português'
         },
-        # Fontes brasileiras (muitas escrevem sobre o mundo)
+        # Fontes brasileiras
         {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&domains=globo.com,folha.uol.com.br,g1.globo.com,estadao.com.br,veja.abril.com.br&sortBy=publishedAt&pageSize=10&apiKey={api_key}',
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&domains=globo.com,folha.uol.com.br,g1.globo.com,estadao.com.br,veja.abril.com.br&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
             'desc': 'fontes brasileiras'
         },
         # Fontes portuguesas
         {
-            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&domains=publico.pt,observador.pt,expresso.pt,rtp.pt,tsf.pt&sortBy=publishedAt&pageSize=10&apiKey={api_key}',
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords} {negative_keywords}&domains=publico.pt,observador.pt,expresso.pt,rtp.pt,tsf.pt,sicnoticias.pt,dn.pt&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
             'desc': 'fontes portuguesas'
         },
     ]
