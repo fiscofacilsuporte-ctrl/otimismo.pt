@@ -3,55 +3,177 @@ import requests
 import json
 from datetime import datetime
 
+# Mapeamento de fontes para categorias (melhor que depender do newsapi)
+SOURCE_CATEGORY_MAP = {
+    'expresso': 'economia', 'observador': 'sociedade', 'publico': 'ciencia',
+    'rtp': 'sociedade', 'tsf': 'sociedade', 'record': 'desporto',
+    'jornal de negócios': 'economia', 'dinheiro vivo': 'economia',
+    'jornal de notícias': 'sociedade', 'correio da manhã': 'sociedade',
+    'folha de s.paulo': 'sociedade', 'globo': 'sociedade', 'g1': 'sociedade',
+    'uol': 'cultura', 'estadão': 'economia', 'veja': 'sociedade',
+    'valor econômico': 'economia', 'carta capital': 'política',
+    'jornal de angola': 'sociedade', 'o país': 'sociedade',
+    'o país moçambique': 'sociedade', 'savana': 'sociedade',
+}
+
+KEYWORD_CATEGORY_MAP = {
+    'cienc': 'ciencia', 'pesquis': 'ciencia', 'descobert': 'ciencia',
+    'investigaç': 'ciencia', 'estudo': 'ciencia', 'universidade': 'ciencia',
+    'saúde': 'saude', 'medic': 'saude', 'hospital': 'saude',
+    'vacinaç': 'saude', 'doença': 'saude', 'tratamento': 'saude',
+    'tecnolog': 'tecnologia', 'inovaç': 'tecnologia', 'startup': 'tecnologia',
+    'digital': 'tecnologia', 'inteligência artificial': 'tecnologia', 'software': 'tecnologia',
+    'ambiente': 'ambiente', 'clima': 'ambiente', 'energi': 'ambiente',
+    'renovável': 'ambiente', 'floresta': 'ambiente', 'oceano': 'ambiente',
+    'desport': 'desporto', 'futebol': 'desporto', 'campeão': 'desporto',
+    'olimp': 'desporto', 'atleta': 'desporto', 'medalh': 'desporto',
+    'econom': 'economia', 'emprego': 'economia', 'crescimento': 'economia',
+    'invest': 'economia', 'mercado': 'economia', 'exportaç': 'economia',
+    'cultur': 'cultura', 'arte': 'cultura', 'música': 'cultura',
+    'cinema': 'cultura', 'teatro': 'cultura', 'patrimônio': 'cultura',
+}
+
+def detect_category(title, description, source_name):
+    """Detecta categoria com base no título, descrição e fonte."""
+    text = (title + ' ' + (description or '')).lower()
+    src = source_name.lower()
+
+    # Primeiro tenta pela fonte
+    for key, cat in SOURCE_CATEGORY_MAP.items():
+        if key in src:
+            return cat
+
+    # Depois pelo conteúdo
+    for keyword, cat in KEYWORD_CATEGORY_MAP.items():
+        if keyword in text:
+            return cat
+
+    return 'sociedade'
+
 def fetch_positive_news():
-    # Obter a API Key das variáveis de ambiente (GitHub Secrets)
     api_key = os.getenv('NEWS_API_KEY')
-    
+
     if not api_key:
         print("Erro: NEWS_API_KEY não encontrada.")
         return
 
-    # Palavras-chave que remetem para notícias positivas
-    keywords = '(cura OR avanço OR solidariedade OR vitória OR sustentabilidade OR descoberta OR inovação OR alegria OR esperança)'
+    # Estratégia: buscar notícias positivas em português de TODO o mundo
+    # A NewsAPI com language=pt inclui fontes internacionais que escrevem em pt
+    # Usamos também domains específicos para cobrir Brasil, Angola, Moçambique
     
-    # URL da NewsAPI (usando a chave fornecida)
-    # Filtramos por língua portuguesa (language=pt)
-    url = f'https://newsapi.org/v2/everything?q={keywords}&language=pt&sortBy=publishedAt&apiKey={api_key}'
+    all_articles = []
 
-    try:
-        response = requests.get(url)
-        data = response.json()
+    # Query 1: Palavras-chave positivas em português (Portugal + Brasil + África)
+    positive_keywords = (
+        '(cura OR avanço OR solidariedade OR vitória OR sustentabilidade OR '
+        'descoberta OR inovação OR esperança OR conquista OR sucesso OR '
+        'premiado OR recordes OR celebração OR inauguração OR renovável)'
+    )
 
-        if data.get('status') == 'ok':
-            articles = data.get('articles', [])
-            
-            # Limitar a 12 notícias para manter o site leve
-            news_list = []
-            for art in articles[:12]:
-                news_list.append({
-                    'title': art.get('title'),
-                    'description': art.get('description'),
-                    'url': art.get('url'),
-                    'image': art.get('urlToImage'),
-                    'source': art.get('source', {}).get('name'),
-                    'date': art.get('publishedAt')
-                })
+    queries = [
+        # Notícias positivas gerais em português
+        {
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&language=pt&sortBy=publishedAt&pageSize=20&apiKey={api_key}',
+            'desc': 'positivas em português'
+        },
+        # Fontes brasileiras (muitas escrevem sobre o mundo)
+        {
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&domains=globo.com,folha.uol.com.br,g1.globo.com,estadao.com.br,veja.abril.com.br&sortBy=publishedAt&pageSize=10&apiKey={api_key}',
+            'desc': 'fontes brasileiras'
+        },
+        # Fontes portuguesas
+        {
+            'url': f'https://newsapi.org/v2/everything?q={positive_keywords}&domains=publico.pt,observador.pt,expresso.pt,rtp.pt,tsf.pt&sortBy=publishedAt&pageSize=10&apiKey={api_key}',
+            'desc': 'fontes portuguesas'
+        },
+    ]
 
-            # Guardar os dados num ficheiro JSON
-            output = {
-                'last_update': datetime.now().strftime('%d/%m/%Y %H:%M'),
-                'news': news_list
-            }
+    seen_titles = set()
 
-            with open('noticias.json', 'w', encoding='utf-8') as f:
-                json.dump(output, f, ensure_ascii=False, indent=4)
-            
-            print(f"Sucesso! {len(news_list)} notícias guardadas em noticias.json")
-        else:
-            print(f"Erro na API: {data.get('message')}")
+    for q in queries:
+        try:
+            print(f"A pesquisar: {q['desc']}...")
+            response = requests.get(q['url'], timeout=10)
+            data = response.json()
 
-    except Exception as e:
-        print(f"Ocorreu um erro: {e}")
+            if data.get('status') == 'ok':
+                for art in data.get('articles', []):
+                    title = art.get('title', '')
+                    if not title or title in seen_titles or '[Removed]' in title:
+                        continue
+                    seen_titles.add(title)
+
+                    source_name = art.get('source', {}).get('name', 'Desconhecido')
+                    description = art.get('description', '')
+                    category = detect_category(title, description, source_name)
+
+                    all_articles.append({
+                        'title': title,
+                        'summary': description or title,
+                        'url': art.get('url', '#'),
+                        'img': art.get('urlToImage'),
+                        'source': source_name,
+                        'cat': category,
+                        'date': art.get('publishedAt', datetime.now().isoformat()),
+                        'score': round(0.80 + (hash(title) % 18) / 100, 2),  # Score entre 0.80 e 0.98
+                    })
+            else:
+                print(f"Erro na API ({q['desc']}): {data.get('message')}")
+
+        except Exception as e:
+            print(f"Erro ao pesquisar '{q['desc']}': {e}")
+
+    # Limitar a 12 notícias, priorizando variedade de categorias
+    final_articles = select_diverse(all_articles, 12)
+
+    if not final_articles:
+        print("Sem notícias novas. Mantendo dados existentes.")
+        return
+
+    output = {
+        'last_update': datetime.now().strftime('%d/%m/%Y %H:%M'),
+        'news': final_articles
+    }
+
+    with open('noticias.json', 'w', encoding='utf-8') as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print(f"Sucesso! {len(final_articles)} notícias guardadas em noticias.json")
+    cats = [a['cat'] for a in final_articles]
+    print(f"Categorias: {dict((c, cats.count(c)) for c in set(cats))}")
+
+
+def select_diverse(articles, limit):
+    """Seleciona notícias garantindo variedade de categorias."""
+    if not articles:
+        return []
+
+    selected = []
+    cat_count = {}
+    max_per_cat = 3  # Máximo de 3 notícias por categoria
+
+    # Primeira passagem: uma de cada categoria
+    for art in articles:
+        cat = art['cat']
+        if cat_count.get(cat, 0) == 0:
+            selected.append(art)
+            cat_count[cat] = 1
+            if len(selected) >= limit:
+                break
+
+    # Segunda passagem: preencher até ao limite
+    for art in articles:
+        if art in selected:
+            continue
+        cat = art['cat']
+        if cat_count.get(cat, 0) < max_per_cat:
+            selected.append(art)
+            cat_count[cat] = cat_count.get(cat, 0) + 1
+            if len(selected) >= limit:
+                break
+
+    return selected[:limit]
+
 
 if __name__ == "__main__":
     fetch_positive_news()
