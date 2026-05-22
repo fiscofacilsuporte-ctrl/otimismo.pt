@@ -1,0 +1,102 @@
+{
+  "last_update": "22/05/2026 22:30",
+  "ticker": "✦ Projeto reflorestação em Portugal atinge meta histórica ✦ Cientistas descobrem nova forma de limpar plástico dos oceanos ✦ Vacina inovadora apresenta resultados positivos",
+  "stats": {
+    "stories_count": "1,240",
+    "countries_count": "45",
+    "users_count": "12k"
+  },
+  "featured_main": {
+    "title": "Energias renováveis abastecem 100% de Portugal Continental durante uma semana inteira",
+    "category": "ambiente",
+    "source": "Expresso",
+    "date": "22/05/2026",
+    "score": 98,
+    "url": "#"
+  },
+  "featured_side": [
+    {
+      "title": "Investigadores portugueses descobrem molécula que pode travar o envelhecimento celular",
+      "category": "ciencia",
+      "source": "Público",
+      "date": "22/05/2026",
+      "url": "#",
+      "thumb": "🔬"
+    },
+    {
+      "title": "Nova aplicação portuguesa ajuda a reduzir o desperdício alimentar em toneladas",
+      "category": "tecnologia",
+      "source": "Observador",
+      "date": "21/05/2026",
+      "url": "#",
+      "thumb": "📱"
+    },
+    {
+      "title": "Estudo confirma que atos de bondade diários melhoram significativamente a saúde mental",
+      "category": "saude",
+      "source": "Sapo Lifestyle",
+      "date": "21/05/2026",
+      "url": "#",
+      "thumb": "❤️"
+    }
+  ],
+  "news": [
+    {
+      "title": "Portugal regista taxa de desemprego mais baixa da década com crescimento na economia verde",
+      "summary": "O mercado de trabalho em Portugal continua a dar sinais altamente positivos. Os setores da sustentabilidade e tecnologias limpas lideraram a criação de novos postos de trabalho qualificados.",
+      "category": "economia",
+      "source": "Jornal de Negócios",
+      "date": "22/05/2026",
+      "score": 92,
+      "url": "#",
+      "thumb": "📈"
+    },
+    {
+      "title": "Seleção Nacional de Surf conquista o campeonato europeu em dia histórico",
+      "summary": "Os atletas portugueses dominaram as ondas e garantiram o primeiro lugar no pódio coletivo. O espírito de equipa e a consistência foram a chave para esta grande vitória.",
+      "category": "desporto",
+      "source": "A Bola",
+      "date": "22/05/2026",
+      "score": 95,
+      "url": "#",
+      "thumb": "🏄"
+    },
+    {
+      "title": "População de lince-ibérico em Portugal triplica após programa de conservação de sucesso",
+      "summary": "O esforço conjunto de biólogos e autoridades locais permitiu salvar a espécie da extinção em território nacional. Novas crias foram avistadas no Alentejo e Algarve.",
+      "category": "ambiente",
+      "source": "Wilder",
+      "date": "21/05/2026",
+      "score": 97,
+      "url": "#",
+      "thumb": "🐾"
+    },
+    {
+      "title": "Associação local reconverte terreno abandonado num jardim comunitário urbano",
+      "summary": "Moradores uniram-se para transformar uma lixeira ilegal num espaço verde focado na inclusão social e na produção de alimentos biológicos para famílias carenciadas.",
+      "category": "sociedade",
+      "source": "RTP Notícias",
+      "date": "20/05/2026",
+      "score": 89,
+      "url": "#",
+      "thumb": "🌱"
+    }
+  ],
+  "trending": [
+    {
+      "title": "Universidade de Coimbra cria plástico 100% biodegradável a partir de cascas de batata",
+      "category": "ciencia",
+      "url": "#"
+    },
+    {
+      "title": "Voluntários limpam mais de 5 toneladas de lixo das praias de Cascais",
+      "category": "ambiente",
+      "url": "#"
+    },
+    {
+      "title": "Hospitais portugueses adotam terapia com animais para acelerar a recuperação de crianças",
+      "category": "saude",
+      "url": "#"
+    }
+  ]
+}
