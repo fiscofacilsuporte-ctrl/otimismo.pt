@@ -364,12 +364,7 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
       <div class="apoiar-icon">🌟</div>
       <div class="apoiar-title">Apoiar a Positividade</div>
       <div class="apoiar-desc">Este projeto é gratuito e independente. Cada contribuição ajuda-nos a continuar a partilhar histórias que inspiram e fazem a diferença.</div>
-      <div class="apoiar-amounts">
-        <button class="amount-btn" onclick="selectAmount(this, 2)">2€</button>
-        <button class="amount-btn active" onclick="selectAmount(this, 5)">5€</button>
-        <button class="amount-btn" onclick="selectAmount(this, 10)">10€</button>
-      </div>
-      <button class="btn-apoiar-main" onclick="donate()">💛 Apoiar com <span id="amt">5</span>€</button>
+      <button class="btn-apoiar-main" onclick="donate()">💛 Apoiar a Positividade</button>
     </div>
 
     <div class="sidebar-card">
@@ -715,7 +710,7 @@ function selectAmount(btn, amt) {
   document.getElementById('amt').textContent = amt;
 }
 function donate() {
-  showToast('Obrigado! A redirecionar para o checkout ('+selectedAmt+'€)...');
+  showToast('Obrigado! A redirecionar para o checkout...');
 }
 function subscribe() {
   showToast('Obrigado! Subscrição efetuada.');
