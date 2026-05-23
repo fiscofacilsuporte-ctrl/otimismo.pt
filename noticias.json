@@ -1,46 +1,6 @@
 {
-  "last_update": "22/05/2026 23:44",
+  "last_update": "23/05/2026 08:57",
   "news": [
-    {
-      "title": "Profissional da OMS na RD Congo explica ações para conter propagação do ebola",
-      "summary": "Agência da ONU está em campo apoiando rastreamento e isolamento de casos suspeitos; embora menos virulenta, variante identificada neste surto tem letalidade de 50%.&nbsp;",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853224",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "saude",
-      "date": "2026-05-21T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "Brasileira ajuda a reunir evidências científicas sobre riscos e benefícios da IA",
-      "summary": "Pesquisadora Teresa Ludermir faz parte de Painel Científico Internacional Independente sobre Inteligência Artificial criado pela ONU; ela destacou preocupação com sistemas autônomos que tentam enganar usuários e desenvolvedores, mas ressaltou vantagens da tecnologia no avanço da medicina.&nbsp;",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853217",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "cultura",
-      "date": "2026-05-21T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "OIT pede reforço de trabalho digno para trabalhadores migrantes",
-      "summary": "Procura por emprego e meios de subsistência impulsionam fluxos migratórios internacionais; declaração conjunta procura garantir canais de migração seguros, facilitando mobilidade e dignidade laboral",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853195",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "economia",
-      "date": "2026-05-20T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay",
-      "summary": "<p>Scientists in California are using heat-sensing AI to save grey whales transiting through San Francisco Bay. More and more sightings of grey whales, a medium size baleen that can grow to between 40 and 50 feet, are being recorded in the bay, and conservationists are eager to develop methods to more consistently keep them safe [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/\">AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
-      "url": "https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/",
-      "img": null,
-      "source": "Good News Network",
-      "cat": "sociedade",
-      "date": "2026-05-22T18:30:21+00:00",
-      "score": 0.95
-    },
     {
       "title": "Para mulheres da área da saúde, gênero deve ser centro de discussões e decisões",
       "summary": "Representantes do grupo lusófono&nbsp;Women in Global Health estão na Suíça para a Assembleia Mundial da Saúde, da OMS; para elas, mais precisa ser feito para acelerar alcance das metas de desenvolvimento.",
@@ -49,47 +9,17 @@
       "source": "ONU News - Perspectiva Global Reportagens Humanas",
       "cat": "saude",
       "date": "2026-05-21T12:00:00+00:00",
-      "score": 0.95
+      "score": 1.0
     },
     {
-      "title": "Uso de dispositivos em excesso compromete desenvolvimento infantil",
-      "summary": "Exposição demorada a telas afeta linguagem e capacidade de atenção; especialistas sublinham necessidade de equilíbrio digital no cotidiano das crianças.",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853210",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "saude",
-      "date": "2026-05-21T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "Uso de dispositivos em excesso compromete desenvolvimento infantil",
-      "summary": "Exposição demorada a telas afeta linguagem e capacidade de atenção; especialistas sublinham necessidade de equilíbrio digital no cotidiano das crianças.",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853210",
+      "title": "Apesar de crescimento, acesso ao ensino superior permanece desigual",
+      "summary": "Número de estudantes mais que duplicou, acentuando necessidade por medidas para desenvolvimento e financiamento do setor; no Brasil, 4 em cada 5 universitários frequentam instituições privadas.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853135",
       "img": null,
       "source": "ONU News - Perspectiva Global Reportagens Humanas",
       "cat": "cultura",
-      "date": "2026-05-21T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "Guterres pede reforço do investimento coletivo na conectividade digital",
-      "summary": "Chefe da ONU destaca infraestrutura digital como bem público essencial; vulnerabilidades digitais e assimetrias na qualidade e no acesso à internet são motivo de procupação; 2,2 bilhões de pessoas ainda permanecem offline.",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853145",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "cultura",
-      "date": "2026-05-17T12:00:00+00:00",
-      "score": 0.95
-    },
-    {
-      "title": "Desigualdade econômica prejudica bem-estar de crianças até nos países mais ricos",
-      "summary": "Relatório do Unicef mostra que 20% dos menores analisados para o estudo vivem em pobreza monetária, o que significa que suas necessidades básicas não são garantidas.",
-      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853120",
-      "img": null,
-      "source": "ONU News - Perspectiva Global Reportagens Humanas",
-      "cat": "economia",
-      "date": "2026-05-13T12:00:00+00:00",
-      "score": 0.95
+      "date": "2026-05-15T12:00:00+00:00",
+      "score": 1.0
     },
     {
       "title": "Em Nairóbi, chefe da ONU reitera potencial da África como motor da mudança",
@@ -99,27 +29,97 @@
       "source": "ONU News - Perspectiva Global Reportagens Humanas",
       "cat": "economia",
       "date": "2026-05-12T12:00:00+00:00",
-      "score": 0.95
+      "score": 1.0
     },
     {
-      "title": "Police Deputy Praised After ‘Run-of-the-Mill’ Call Turns into Emergency Baby Delivery",
-      "summary": "<p>A call about suspicious activity saw a California police officer race to save a newborn&#8217;s life. A woman was sitting between two bushes near a business in the Rancho Cordova, and Deputy Foster Tracy described the situation as &#8220;routine,&#8221; before it became anything but. &#8220;It was zero to a hundred really fast. It was one [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/police-deputy-praised-after-run-of-the-mill-call-turns-into-emergency-baby-delivery/\">Police Deputy Praised After &#8216;Run-of-the-Mill&#8217; Call Turns into Emergency Baby Delivery</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
-      "url": "https://www.goodnewsnetwork.org/police-deputy-praised-after-run-of-the-mill-call-turns-into-emergency-baby-delivery/",
+      "title": "AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay",
+      "summary": "<p>Scientists in California are using heat-sensing AI to save grey whales transiting through San Francisco Bay. More and more sightings of grey whales, a medium size baleen that can grow to between 40 and 50 feet, are being recorded in the bay, and conservationists are eager to develop methods to more consistently keep them safe [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/\">AI Used to Pinpoint Whale Heat Signatures to Prevent Ship Collisions in San Francisco Bay</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
+      "url": "https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/",
       "img": null,
       "source": "Good News Network",
       "cat": "sociedade",
-      "date": "2026-05-22T15:30:26+00:00",
-      "score": 0.95
+      "date": "2026-05-22T18:30:21+00:00",
+      "score": 1.0
     },
     {
-      "title": "Britain’s Largest Iron Age Hoard on Display for the First Time Includes Evidence of First 4-Horse Carriage",
-      "summary": "<p>5 years after its discovery and 2 years after preservation, the largest collection of Iron age artifacts ever found in Britain is revealing its secrets. Found in the &#8220;rural backwater&#8221; of northern England&#8217;s county of Yorkshire, the mélange of horse tackle, carriage pieces, weapons, and home goods is proving the region was anything but. Now, [&#8230;]</p>\n<p>The post <a href=\"https://www.goodnewsnetwork.org/britains-largest-iron-age-hoard-on-display-for-the-first-time-includes-evidence-of-first-4-horse-carriage/\">Britain&#8217;s Largest Iron Age Hoard on Display for the First Time Includes Evidence of First 4-Horse Carriage</a> appeared first on <a href=\"https://www.goodnewsnetwork.org\">Good News Network</a>.</p>",
-      "url": "https://www.goodnewsnetwork.org/britains-largest-iron-age-hoard-on-display-for-the-first-time-includes-evidence-of-first-4-horse-carriage/",
+      "title": "Descarbonização e inovação tecnológica impulsionam o futuro energético de Sines - Jornal Económico",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxORlExbTRHbWJSWm5nQ04yS1dadjg3MnlmcGEtRXhCd2xaa0g4cURTNmpCWmVEVUVneXF0N1JaVWpOdm1YQ1hYOUwxYUk5a1lEeUI1TnpYTkhwcEZMcTRoak1jZFZaV01RREQwc25qRjNnYUlaektQSXJLWVdOc19vb0I5elRyRFhmbmNneXVGUjBILWc5NWRyVUJpS2k0YU5uUVVCSExmZkVTd0lNNWtUV3oyUGlEZF9JcEVtaVZn?oc=5\" target=\"_blank\">Descarbonização e inovação tecnológica impulsionam o futuro energético de Sines</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Jornal Económico</font>",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxORlExbTRHbWJSWm5nQ04yS1dadjg3MnlmcGEtRXhCd2xaa0g4cURTNmpCWmVEVUVneXF0N1JaVWpOdm1YQ1hYOUwxYUk5a1lEeUI1TnpYTkhwcEZMcTRoak1jZFZaV01RREQwc25qRjNnYUlaektQSXJLWVdOc19vb0I5elRyRFhmbmNneXVGUjBILWc5NWRyVUJpS2k0YU5uUVVCSExmZkVTd0lNNWtUV3oyUGlEZF9JcEVtaVZn?oc=5",
       "img": null,
-      "source": "Good News Network",
-      "cat": "sociedade",
-      "date": "2026-05-22T13:00:04+00:00",
-      "score": 0.95
+      "source": "Google News",
+      "cat": "tecnologia",
+      "date": "2026-05-20T00:00:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "Como a inteligência artificial está a acelerar e automatizar a descoberta científica - Público",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQU8tZ3FJbkZhdWxOMVdzMzZQZndiOWRtM25Vb2NFMGFDU0x0MFpTMkM1eHJ6SDlPS2FSYUJJLW10ZGxBWHpISkczNGRsRVFydzBXVHlGNHZKTGVSOFd6VWlZc09LU29vU3dSeVFDVXMwMDhZRDF3ZlVOWkIxeE1sNFNzZUpXX0ZNSVp5aTdaU2FnUVhjeDRqU3pmVHhWRlpZYkpSN2g4NG11Y1VuQjdiUmNKVFkyOHBDQktnSDAxcTNYUQ?oc=5\" target=\"_blank\">Como a inteligência artificial está a acelerar e automatizar a descoberta científica</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Público</font>",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQU8tZ3FJbkZhdWxOMVdzMzZQZndiOWRtM25Vb2NFMGFDU0x0MFpTMkM1eHJ6SDlPS2FSYUJJLW10ZGxBWHpISkczNGRsRVFydzBXVHlGNHZKTGVSOFd6VWlZc09LU29vU3dSeVFDVXMwMDhZRDF3ZlVOWkIxeE1sNFNzZUpXX0ZNSVp5aTdaU2FnUVhjeDRqU3pmVHhWRlpZYkpSN2g4NG11Y1VuQjdiUmNKVFkyOHBDQktnSDAxcTNYUQ?oc=5",
+      "img": null,
+      "source": "Google News",
+      "cat": "ciencia",
+      "date": "2026-05-20T06:49:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "Prémio distingue projetos e líderes da sustentabilidade - Negócios",
+      "summary": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOa3NHZHV6M1pYRWNNQUY4bEJxT0YwQkFraWZFd0kyRE5KQXhRSlo2Z0I2WlFmSXhMVlhOOHdycGp0VmpCMXlUb1NhWDZnbjdDNjFkXzctNi1YdlRJSFF1cFZ5OG1LRWZqNHN3bjZBb1hycFdFU1BKVXR6REI5Z3podjVGMVQxbmJQdVNaYVFvcWpHUTJWdVYwRjdwdHVoTXJXYTdfT0lpa0dZd1BRRTJneXRn?oc=5\" target=\"_blank\">Prémio distingue projetos e líderes da sustentabilidade</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Negócios</font>",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa3NHZHV6M1pYRWNNQUY4bEJxT0YwQkFraWZFd0kyRE5KQXhRSlo2Z0I2WlFmSXhMVlhOOHdycGp0VmpCMXlUb1NhWDZnbjdDNjFkXzctNi1YdlRJSFF1cFZ5OG1LRWZqNHN3bjZBb1hycFdFU1BKVXR6REI5Z3podjVGMVQxbmJQdVNaYVFvcWpHUTJWdVYwRjdwdHVoTXJXYTdfT0lpa0dZd1BRRTJneXRn?oc=5",
+      "img": null,
+      "source": "Google News",
+      "cat": "ambiente",
+      "date": "2026-05-22T09:30:22+00:00",
+      "score": 0.6
+    },
+    {
+      "title": "Uso de dispositivos em excesso compromete desenvolvimento infantil",
+      "summary": "Exposição demorada a telas afeta linguagem e capacidade de atenção; especialistas sublinham necessidade de equilíbrio digital no cotidiano das crianças.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853210",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "saude",
+      "date": "2026-05-21T12:00:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "Ultraprocessados elevam consumo de sódio nas Américas, adverte Opas",
+      "summary": "Alimentos industrializados são responsáveis por 80% do sódio ingerido; representante da Organização Pan-Americana da Saúde aponta pressão da indústria para barrar políticas de redução.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853168",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "saude",
+      "date": "2026-05-18T12:00:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "ESPECIAL: Festa do português projeta a voz de 300 milhões nas Nações Unidas",
+      "summary": "Semana de celebração do Dia Mundial da Língua Portuguesa termina em encontro de culturas com altos funcionários da organização incluindo o secretário-geral da ONU, diplomatas e representantes da diáspora na exaltação da força do idioma e da conexão lusófona.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853080",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "cultura",
+      "date": "2026-05-08T12:00:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "Da Lua à ONU: A humanidade no ponto mais distante do espaço",
+      "summary": "A tripulação da Artemis 2 celebrou o sucesso de sua jornada recorde em visita às Nações Unidas ONU; os quatro astronautas destacaram o papel da ciência na unificação dos povos após 10 dias em órbita lunar e de terem viajado mais longe da Terra do que qualquer outro ser humano.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853028",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "cultura",
+      "date": "2026-05-02T12:00:00+00:00",
+      "score": 1.0
+    },
+    {
+      "title": "Investimentos assimétricos em IA agravam desigualdades no mundo",
+      "summary": "Tensões geopolíticas impulsionam concentração de capital acentuando divisão global no desenvolvimento; desequilíbrio configura uma oportunidade perdida para o crescimento de economias do Sul Global.",
+      "url": "https://news.un.org/feed/view/pt/story/2026/05/1853088",
+      "img": null,
+      "source": "ONU News - Perspectiva Global Reportagens Humanas",
+      "cat": "economia",
+      "date": "2026-05-11T12:00:00+00:00",
+      "score": 1.0
     }
   ]
 }
