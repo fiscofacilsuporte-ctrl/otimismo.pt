@@ -1,38 +1,24 @@
-name: Atualização Diária de Notícias Positivas
-
+name: Update News
 on:
+  workflow_dispatch:
   schedule:
-    # Corre todos os dias às 08:00 AM UTC (aprox. 09:00 AM em Portugal)
     - cron: '0 8 * * *'
-  workflow_dispatch: # Permite que você corra o script manualmente quando quiser
-
 jobs:
-  build:
+  update:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
-    - name: Checkout do repositório
-      uses: actions/checkout@v4
-
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-
-    - name: Instalar dependências
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests feedparser python-dateutil
-
-    - name: Executar script de notícias
-      run: python fetch_news.py
-
-    - name: Guardar alterações no GitHub
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add noticias.json
-        git commit -m "Automated: Atualização diária de notícias positivas" || echo "Sem alterações para commit"
-        git push
+      - uses: actions/checkout@v4
+      - setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install deps
+        run: pip install requests feedparser python-dateutil
+      - name: Run script
+        run: python fetch_news.py
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add noticias.json
+          git commit -m "Update news" || exit 0
+          git push
