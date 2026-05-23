@@ -4,9 +4,10 @@ import json
 from datetime import datetime
 import feedparser
 from dateutil import parser
+import re
+from urllib.parse import quote
 
-
-# Mapeamento de fontes para categorias (melhor que depender do newsapi)
+# Mapeamento de fontes para categorias
 SOURCE_CATEGORY_MAP = {
     'expresso': 'economia', 'observador': 'sociedade', 'publico': 'ciencia',
     'rtp': 'sociedade', 'tsf': 'sociedade', 'record': 'desporto',
@@ -39,6 +40,39 @@ KEYWORD_CATEGORY_MAP = {
     'festival': 'cultura', 'exposição': 'cultura',
 }
 
+# Palavras-chave POSITIVAS (para aumentar score)
+POSITIVE_KEYWORDS = [
+    'sucesso', 'vitória', 'triunfo', 'conquista', 'avanço', 'progresso',
+    'inovação', 'melhoria', 'desenvolvimento', 'crescimento', 'esperança',
+    'inspirador', 'incrível', 'fantástico', 'maravilhoso', 'extraordinário',
+    'positivo', 'bom', 'excelente', 'ótimo', 'magnífico',
+    'ajuda', 'solidariedade', 'humanitário', 'voluntário', 'caridade',
+    'descoberta', 'pesquisa', 'científico', 'estudo', 'investigação',
+    'preservação', 'conservação', 'sustentável', 'renovável', 'ambiental',
+    'saúde', 'bem-estar', 'cura', 'tratamento', 'vacinação',
+    'educação', 'aprendizado', 'conhecimento', 'cultura', 'arte',
+    'paz', 'acordo', 'cooperação', 'união', 'comunidade',
+    'recorde', 'melhor', 'primeira vez', 'novo', 'inédito',
+    'resgate', 'salvação', 'proteção', 'segurança', 'defesa',
+    'prêmio', 'reconhecimento', 'homenagem', 'celebração', 'festividade',
+    'oportunidade', 'chance', 'possibilidade', 'potencial', 'promessa',
+    'liberdade', 'direitos', 'justiça', 'igualdade', 'inclusão',
+]
+
+# Palavras-chave NEGATIVAS (para diminuir score)
+NEGATIVE_KEYWORDS = [
+    'morte', 'crime', 'guerra', 'crise', 'bloqueio', 'erro', 'falha',
+    'opinião', 'colunista', 'death', 'war', 'crisis', 'murder', 'attack',
+    'violência', 'acidente', 'desastre', 'catástrofe', 'tragédia',
+    'doença', 'epidemia', 'pandemia', 'contaminação', 'poluição',
+    'corrupção', 'fraude', 'escândalo', 'roubo', 'assalto',
+    'pobreza', 'miséria', 'fome', 'desemprego', 'recessão',
+    'depressão', 'ansiedade', 'suicídio', 'automutilação', 'droga',
+    'conflito', 'disputa', 'tensão', 'ameaça', 'perigo',
+    'perda', 'luto', 'sofrimento', 'dor', 'angústia',
+    'fechamento', 'encerramento', 'cancelamento', 'suspensão', 'adiamento',
+]
+
 def detect_category(title, description, source_name):
     """Detecta categoria com base no título, descrição e fonte."""
     text = (title + ' ' + (description or '')).lower()
@@ -56,19 +90,30 @@ def detect_category(title, description, source_name):
 
     return 'sociedade'
 
-def translate_text(text, target_lang='pt'):
-    # Simplified translation using a public API (MyMemory)
-    try:
-        url = f"https://api.mymemory.translated.net/get?q={text}&langpair=en|{target_lang}"
-        response = requests.get(url, timeout=5)
-        data = response.json()
-        if data.get('responseStatus') == 200:
-            return data.get('responseData').get('translatedText')
-    except:
-        pass
-    return text
+def calculate_sentiment_score(title, summary):
+    """
+    Calcula um score de sentimento (0-1) baseado em palavras-chave.
+    Quanto mais próximo de 1, mais positivo é o conteúdo.
+    """
+    text = (title + ' ' + (summary or '')).lower()
+    
+    # Contar palavras positivas
+    positive_count = sum(1 for keyword in POSITIVE_KEYWORDS if keyword in text)
+    
+    # Contar palavras negativas
+    negative_count = sum(1 for keyword in NEGATIVE_KEYWORDS if keyword in text)
+    
+    # Calcular score
+    if positive_count + negative_count == 0:
+        # Se não há palavras-chave, usar um score neutro
+        score = 0.6
+    else:
+        score = positive_count / (positive_count + negative_count)
+    
+    return score
 
-def fetch_rss_articles(rss_url, category, translate=False):
+def fetch_rss_articles(rss_url, category, min_sentiment_score=0.5):
+    """Obtém artigos de um feed RSS com filtragem de sentimento."""
     articles = []
     try:
         feed = feedparser.parse(rss_url)
@@ -76,19 +121,14 @@ def fetch_rss_articles(rss_url, category, translate=False):
             title = entry.title
             summary = entry.summary if hasattr(entry, 'summary') else entry.title
             
-            # Skipping translation to avoid timeout
-            # if translate:
-            #     title = translate_text(title)
-            #     summary = translate_text(summary[:500])
-                
             url = entry.link
             published_date = parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat()
             
-            # Trust curated feeds, but keep a light negative filter
-            negative_keywords_check = ["morte", "crime", "guerra", "crise", "bloqueio", "erro", "falha", "opinião", "colunista", "death", "war", "crisis"]
-            is_negative = any(kw in title.lower() or kw in summary.lower() for kw in negative_keywords_check)
-
-            if not is_negative:
+            # Calcular score de sentimento
+            sentiment_score = calculate_sentiment_score(title, summary)
+            
+            # Filtrar por score de sentimento
+            if sentiment_score >= min_sentiment_score:
                 articles.append({
                     'title': title,
                     'summary': summary,
@@ -97,41 +137,104 @@ def fetch_rss_articles(rss_url, category, translate=False):
                     'source': feed.feed.title if hasattr(feed.feed, 'title') else 'Desconhecido',
                     'cat': category,
                     'date': published_date,
-                    'score': 0.98 if "razoesparaacreditar" in rss_url else 0.95,
+                    'score': sentiment_score,
                 })
     except Exception as e:
         print(f"Erro ao buscar RSS de {rss_url}: {e}")
     return articles
 
+def fetch_google_news(query, category, num_results=10):
+    """
+    Obtém notícias do Google News via RSS.
+    Nota: O Google News RSS é limitado, mas funciona para queries específicas.
+    """
+    articles = []
+    try:
+        # URL do Google News RSS para a query específica
+        google_news_url = f"https://news.google.com/rss/search?q={quote(query)}&hl=pt-PT&gl=PT&ceid=PT:pt"
+        
+        feed = feedparser.parse(google_news_url)
+        
+        for entry in feed.entries[:num_results]:
+            title = entry.title
+            summary = entry.summary if hasattr(entry, 'summary') else entry.title
+            
+            url = entry.link
+            published_date = parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat()
+            
+            # Calcular score de sentimento
+            sentiment_score = calculate_sentiment_score(title, summary)
+            
+            # Filtrar por score de sentimento
+            if sentiment_score >= 0.55:
+                articles.append({
+                    'title': title,
+                    'summary': summary,
+                    'url': url,
+                    'img': None,
+                    'source': 'Google News',
+                    'cat': category,
+                    'date': published_date,
+                    'score': sentiment_score,
+                })
+    except Exception as e:
+        print(f"Erro ao buscar Google News para '{query}': {e}")
+    
+    return articles
+
 def fetch_positive_news():
-
-
+    """Obtém notícias positivas de múltiplas fontes."""
     all_articles = []
 
-    # RSS Feeds de notícias positivas
+    # RSS Feeds de notícias positivas (curadas)
     rss_feeds = [
-        {"url": "https://razoesparaacreditar.com/feed/", "cat": "sociedade", "translate": False},
-        {"url": "https://news.un.org/pt/news/topic/health/feed/rss.xml", "cat": "saude", "translate": False},
-        {"url": "https://news.un.org/pt/news/topic/culture-and-education/feed/rss.xml", "cat": "cultura", "translate": False},
-        {"url": "https://news.un.org/pt/news/topic/economic-development/feed/rss.xml", "cat": "economia", "translate": False},
-        {"url": "https://www.goodnewsnetwork.org/feed/", "cat": "sociedade", "translate": True},
-        {"url": "https://www.positive.news/feed/", "cat": "sociedade", "translate": True},
-        {"url": "https://reasonstobecheerful.world/feed/", "cat": "sociedade", "translate": True},
-        {"url": "https://www.optimistdaily.com/feed/", "cat": "sociedade", "translate": True},
+        {"url": "https://razoesparaacreditar.com/feed/", "cat": "sociedade", "min_score": 0.5},
+        {"url": "https://news.un.org/pt/news/topic/health/feed/rss.xml", "cat": "saude", "min_score": 0.5},
+        {"url": "https://news.un.org/pt/news/topic/culture-and-education/feed/rss.xml", "cat": "cultura", "min_score": 0.5},
+        {"url": "https://news.un.org/pt/news/topic/economic-development/feed/rss.xml", "cat": "economia", "min_score": 0.5},
+        {"url": "https://www.goodnewsnetwork.org/feed/", "cat": "sociedade", "min_score": 0.5},
+        {"url": "https://www.positive.news/feed/", "cat": "sociedade", "min_score": 0.5},
+        {"url": "https://reasonstobecheerful.world/feed/", "cat": "sociedade", "min_score": 0.5},
+        {"url": "https://www.optimistdaily.com/feed/", "cat": "sociedade", "min_score": 0.5},
     ]
 
+    print("=== Obtendo notícias de feeds RSS ===")
     for feed_info in rss_feeds:
-        translate = feed_info.get("translate", False)
-        # Fetch articles from each feed
-        articles = fetch_rss_articles(feed_info["url"], feed_info["cat"], translate=translate)
+        min_score = feed_info.get("min_score", 0.5)
+        articles = fetch_rss_articles(feed_info["url"], feed_info["cat"], min_sentiment_score=min_score)
         print(f"Feed {feed_info['url']}: {len(articles)} artigos encontrados")
         all_articles.extend(articles)
 
-    # Limitar a 12 notícias, priorizando variedade de categorias
-    final_articles = select_diverse(all_articles, 12)
+    # Google News queries
+    print("\n=== Obtendo notícias do Google News ===")
+    google_news_queries = [
+        {"query": "notícias positivas Portugal", "cat": "sociedade"},
+        {"query": "inovação tecnológica", "cat": "tecnologia"},
+        {"query": "descoberta científica", "cat": "ciencia"},
+        {"query": "sustentabilidade ambiente", "cat": "ambiente"},
+        {"query": "saúde bem-estar", "cat": "saude"},
+        {"query": "educação desenvolvimento", "cat": "cultura"},
+        {"query": "economia crescimento", "cat": "economia"},
+    ]
+
+    for query_info in google_news_queries:
+        articles = fetch_google_news(query_info["query"], query_info["cat"], num_results=5)
+        print(f"Google News '{query_info['query']}': {len(articles)} artigos encontrados")
+        all_articles.extend(articles)
+
+    # Remover duplicatas
+    seen_urls = set()
+    unique_articles = []
+    for article in all_articles:
+        if article['url'] not in seen_urls:
+            seen_urls.add(article['url'])
+            unique_articles.append(article)
+
+    # Limitar a 12 notícias
+    final_articles = select_diverse(unique_articles, 12)
 
     if not final_articles:
-        print("Sem notícias novas. Mantendo dados existentes.")
+        print("Sem notícias novas.")
         return
 
     now = datetime.now().strftime("%d/%m/%Y %H:%M")
@@ -140,29 +243,22 @@ def fetch_positive_news():
         "news": final_articles
     }
 
-    # Use absolute path to ensure file is saved in the correct directory
     script_dir = os.path.dirname(os.path.abspath(__file__))
     output_path = os.path.join(script_dir, "noticias.json")
-    print(f"A tentar gravar em: {output_path}")
     
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"Sucesso! {len(final_articles)} notícias guardadas em noticias.json com data {now}")
-    cats = [a["cat"] for a in final_articles]
-    print(f"Categorias: {dict((c, cats.count(c)) for c in set(cats))}")
-
+    print(f"Sucesso! {len(final_articles)} notícias guardadas.")
 
 def select_diverse(articles, limit):
     """Seleciona notícias garantindo variedade de categorias."""
     if not articles:
         return []
-
+    articles = sorted(articles, key=lambda x: x['score'], reverse=True)
     selected = []
     cat_count = {}
-    max_per_cat = 3  # Máximo de 3 notícias por categoria
-
-    # Primeira passagem: uma de cada categoria
+    max_per_cat = 3
     for art in articles:
         cat = art['cat']
         if cat_count.get(cat, 0) == 0:
@@ -170,8 +266,6 @@ def select_diverse(articles, limit):
             cat_count[cat] = 1
             if len(selected) >= limit:
                 break
-
-    # Segunda passagem: preencher até ao limite
     for art in articles:
         if art in selected:
             continue
@@ -181,9 +275,7 @@ def select_diverse(articles, limit):
             cat_count[cat] = cat_count.get(cat, 0) + 1
             if len(selected) >= limit:
                 break
-
     return selected[:limit]
-
 
 if __name__ == "__main__":
     fetch_positive_news()
