@@ -7,6 +7,8 @@
 <meta name="description" content="As melhores notícias positivas de Portugal e do mundo. Informação que inspira, histórias que transformam.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!-- Google AdSense — substitui ca-pub-XXXXXXXXXXXXXXXX pelo teu Publisher ID -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -297,7 +299,7 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-label">Notícias Positivas · Portugal e o Mundo</div>
+      <div class="hero-label">Notícias Positivas · Alcance Global</div>
       <h1>O mundo tem mais <em>boas notícias</em><br>do que imaginas.</h1>
       <p>Histórias de progresso, inovação e solidariedade — em português. Porque a informação que inspira também importa.</p>
       <div class="hero-stats" id="heroStats">
@@ -327,9 +329,14 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
     </div>
 
     <!-- Mid ad -->
-    <div class="ad-slot" style="height:90px;margin-bottom:24px;">
-      <!-- Google AdSense: banner 728x90 -->
-      <span>Publicidade</span>
+    <div style="margin-bottom:24px;display:block;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <!-- News grid -->
@@ -355,16 +362,12 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
 
     <!-- Apoiar o projeto -->
     <div class="apoiar-card" id="apoiar">
-      <div class="apoiar-icon">❤️</div>
-      <div class="apoiar-title">Apoiar o otimismo.pt</div>
-      <div class="apoiar-desc">Este projeto é gratuito e independente. Com o teu apoio continuamos a trazer boas notícias todos os dias.</div>
-      <div class="apoiar-amounts">
-        <button class="amount-btn active" onclick="selectAmount(this, 2)">2€</button>
-        <button class="amount-btn" onclick="selectAmount(this, 5)">5€</button>
-        <button class="amount-btn" onclick="selectAmount(this, 10)">10€</button>
-      </div>
-      <button class="btn-apoiar-main" onclick="donar()">💛 Apoiar com <span id="selectedAmount">2€</span></button>
+      <div class="apoiar-icon">🌟</div>
+      <div class="apoiar-title">Apoiar a Positividade</div>
+      <div class="apoiar-desc">Este projeto é gratuito e independente. Cada contribuição ajuda-nos a continuar a partilhar histórias que inspiram e fazem a diferença.</div>
+      <button class="btn-apoiar-main" onclick="donar()">💛 Apoiar a Positividade</button>
     </div>
+
 
     <!-- Trending -->
     <div class="sidebar-card">
@@ -385,19 +388,28 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
     </div>
 
     <!-- Ad sidebar 300x250 -->
-    <div class="ad-sidebar">
-      <!-- Google AdSense 300x250 -->
-      <div><div style="font-size:1.5rem;margin-bottom:6px;">📢</div>Publicidade<br>300 × 250</div>
+    <div style="min-height:250px;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+           data-ad-slot="XXXXXXXXXX"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <!-- Partilhar -->
     <div class="sidebar-card" id="contacto">
-      <div class="sidebar-card-header">📣 Partilhar</div>
+      <div class="sidebar-card-header">📣 Partilhar & Contacto</div>
       <div class="sidebar-card-body">
         <div class="share-row">
           <a href="https://twitter.com/intent/tweet?text=Notícias+positivas+em+otimismo.pt&url=https://otimismo.pt" target="_blank" class="share-btn" style="background:#e7f3fe;color:#1877f2;">𝕏 Twitter</a>
           <a href="https://api.whatsapp.com/send?text=Já+conheces+o+otimismo.pt?+https://otimismo.pt" target="_blank" class="share-btn" style="background:#e8f5e9;color:#25d366;">💬 WhatsApp</a>
           <a href="https://www.facebook.com/sharer/sharer.php?u=https://otimismo.pt" target="_blank" class="share-btn" style="background:#e7f3fe;color:#1877f2;">👥 Facebook</a>
+        </div>
+        <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--gray-200);">
+          <p style="font-size:.78rem;color:var(--gray-600);margin-bottom:4px;">✉️ Contacto & Parcerias</p>
+          <a href="mailto:fiscofacil.support@gmail.com" style="font-size:.82rem;color:var(--blue-400);text-decoration:none;font-weight:500;">fiscofacil.support@gmail.com</a>
         </div>
       </div>
     </div>
@@ -425,8 +437,8 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
       </div>
       <div style="background:var(--gray-100);border-radius:var(--radius-md);padding:20px;">
         <div style="font-size:1.5rem;margin-bottom:6px;">🌍</div>
-        <strong style="font-size:.9rem;color:var(--navy);">Portugal e o mundo</strong>
-        <p style="font-size:.8rem;color:var(--gray-600);margin-top:4px;line-height:1.5;">Cobrimos Portugal, Brasil, Angola, Moçambique e todas as comunidades de língua portuguesa.</p>
+        <strong style="font-size:.9rem;color:var(--navy);">Alcance global</strong>
+        <p style="font-size:.8rem;color:var(--gray-600);margin-top:4px;line-height:1.5;">Chegamos a leitores em todo o mundo — onde quer que o português seja falado e onde quer que aconteça algo que valha a pena celebrar.</p>
       </div>
     </div>
   </div>
@@ -643,9 +655,8 @@ function selectAmount(btn, amt) {
   document.getElementById('selectedAmount').textContent = amt+'€';
 }
 function donar() {
-  toast('❤️ Obrigado pelo teu apoio de '+selectedAmt+'€! A redirecionar para pagamento seguro...');
-  // Aqui integrarias PayPal, MB Way, Stripe, etc.
-  setTimeout(()=>window.open('https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID&amount='+selectedAmt,'_blank'),1200);
+  toast('🌟 Obrigado por apoiares a positividade! A redirecionar...');
+  setTimeout(()=>window.open('https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID','_blank'),1200);
 }
 
 // ── NEWSLETTER ───────────────────────────────────────────
