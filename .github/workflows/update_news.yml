@@ -29,7 +29,7 @@ jobs:
           python-version: '3.10'
           
       - name: Install dependencies
-        run: pip install requests feedparser python-dateutil beautifulsoup4
+        run: pip install requests feedparser python-dateutil beautifulsoup4 deep-translator
         
       - name: Fetch News
         run: python fetch_news.py
