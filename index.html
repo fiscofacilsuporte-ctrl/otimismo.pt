@@ -569,6 +569,7 @@ async function loadNews() {
   filtered = [...NEWS];
   document.getElementById('statTotal').textContent = NEWS.length;
   renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
+  checkDeepLink();
 }
 
 function checkMobile() {
@@ -624,7 +625,7 @@ function renderGrid(reset) {
   }
   slice.forEach((n,i) => {
     const card = document.createElement('a');
-    card.className='news-card'; card.href=n.url; card.target='_blank'; card.style.animationDelay=(i*.07)+'s';
+    card.className='news-card'; card.href=n.url; card.target='_blank'; card.onclick=(e)=>{ history.replaceState(null,null,'#noticia='+getNewsId(n)); }; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
     card.innerHTML=(n.img?'<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.src=\'\';this.outerHTML=\'<div class=thumb>\'+catEmoji(\''+n.cat+'\')+\'</div>\'">'
       :'<div class="thumb">'+catEmoji(n.cat)+'</div>')
