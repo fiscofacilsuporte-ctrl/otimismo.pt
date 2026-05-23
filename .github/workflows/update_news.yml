@@ -1,24 +1,55 @@
-name: Update News
+name: Deploy Otimismo.pt
+
 on:
-  workflow_dispatch:
+  push:
+    branches: ["main"]
   schedule:
     - cron: '0 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  update:
+  update-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-      - name: Install deps
+          
+      - name: Install dependencies
         run: pip install requests feedparser python-dateutil
-      - name: Run script
+        
+      - name: Fetch News
         run: python fetch_news.py
-      - name: Commit and Push
+        
+      - name: Commit news changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add noticias.json
-          git commit -m "Update news" || exit 0
-          git push
+          git commit -m "Automated news update" || echo "No changes to commit"
+          git push origin main || echo "Push failed"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
