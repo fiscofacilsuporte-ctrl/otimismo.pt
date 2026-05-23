@@ -605,9 +605,14 @@ function renderFeatured() {
   updateBarometer();
 }
 function fsmCard(n) {
-  const thumb = n.img
-    ? '<img src="'+n.img+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" onerror="this.outerHTML=\'<div style=\\\"width:64px;height:64px;border-radius:var(--radius-sm);background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;\\\">'+catEmoji(n.cat)+'</div>\'">'
-    : '<div class="thumb">'+catEmoji(n.cat)+'</div>';
+  const em = catEmoji(n.cat);
+  let thumb;
+  if (n.img) {
+    thumb = '<img src="'+n.img+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" '
+      +'onerror="this.parentNode.replaceChild(Object.assign(document.createElement(\'div\'),{innerHTML:\''+em+'\',style:\'width:64px;height:64px;border-radius:6px;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;\'}),this)">';
+  } else {
+    thumb = '<div class="thumb">'+em+'</div>';
+  }
   return '<a href="'+n.url+'" class="feat-card-sm" target="_blank">'
     +thumb
     +'<div class="info"><div class="cat-tag">'+CATS[n.cat]+'</div>'
@@ -627,8 +632,10 @@ function renderGrid(reset) {
     const card = document.createElement('a');
     card.className='news-card'; card.href=n.url; card.target='_blank'; card.onclick=(e)=>{ history.replaceState(null,null,'#noticia='+getNewsId(n)); }; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
-    card.innerHTML=(n.img?'<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.src=\'\';this.outerHTML=\'<div class=thumb>\'+catEmoji(\''+n.cat+'\')+\'</div>\'">'
-      :'<div class="thumb">'+catEmoji(n.cat)+'</div>')
+    const imgHtml = n.img
+      ? '<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.parentNode.replaceChild(Object.assign(document.createElement(\'div\'),{className:\'thumb\',textContent:\''+catEmoji(n.cat)+'\'}),this)">'
+      : '<div class="thumb">'+catEmoji(n.cat)+'</div>';
+    card.innerHTML=imgHtml
       +'<div class="body"><span class="cat-pill '+n.cat+'">'+CATS[n.cat]+'</span>'
       +'<div class="card-title">'+n.title+'</div>'
       +'<div class="card-summary">'+n.summary+'</div>'
@@ -711,7 +718,19 @@ function selectAmount(btn, amt) {
   document.getElementById('amt').textContent = amt;
 }
 function donate() {
-  showToast('Obrigado! A redirecionar para o checkout...');
+  if (typeof kofiWidgetOverlay !== 'undefined') {
+    kofiWidgetOverlay.draw('otimismopt', {
+      'type': 'widget',
+      'page.id': 'otimismopt',
+      'element.id': 'kofi-widget-overlay-otimismopt',
+      'button.text': 'Apoiar',
+      'button.color': '#1d4ed8',
+      'button.text.color': '#fff'
+    });
+  } else {
+    window.open('https://ko-fi.com/otimismopt', '_blank');
+  }
+  showToast('Obrigado pelo teu apoio! ❤️');
 }
 function subscribe() {
   showToast('Obrigado! Subscrição efetuada.');
@@ -736,5 +755,8 @@ function catEmoji(c) {
   return m[c] || '📰';
 }
 </script>
+<!-- Ko-fi Widget -->
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<div id='kofi-widget-overlay-otimismopt'></div>
 </body>
 </html>
