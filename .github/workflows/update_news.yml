@@ -42,6 +42,10 @@ jobs:
           git commit -m "Automated news update" || echo "No changes to commit"
           git push origin main || echo "Push failed"
 
+      # --- AQUI É A MUDANÇA: Sincronizar antes de publicar ---
+      - name: Pull latest changes
+        run: git pull origin main
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
