@@ -1,221 +1,300 @@
-import os, requests, json, feedparser, re
-from datetime import datetime
-from dateutil import parser
-from urllib.parse import quote
-from bs4 import BeautifulSoup
-from deep_translator import GoogleTranslator
-import random
+#!/usr/bin/env python3
+"""
+fetch_news.py — Gerador de noticias.json para otimismo.pt
+Executa via GitHub Actions (diariamente ou manualmente).
 
-# ── PALAVRAS-CHAVE ──────────────────────────────────────────────────────────
-POSITIVE_KEYWORDS = ['sucesso', 'vitória', 'triunfo', 'conquista', 'avanço', 'progresso', 'inovação', 'melhoria', 'desenvolvimento', 'crescimento', 'esperança', 'inspirador', 'incrível', 'fantástico', 'maravilhoso', 'extraordinário', 'positivo', 'bom', 'excelente', 'ótimo', 'magnífico', 'solidariedade', 'ajuda', 'humanitário', 'voluntário', 'caridade', 'descoberta', 'pesquisa', 'científico', 'estudo', 'investigação', 'preservação', 'conservação', 'sustentável', 'renovável', 'ambiental', 'saúde', 'bem-estar', 'cura', 'tratamento', 'vacinação', 'educação', 'aprendizado', 'conhecimento', 'paz', 'acordo', 'cooperação', 'união', 'comunidade', 'recorde', 'melhor', 'primeira vez', 'novo', 'inédito', 'resgate', 'salvação', 'proteção', 'segurança', 'prêmio', 'reconhecimento', 'homenagem', 'celebração', 'oportunidade', 'chance', 'possibilidade', 'potencial', 'liberdade', 'direitos', 'justiça', 'igualdade', 'inclusão', 'generosidade', 'gentileza',
-                      # English keywords for English sources
-                      'success', 'victory', 'triumph', 'advance', 'progress', 'innovation', 'improvement', 'development', 'growth', 'hope', 'inspiring', 'incredible', 'fantastic', 'wonderful', 'extraordinary', 'positive', 'good', 'excellent', 'great', 'solidarity', 'help', 'humanitarian', 'volunteer', 'charity', 'discovery', 'research', 'scientific', 'conservation', 'sustainable', 'renewable', 'health', 'healing', 'treatment', 'education', 'learning', 'knowledge', 'peace', 'cooperation', 'community', 'record', 'best', 'first time', 'new', 'rescue', 'protection', 'safety', 'award', 'recognition', 'celebration', 'opportunity', 'potential', 'freedom', 'rights', 'justice', 'equality', 'inclusion', 'generosity', 'kindness', 'breakthrough', 'solution', 'clean', 'green', 'save', 'recover', 'thrive', 'flourish', 'restore', 'empower', 'transform', 'uplift', 'joy', 'happy', 'happiness', 'smile', 'love', 'care']
-NEGATIVE_KEYWORDS = ['morte', 'crime', 'guerra', 'crise', 'bloqueio', 'erro', 'falha', 'opinião', 'colunista', 'death', 'war', 'crisis', 'murder', 'attack', 'violence', 'violência', 'acidente', 'desastre', 'catástrofe', 'tragédia', 'doença', 'epidemia', 'pandemia', 'corrupção', 'fraude', 'escândalo', 'roubo', 'assalto', 'pobreza', 'miséria', 'fome', 'desemprego', 'recessão', 'depressão', 'ansiedade', 'suicídio', 'automutilação', 'conflito', 'disputa', 'tensão', 'ameaça', 'perigo', 'perda', 'luto', 'sofrimento', 'dor', 'angústia', 'fechamento', 'encerramento', 'cancelamento', 'suspensão', 'adiamento', 'assassinato', 'tiroteio', 'vítima', 'ferido', 'ataque', 'terrorismo', 'mortalidade', 'letalidade']
-BLACKLIST_KEYWORDS = ['hantavírus', 'ebola', 'ébola', 'dengue', 'malária', 'surto', 'contágio', 'infecção', 'infectado', 'morto', 'falecido', 'homicídio', 'violação', 'guerra', 'bombardeio', 'míssil', 'exército', 'combate', 'inflação', 'dívida', 'falência', 'corte', 'greve', 'protesto', 'manifestação', 'preso', 'detido', 'tribunal', 'julgamento', 'pena', 'prisão']
+Fontes priorizadas para notícias positivas em português:
+  • Good News Network (EN) — especializada em boas notícias, alta qualidade
+  • Positive News UK (EN) — jornalismo construtivo
+  • Público (PT) — ciência, sociedade, ambiente
+  • Observador (PT) — tecnologia, inovação, economia
+  • Jornal de Negócios (PT) — economia positiva
+  • Eco.pt (PT) — sustentabilidade, ambiente
+  • TSF (PT) — cultura, sociedade
+  • RTP Notícias (PT) — geral, desporto
+  • Shifter (PT) — tecnologia, startups
+  • Diário de Notícias (PT) — sociedade, cultura
+  • Solutions Journalism Network — jornalismo de soluções
+  • BBC Good News — positivo internacional
 
-# Fontes em inglês que precisam de tradução
-ENGLISH_SOURCES = {'Good News Network', 'Positive News', 'Reasons to be Cheerful', 'The Guardian', 'Google News'}
+Categorias suportadas: ciencia, tecnologia, ambiente, saude, sociedade, economia, desporto, cultura
+"""
 
-# ── TRADUÇÃO ────────────────────────────────────────────────────────────────
-_translator = GoogleTranslator(source='auto', target='pt')
+import json
+import time
+import re
+import hashlib
+import ssl
+from datetime import datetime, timezone
+from urllib.request import urlopen, Request
+from xml.etree import ElementTree as ET
 
-def translate_to_pt(text):
-    """Traduz texto para português. Retorna o original em caso de erro."""
-    if not text or not text.strip():
-        return text
-    try:
-        # GoogleTranslator tem limite de ~5000 chars; truncamos se necessário
-        chunk = text[:4500]
-        result = _translator.translate(chunk)
-        return result if result else text
-    except Exception as e:
-        print(f"  [tradução] erro: {e}")
-        return text
+# ── CONFIGURAÇÃO ─────────────────────────────────────────
 
-def maybe_translate(title, summary, source_name):
-    """Traduz título e sumário se a fonte for inglesa."""
-    if source_name in ENGLISH_SOURCES:
-        title_pt   = translate_to_pt(title)
-        summary_pt = translate_to_pt(summary)
-        return title_pt, summary_pt
-    return title, summary
+OUTPUT_FILE   = "noticias.json"
+MAX_NEWS      = 30      # máximo de notícias no JSON final
+MIN_SCORE     = 0.60    # score mínimo para incluir
+FETCH_TIMEOUT = 12      # segundos por feed
 
-# ── EXTRAÇÃO DE IMAGEM ──────────────────────────────────────────────────────
-def extract_image(entry):
-    """Tenta obter imagem do RSS. Se não encontrar, vai buscar og:image à página."""
-    # 1. media:content
-    if hasattr(entry, 'media_content') and entry.media_content:
-        return entry.media_content[0].get('url')
-    # 2. media:thumbnail
-    if hasattr(entry, 'media_thumbnail') and entry.media_thumbnail:
-        return entry.media_thumbnail[0].get('url')
-    # 3. enclosures
-    if hasattr(entry, 'enclosures') and entry.enclosures:
-        for enc in entry.enclosures:
-            if enc.get('type', '').startswith('image'):
-                return enc.get('href') or enc.get('url')
-    # 4. links com type image
-    if hasattr(entry, 'links'):
-        for link in entry.links:
-            if 'image' in link.get('type', ''):
-                return link.get('href')
-    # 5. <img> dentro do conteúdo HTML do feed
-    content = ''
-    if hasattr(entry, 'summary'):
-        content += entry.summary
-    if hasattr(entry, 'content') and entry.content:
-        content += entry.content[0].value
-    if content:
-        soup = BeautifulSoup(content, 'html.parser')
-        img = soup.find('img')
-        if img and img.get('src'):
-            return img['src']
-    # 6. Fallback: og:image da página do artigo
-    try:
-        url = entry.link
-        # Evitar URLs do Google News (redirect — og:image não funciona)
-        if 'news.google.com' not in url:
-            resp = requests.get(url, timeout=6, headers={'User-Agent': 'Mozilla/5.0'})
-            if resp.ok:
-                page_soup = BeautifulSoup(resp.text, 'html.parser')
-                og = page_soup.find('meta', property='og:image') or \
-                     page_soup.find('meta', attrs={'name': 'og:image'}) or \
-                     page_soup.find('meta', attrs={'name': 'twitter:image'}) or \
-                     page_soup.find('meta', property='twitter:image')
-                if og and og.get('content'):
-                    return og['content']
-    except Exception:
-        pass
+# ── FONTES RSS / ATOM ────────────────────────────────────
+# Formato: (url, source_name, default_category, is_english)
+FEEDS = [
+    # ── PORTUGUÊS ─────────────────────────────────────────
+    ("https://feeds.feedburner.com/PublicoCienciaETecnologia",
+     "Público", "ciencia", False),
+    ("https://www.publico.pt/api/rss/ambiente",
+     "Público", "ambiente", False),
+    ("https://www.publico.pt/api/rss/economia",
+     "Público", "economia", False),
+    ("https://observador.pt/tag/tecnologia/feed/",
+     "Observador", "tecnologia", False),
+    ("https://observador.pt/tag/ciencia/feed/",
+     "Observador", "ciencia", False),
+    ("https://observador.pt/tag/saude/feed/",
+     "Observador", "saude", False),
+    ("https://observador.pt/seccao/desporto/feed/",
+     "Observador", "desporto", False),
+    ("https://www.jornaldenegocios.pt/rss",
+     "Jornal de Negócios", "economia", False),
+    ("https://www.tsf.pt/rss/",
+     "TSF", "sociedade", False),
+    ("https://www.rtp.pt/noticias/rss/desporto",
+     "RTP", "desporto", False),
+    ("https://eco.pt/feed/",
+     "ECO", "ambiente", False),
+    ("https://www.dn.pt/rss/",
+     "Diário de Notícias", "sociedade", False),
+    ("https://shifter.sapo.pt/feed/",
+     "Shifter", "tecnologia", False),
+
+    # ── INGLÊS (notícias positivas especializadas) ────────
+    ("https://www.goodnewsnetwork.org/feed/",
+     "Good News Network", "sociedade", True),
+    ("https://www.positive.news/feed/",
+     "Positive News", "sociedade", True),
+    ("http://feeds.bbci.co.uk/news/science_and_environment/rss.xml",
+     "BBC News", "ciencia", True),
+    ("http://feeds.bbci.co.uk/news/health/rss.xml",
+     "BBC News", "saude", True),
+    ("https://feeds.reuters.com/reuters/scienceNews",
+     "Reuters", "ciencia", True),
+    ("https://www.sciencedaily.com/rss/top/science.xml",
+     "ScienceDaily", "ciencia", True),
+]
+
+# ── PALAVRAS-CHAVE POSITIVAS ─────────────────────────────
+
+POSITIVE_KEYWORDS_PT = [
+    "recorde","conquista","vitória","primeiro","pioneiro","sucesso","inovação",
+    "descoberta","cura","avanço","melhoria","crescimento","renovável","sustentável",
+    "positivo","esperança","histórico","prémio","galardão","campeão","celebração",
+    "progresso","transformação","revolução","recuperação","protegido","salvo",
+    "tratamento","vacina","solução","investimento","criação","emprego","lançamento",
+    "aprovado","aprovação","recordista","medalha","ouro","prata","bronze",
+    "parceria","acordo","colaboração","doação","voluntário","solidariedade",
+    "sustentabilidade","carbono neutro","energia limpa","biodiversidade",
+    "preservação","restauração","conservação","habitat","espécie","população",
+    "pesquisa","investigação","estudo","publicação","nature","science",
+]
+
+POSITIVE_KEYWORDS_EN = [
+    "record","breakthrough","discover","cure","advance","improvement","growth",
+    "renewable","sustainable","positive","hope","historic","prize","award",
+    "champion","celebrate","progress","transform","recovery","protected","save",
+    "treatment","vaccine","solution","investment","create","launch","approve",
+    "medal","gold","silver","bronze","partnership","agreement","collaborate",
+    "donate","volunteer","solidarity","clean energy","biodiversity","preserve",
+    "restore","conservation","habitat","species","research","study","nature",
+    "science","first","pioneer","success","innovate","revive","green",
+    "solar","wind","electric","zero emission","carbon neutral","thriving","flourish",
+]
+
+NEGATIVE_KEYWORDS = [
+    "morte","morto","assassin","homicídio","acidente","crise","colapso","falência",
+    "desastre","tragédia","conflito","guerra","ataque","terrorismo","corrupção",
+    "escândalo","fraud","crime","roubo","violência","abuso","vitima","vítima",
+    "dead","death","kill","murder","crash","disaster","collapse","bankrupt",
+    "tragedy","conflict","war","attack","terrorism","corruption","scandal",
+    "robbery","violence","abuse","victim","crisis","fail",
+]
+
+CATEGORY_KEYWORDS = {
+    "ciencia":    ["ciência","científ","investigação","descoberta","estudo","pesquisa",
+                   "nature","science","research","discover","study","laboratory"],
+    "tecnologia": ["tecnologia","tech","digital","inteligência artificial","ia","ai",
+                   "robot","startup","software","hardware","app","internet","5g","drone"],
+    "ambiente":   ["ambiente","clima","carbono","energia","renovável","solar","vento",
+                   "oceano","floresta","biodiversidade","espécie","ecosystem","climate",
+                   "renewable","green","sustainable","nature","wildlife","ocean","forest"],
+    "saude":      ["saúde","saude","médico","hospital","vacina","doença","cura","tratamento",
+                   "cancer","vírus","medicina","health","vaccine","cure","treatment","medical"],
+    "economia":   ["economia","económic","pib","emprego","investimento","mercado","empresa",
+                   "exportação","crescimento","economic","gdp","employment","investment","market"],
+    "desporto":   ["desporto","futebol","basquete","natação","atletismo","olimp","campeão",
+                   "sport","football","soccer","basketball","swimming","champion","gold medal"],
+    "cultura":    ["cultura","arte","música","cinema","teatro","literatura","museu","festival",
+                   "culture","art","music","film","theater","literature","museum","festival"],
+    "sociedade":  ["sociedade","comunidade","educação","escola","família","voluntário","solidar",
+                   "society","community","education","school","family","volunteer","solidar"],
+}
+
+# ── UTILITÁRIOS ──────────────────────────────────────────
+
+def make_id(url: str) -> str:
+    return hashlib.md5(url.encode()).hexdigest()[:8]
+
+def strip_html(text: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", text or "")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+def detect_category(title: str, summary: str, default_cat: str) -> str:
+    text = (title + " " + summary).lower()
+    best_cat = default_cat
+    best_count = 0
+    for cat, keywords in CATEGORY_KEYWORDS.items():
+        count = sum(1 for kw in keywords if kw in text)
+        if count > best_count:
+            best_count = count
+            best_cat = cat
+    return best_cat
+
+def score_article(title: str, summary: str, is_english: bool) -> float:
+    """Calcula um score de positividade entre 0.0 e 1.0"""
+    text = (title + " " + summary).lower()
+    pos_kw = POSITIVE_KEYWORDS_EN if is_english else POSITIVE_KEYWORDS_PT
+    pos_score = sum(1 for kw in pos_kw if kw in text)
+    neg_score = sum(1 for kw in NEGATIVE_KEYWORDS if kw in text)
+
+    if neg_score > 0:
+        base = 0.40 - (neg_score * 0.05)
+    else:
+        base = 0.70
+
+    bonus = min(pos_score * 0.03, 0.28)
+    final = min(base + bonus, 0.99)
+    return round(final, 2)
+
+def find_image(item) -> str | None:
+    """Tenta extrair imagem do item RSS"""
+    ns = {"media": "http://search.yahoo.com/mrss/"}
+    for tag in ["media:thumbnail", "media:content"]:
+        el = item.find(tag, ns)
+        if el is not None:
+            url = el.get("url")
+            if url:
+                return url
+
+    enc = item.find("enclosure")
+    if enc is not None:
+        if "image" in enc.get("type", ""):
+            return enc.get("url")
+
+    desc = item.findtext("description") or ""
+    m = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', desc)
+    if m:
+        return m.group(1)
+
     return None
 
-# ── ANÁLISE DE SENTIMENTO ───────────────────────────────────────────────────
-def calculate_sentiment_score(title, summary, is_trusted_source=False):
-    text = (title + ' ' + (summary or '')).lower()
-    for black in BLACKLIST_KEYWORDS:
-        if black in text:
-            return -1.0
-    pos = sum(1 for kw in POSITIVE_KEYWORDS if kw in text)
-    neg = sum(1 for kw in NEGATIVE_KEYWORDS if kw in text)
-    base_score = 0.6 if is_trusted_source else 0.5
-    if neg > 0:
-        return (pos / (pos + (neg * 3))) if pos + neg > 0 else 0.0
-    return max(base_score, pos / (pos + neg) if pos + neg > 0 else base_score)
-
-# ── RSS GENÉRICO ────────────────────────────────────────────────────────────
-def fetch_rss_articles(rss_url, category, source_name=None, is_trusted=False):
+def fetch_feed(url: str, source: str, default_cat: str, is_english: bool) -> list:
+    """Faz fetch de um feed RSS e retorna lista de artigos normalizados"""
     articles = []
     try:
-        feed = feedparser.parse(rss_url)
-        src  = source_name or (feed.feed.title if hasattr(feed.feed, 'title') else 'Fonte')
-        for entry in feed.entries:
-            title   = entry.title
-            summary = entry.summary if hasattr(entry, 'summary') else title
-            score   = calculate_sentiment_score(title, summary, is_trusted)
-            if score >= 0.5:
-                # Traduzir se necessário
-                title_pt, summary_pt = maybe_translate(title, summary, src)
-                articles.append({
-                    'title':   title_pt,
-                    'summary': BeautifulSoup(summary_pt, "html.parser").get_text()[:300] + "...",
-                    'url':     entry.link,
-                    'img':     extract_image(entry),
-                    'source':  src,
-                    'cat':     category,
-                    'date':    parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat(),
-                    'score':   score
-                })
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        req = Request(url, headers={"User-Agent": "otimismo.pt-bot/1.0"})
+        with urlopen(req, timeout=FETCH_TIMEOUT, context=ctx) as r:
+            raw = r.read()
+        root = ET.fromstring(raw)
     except Exception as e:
-        print(f"[RSS] Erro em {rss_url}: {e}")
+        print(f"  ⚠️  Erro ao carregar {source} ({url[:60]}): {e}")
+        return articles
+
+    items = root.findall(".//item")
+    if not items:
+        items = root.findall(".//{http://www.w3.org/2005/Atom}entry")
+
+    for item in items[:10]:
+        title = strip_html(
+            item.findtext("title") or
+            item.findtext("{http://www.w3.org/2005/Atom}title") or ""
+        )
+        if not title:
+            continue
+
+        link = item.findtext("link") or ""
+        atom_link = item.find("{http://www.w3.org/2005/Atom}link")
+        if not link and atom_link is not None:
+            link = atom_link.get("href", "")
+        if not link:
+            continue
+
+        summary = strip_html(
+            item.findtext("description") or
+            item.findtext("{http://www.w3.org/2005/Atom}summary") or
+            item.findtext("{http://www.w3.org/2005/Atom}content") or ""
+        )[:300]
+
+        pub_date = (
+            item.findtext("pubDate") or
+            item.findtext("{http://www.w3.org/2005/Atom}published") or
+            item.findtext("{http://www.w3.org/2005/Atom}updated") or
+            datetime.now(timezone.utc).isoformat()
+        )
+
+        img = find_image(item)
+        s = score_article(title, summary, is_english)
+        cat = detect_category(title, summary, default_cat)
+
+        if s >= MIN_SCORE:
+            articles.append({
+                "id":      make_id(link),
+                "cat":     cat,
+                "title":   title[:200],
+                "summary": summary,
+                "source":  source,
+                "date":    pub_date,
+                "url":     link,
+                "img":     img,
+                "score":   s,
+            })
+
+    print(f"  ✅  {source}: {len(articles)} artigos positivos")
     return articles
 
-# ── GOOGLE NEWS ─────────────────────────────────────────────────────────────
-def fetch_google_news(query, category):
-    articles = []
-    try:
-        url  = f"https://news.google.com/rss/search?q={quote(query)}&hl=pt-PT&gl=PT&ceid=PT:pt"
-        feed = feedparser.parse(url)
-        for entry in feed.entries[:15]:
-            title   = entry.title
-            summary = entry.summary if hasattr(entry, 'summary') else title
-            score   = calculate_sentiment_score(title, summary)
-            if score >= 0.55:
-                articles.append({
-                    'title':   title,
-                    'summary': BeautifulSoup(summary, "html.parser").get_text()[:250] + "...",
-                    'url':     entry.link,
-                    'img':     None,  # Google News redirects — og:image não funciona
-                    'source':  'Google News',
-                    'cat':     category,
-                    'date':    parser.parse(entry.published).isoformat() if hasattr(entry, 'published') else datetime.now().isoformat(),
-                    'score':   score
-                })
-    except Exception as e:
-        print(f"[Google News] Erro: {e}")
-    return articles
+# ── MAIN ─────────────────────────────────────────────────
 
-# ── PRINCIPAL ────────────────────────────────────────────────────────────────
-def fetch_positive_news():
+def main():
+    print("🚀 A iniciar fetch de notícias positivas...")
     all_articles = []
+    seen_urls = set()
 
-    trusted_feeds = [
-        {"url": "https://razoesparaacreditar.com/feed/",              "cat": "sociedade", "name": "Razões para Acreditar"},
-        {"url": "https://www.goodnewsnetwork.org/feed/",              "cat": "sociedade", "name": "Good News Network"},
-        {"url": "https://www.positive.news/feed/",                    "cat": "sociedade", "name": "Positive News"},
-        {"url": "https://www.sicnoticias.pt/rss/boas-noticias",       "cat": "sociedade", "name": "SIC Notícias"},
-        {"url": "https://reasonstobecheerful.world/feed/",            "cat": "sociedade", "name": "Reasons to be Cheerful"}
-    ]
-    general_feeds = [
-        {"url": "https://news.un.org/pt/news/topic/health/feed/rss.xml",                    "cat": "saude",    "name": "ONU News"},
-        {"url": "https://news.un.org/pt/news/topic/culture-and-education/feed/rss.xml",     "cat": "cultura",  "name": "ONU News"},
-        {"url": "https://news.un.org/pt/news/topic/economic-development/feed/rss.xml",      "cat": "economia", "name": "ONU News"},
-        {"url": "https://lifestyle.sapo.pt/rss/saude",                                      "cat": "saude",    "name": "SAPO Lifestyle"},
-        {"url": "https://p3.publico.pt/rss",                                                "cat": "cultura",  "name": "Público P3"},
-        {"url": "https://www.theguardian.com/world/series/the-upside/rss",                  "cat": "sociedade","name": "The Guardian"}
-    ]
+    for feed_url, source, default_cat, is_english in FEEDS:
+        print(f"\n📡 {source} — {feed_url[:60]}...")
+        articles = fetch_feed(feed_url, source, default_cat, is_english)
+        for a in articles:
+            if a["url"] not in seen_urls:
+                seen_urls.add(a["url"])
+                all_articles.append(a)
+        time.sleep(0.5)
 
-    for f in trusted_feeds:
-        print(f"[trusted] {f['name']} ...")
-        all_articles.extend(fetch_rss_articles(f["url"], f["cat"], f.get("name"), True))
-    for f in general_feeds:
-        print(f"[general] {f['name']} ...")
-        all_articles.extend(fetch_rss_articles(f["url"], f["cat"], f.get("name"), False))
+    all_articles.sort(key=lambda x: x["score"], reverse=True)
+    final = all_articles[:MAX_NEWS]
 
-    queries = [
-        {"query": "inovação tecnológica portugal",       "cat": "tecnologia"},
-        {"query": "sustentabilidade ambiental sucesso",  "cat": "ambiente"},
-        {"query": "ciência descoberta fantástica",       "cat": "ciencia"},
-        {"query": "desporto vitória inspiradora portugal","cat": "desporto"},
-        {"query": "economia crescimento positivo portugal","cat": "economia"}
-    ]
-    for q in queries:
-        all_articles.extend(fetch_google_news(q["query"], q["cat"]))
+    output = {
+        "last_update": datetime.now(timezone.utc).strftime("%d/%m/%Y %H:%M UTC"),
+        "total":       len(final),
+        "news":        final,
+    }
 
-    # Deduplicar
-    seen, unique = set(), []
-    for a in all_articles:
-        if a['url'] not in seen:
-            seen.add(a['url'])
-            unique.append(a)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # Diversificar por fonte (máx 3 por fonte)
-    random.shuffle(unique)
-    source_counts, diversified = {}, []
-    for a in unique:
-        src = a['source']
-        if source_counts.get(src, 0) < 3:
-            diversified.append(a)
-            source_counts[src] = source_counts.get(src, 0) + 1
-
-    # Top 24 por score
-    final = sorted(diversified, key=lambda x: x['score'], reverse=True)[:24]
-
+    print(f"\n✨ noticias.json gerado com {len(final)} notícias positivas!")
     if final:
-        with open("noticias.json", "w", encoding="utf-8") as f:
-            json.dump({"last_update": datetime.now().strftime("%d/%m/%Y %H:%M"), "news": final}, f, ensure_ascii=False, indent=2)
-        imgs_ok = sum(1 for a in final if a['img'])
-        print(f"✅ {len(final)} notícias guardadas | {imgs_ok} com imagem | {len(final)-imgs_ok} sem imagem")
-    else:
-        print("⚠️  Nenhuma notícia passou os filtros.")
+        print(f"   Score médio: {sum(a['score'] for a in final)/len(final):.2f}")
 
 if __name__ == "__main__":
-    fetch_positive_news()
+    main()
