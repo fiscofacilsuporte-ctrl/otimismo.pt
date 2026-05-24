@@ -284,12 +284,20 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
       <p>Uma plataforma dedicada a partilhar histórias de impacto positivo, progresso humano e esperança, atualizada diariamente.</p>
       <div class="hero-stats">
         <div class="hero-stat">
-          <strong id="statTotal">0</strong>
-          <span>Histórias</span>
+          <strong id="statTotal">—</strong>
+          <span>Histórias hoje</span>
         </div>
         <div class="hero-stat">
-          <strong>100%</strong>
-          <span>Positivo</span>
+          <strong id="statSources">20+</strong>
+          <span>Fontes verificadas</span>
+        </div>
+        <div class="hero-stat">
+          <strong id="statScore">—</strong>
+          <span>Score médio</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Diário</strong>
+          <span>Atualização</span>
         </div>
       </div>
     </div>
@@ -609,7 +617,7 @@ function renderFeatured() {
 function fsmCard(n) {
   const em = catEmoji(n.cat);
   const thumb = n.img
-    ? '<img src="'+n.img+'" data-em="'+em+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" class="img-fallback">'
+    ? '<img src="'+n.img+'" data-em="'+em+'" data-cat="'+n.cat+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" class="img-fallback">'
     : '<div class="thumb">'+em+'</div>';
   return '<a href="'+n.url+'" class="feat-card-sm" target="_blank">'
     +thumb
@@ -631,7 +639,7 @@ function renderGrid(reset) {
     card.className='news-card'; card.href=n.url; card.target='_blank'; card.onclick=(e)=>{ history.replaceState(null,null,'#noticia='+getNewsId(n)); }; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
     const imgHtml = n.img
-      ? '<img class="thumb img-fallback" src="'+n.img+'" data-em="'+catEmoji(n.cat)+'" alt="" loading="lazy">'
+      ? '<img class="thumb img-fallback" src="'+n.img+'" data-em="'+catEmoji(n.cat)+'" data-cat="'+n.cat+'" alt="" loading="lazy">'
       : '<div class="thumb">'+catEmoji(n.cat)+'</div>';
     card.innerHTML=imgHtml
       +'<div class="body"><span class="cat-pill '+n.cat+'">'+CATS[n.cat]+'</span>'
@@ -747,22 +755,27 @@ function catEmoji(c) {
 function getNewsId(n) { return n.id || ''; }
 function checkDeepLink() { /* reservado para navegação por hash */ }
 
-// ── IMAGENS: delegação global de erro ─────────────────────
-// Substitui qualquer <img class="img-fallback"> que falhe pelo emoji da categoria
+// ── IMAGENS: fallback Unsplash por categoria ──────────────
+const UNSPLASH_FALLBACK = {
+  ciencia:    'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&q=70',
+  tecnologia: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70',
+  ambiente:   'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=70',
+  saude:      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&q=70',
+  economia:   'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=70',
+  desporto:   'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=70',
+  cultura:    'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&q=70',
+  sociedade:  'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=70',
+  default:    'https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=70'
+};
 document.addEventListener('error', function(e) {
   const el = e.target;
   if (el.tagName !== 'IMG' || !el.classList.contains('img-fallback')) return;
-  const em = el.dataset.em || '📰';
-  const fb = document.createElement('div');
-  fb.className = 'thumb';
-  fb.textContent = em;
-  // Copia dimensões inline se existirem (para os cards de destaque)
-  if (el.style.width) {
-    fb.style.cssText = 'width:'+el.style.width+';height:'+el.style.height
-      +';border-radius:var(--radius-sm);background:var(--blue-100)'
-      +';display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;';
-  }
-  if (el.parentNode) el.parentNode.replaceChild(fb, el);
+  const cat = el.dataset.cat || 'default';
+  const fallbackUrl = UNSPLASH_FALLBACK[cat] || UNSPLASH_FALLBACK.default;
+  // Evitar loop infinito
+  if (el.src === fallbackUrl) return;
+  el.src = fallbackUrl;
+  el.onerror = null;
 }, true);
 
 // ── TRADUÇÃO EN → PT (MyMemory API, gratuita) ────────────
