@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 21:19 UTC",
+  "last_update": "24/05/2026 21:32 UTC",
   "total": 27,
   "news": [
     {
@@ -146,6 +146,17 @@
       "score": 0.76
     },
     {
+      "id": "5fda504c",
+      "cat": "tecnologia",
+      "title": "\"Imortalizados\". Tralhão diz ainda não ter noção do que fez",
+      "summary": "O feito é histórico, mas há quem diga que \"não é irrepetível\": Torreense venceu a sua primeira Taça de Portugal e é a primeira equipa da Segunda Liga a consegui-lo. Segue-se uma \"festa rija\".",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 22:20:10 +0100",
+      "url": "https://observador.pt/2026/05/24/ainda-nao-tenho-nocao-do-que-atingimos-104-degraus-dois-comboios-e-a-historia-que-o-torreense-escreveu-no-jamor/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2298:nowe:0:432/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24220306/gettyimages-2277490730-scaled.jpg",
+      "score": 0.73
+    },
+    {
       "id": "50b5bbe6",
       "cat": "tecnologia",
       "title": "Torreense bate Sporting e conquista a Taça de Portugal",
@@ -247,23 +258,12 @@
     {
       "id": "670b0952",
       "cat": "tecnologia",
-      "title": "As notícias das 22h",
-      "summary": "As notícias na Rádio Observador. Aconteça o que acontecer.",
+      "title": "22h. Torreense vence aTaça de Portugal. Sporting perde 2-1",
+      "summary": "A equipa de Torres Vedras fez hoje história ao tornar-se na 1ª equipa da 2ª Liga a vencer uma Taça de Portugal. Ainda, Donald Trump confirma que entendimento com o Irão não está fechado.",
       "source": "Observador",
       "date": "Sun, 24 May 2026 22:14:18 +0100",
       "url": "https://observador.pt/programas/noticiario/as-noticias-das-22h-1778/",
       "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "762342a7",
-      "cat": "tecnologia",
-      "title": "SCP X Torreense. \"Penálti e vermelho bem dados\"",
-      "summary": "Pedro Henriques elogia decisões cruciais da equipa de arbitragem na expulsão de Maxi Araújo e no penálti assinalado. O áudio-árbitro diz ainda que os assistentes estiveram muito bem nos foras de jogo.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 22:05:44 +0100",
-      "url": "https://observador.pt/programas/sem-falta/scp-x-torreense-penalti-e-vermelho-bem-dados/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/05/23172325/770-podcast-sem-falta-betclic.jpg",
       "score": 0.7
     },
     {
