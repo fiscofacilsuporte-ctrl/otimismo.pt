@@ -220,6 +220,22 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
   .hero h1 { font-size:1.6rem; }
   .featured-grid { grid-template-columns:1fr; }
 }
+
+/* ── MODAL LEGAL ── */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(26,43,60,.55); z-index:9000; align-items:center; justify-content:center; padding:20px; }
+.modal-overlay.open { display:flex; }
+.modal-box { background:var(--white); border-radius:var(--radius-lg); max-width:680px; width:100%; max-height:88vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,.22); animation:fadeUp .25s ease; }
+.modal-head { position:sticky; top:0; background:var(--white); display:flex; align-items:center; justify-content:space-between; padding:20px 28px 16px; border-bottom:1px solid var(--gray-200); z-index:1; }
+.modal-head h2 { font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--navy); }
+.modal-close { background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--gray-400); line-height:1; padding:4px 8px; border-radius:var(--radius-sm); transition:background .15s; }
+.modal-close:hover { background:var(--gray-100); color:var(--navy); }
+.modal-body { padding:24px 28px 32px; font-size:.92rem; color:var(--gray-600); line-height:1.75; }
+.modal-body h3 { font-family:var(--font-serif); font-size:1rem; font-weight:700; color:var(--navy); margin:20px 0 6px; }
+.modal-body h3:first-child { margin-top:0; }
+.modal-body p { margin-bottom:12px; }
+.modal-body ul { padding-left:20px; margin-bottom:12px; }
+.modal-body ul li { margin-bottom:6px; }
+.modal-body a { color:var(--blue-400); }
 </style>
 </head>
 <body>
@@ -494,10 +510,10 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
-      <a href="#">Política de Privacidade</a>
-      <a href="#">Termos de Uso</a>
+      <a href="#" onclick="openModal('privacidade');return false;">Política de Privacidade</a>
+      <a href="#" onclick="openModal('termos');return false;">Termos de Uso</a>
       <a href="#">Publicidade</a>
-      <a href="#">Direitos de Autor</a>
+      <a href="#" onclick="openModal('direitos');return false;">Direitos de Autor</a>
     </div>
   </div>
   <div class="footer-bottom">
@@ -834,3 +850,129 @@ async function translateENNews() {
 <!-- Ko-fi: adiciona o teu utilizador em donate() acima -->
 </body>
 </html>
+
+<!-- ── MODAIS LEGAIS ── -->
+
+<!-- Política de Privacidade -->
+<div class="modal-overlay" id="modal-privacidade" onclick="closeModalOutside(event,'privacidade')">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2>🔒 Política de Privacidade</h2>
+      <button class="modal-close" onclick="closeModal('privacidade')" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>1. Quem somos</h3>
+      <p>O <strong>otimismo.pt</strong> é uma plataforma de curadoria de notícias positivas, operada de forma independente e sem fins lucrativos diretos, com sede em Portugal.</p>
+
+      <h3>2. Dados que recolhemos</h3>
+      <p>O otimismo.pt não recolhe, processa nem armazena dados pessoais de forma direta. Não existem formulários de registo, contas de utilizador nem bases de dados de leitores.</p>
+      <ul>
+        <li><strong>Newsletter:</strong> Caso submeta o seu email no formulário de newsletter, este será utilizado exclusivamente para o envio do boletim semanal. Nunca partilhamos o seu email com terceiros.</li>
+        <li><strong>Cookies de publicidade:</strong> O site utiliza o Google AdSense para publicidade. O Google pode usar cookies para personalizar anúncios. Consulte a <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade da Google</a> para mais detalhes.</li>
+        <li><strong>Dados de navegação:</strong> Podemos usar ferramentas de análise anónima (ex. Google Analytics) para compreender o tráfego do site, sem identificar utilizadores individuais.</li>
+      </ul>
+
+      <h3>3. Finalidade do tratamento</h3>
+      <p>Os dados de navegação são utilizados exclusivamente para fins estatísticos e de melhoria da experiência do utilizador. Não são vendidos, cedidos nem utilizados para fins comerciais próprios.</p>
+
+      <h3>4. Os seus direitos</h3>
+      <p>Ao abrigo do Regulamento Geral de Proteção de Dados (RGPD), tem direito de acesso, retificação, apagamento e oposição ao tratamento dos seus dados. Para exercer estes direitos, contacte-nos em <a href="mailto:fiscofacil.support@gmail.com">fiscofacil.support@gmail.com</a>.</p>
+
+      <h3>5. Alterações a esta política</h3>
+      <p>Reservamo-nos o direito de atualizar esta política. A versão mais recente estará sempre disponível nesta página. Última atualização: maio de 2025.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Termos de Uso -->
+<div class="modal-overlay" id="modal-termos" onclick="closeModalOutside(event,'termos')">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2>📋 Termos de Uso</h2>
+      <button class="modal-close" onclick="closeModal('termos')" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>1. Aceitação dos termos</h3>
+      <p>Ao aceder e utilizar o <strong>otimismo.pt</strong>, aceita os presentes Termos de Uso. Se não concordar com qualquer parte destes termos, deverá cessar a utilização do site.</p>
+
+      <h3>2. Finalidade do serviço</h3>
+      <p>O otimismo.pt é uma plataforma de curadoria editorial que agrega, traduz e apresenta notícias com cariz positivo provenientes de fontes jornalísticas públicas (RSS e feeds abertos). O serviço é fornecido gratuitamente e sem garantias de disponibilidade contínua.</p>
+
+      <h3>3. Conteúdo e propriedade intelectual</h3>
+      <p>Os títulos, resumos e imagens exibidos no otimismo.pt pertencem às suas fontes originais. O otimismo.pt não reivindica qualquer direito de propriedade sobre o conteúdo noticioso agregado. Cada artigo inclui um link direto para a fonte original, onde pode ler a notícia completa.</p>
+
+      <h3>4. Limitação de responsabilidade</h3>
+      <p>O otimismo.pt não se responsabiliza pela exatidão, completude ou atualidade das notícias publicadas pelas fontes originais. A curadoria baseia-se em critérios editoriais automáticos e humanos, mas podem ocorrer erros. Recomendamos sempre a leitura do artigo original.</p>
+
+      <h3>5. Utilização permitida</h3>
+      <ul>
+        <li>Leitura e partilha pessoal de artigos (com atribuição à fonte).</li>
+        <li>Partilha de links do otimismo.pt em redes sociais e mensagens pessoais.</li>
+      </ul>
+
+      <h3>6. Utilização proibida</h3>
+      <ul>
+        <li>Scraping, extração automatizada ou reprodução massiva de conteúdo.</li>
+        <li>Utilização do conteúdo para fins comerciais sem autorização prévia.</li>
+        <li>Qualquer uso que viole os direitos de autor das fontes originais.</li>
+      </ul>
+
+      <h3>7. Alterações</h3>
+      <p>Reservamo-nos o direito de modificar estes termos a qualquer momento. Recomendamos a consulta periódica desta página. Contacto: <a href="mailto:fiscofacil.support@gmail.com">fiscofacil.support@gmail.com</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Direitos de Autor -->
+<div class="modal-overlay" id="modal-direitos" onclick="closeModalOutside(event,'direitos')">
+  <div class="modal-box">
+    <div class="modal-head">
+      <h2>©️ Direitos de Autor</h2>
+      <button class="modal-close" onclick="closeModal('direitos')" aria-label="Fechar">✕</button>
+    </div>
+    <div class="modal-body">
+      <h3>Modelo editorial do otimismo.pt</h3>
+      <p>O <strong>otimismo.pt</strong> é uma plataforma de <em>curadoria</em> e não de produção noticiosa. Todo o conteúdo exibido — artigos, imagens e resumos — é <strong>propriedade das respetivas fontes originais</strong> (jornais, revistas, agências noticiosas e portais de informação).</p>
+
+      <h3>Como funciona</h3>
+      <p>O site agrega automaticamente notícias através de feeds RSS públicos disponibilizados pelos meios de comunicação. Cada entrada inclui:</p>
+      <ul>
+        <li>Um título e resumo retirado do feed original.</li>
+        <li>O nome e logótipo da fonte de origem.</li>
+        <li>Um <strong>link direto para o artigo completo</strong> no site do editor original.</li>
+      </ul>
+      <p>As notícias <strong>não são reproduzidas na íntegra</strong> — o utilizador é sempre reencaminhado para a fonte original para ler o artigo completo.</p>
+
+      <h3>Créditos e atribuição</h3>
+      <p>Respeitamos integralmente os direitos de propriedade intelectual. Caso seja titular de direitos sobre algum conteúdo exibido e deseje que seja removido, contacte-nos:</p>
+      <p><a href="mailto:fiscofacil.support@gmail.com">fiscofacil.support@gmail.com</a></p>
+      <p>Comprometemo-nos a dar resposta e, se aplicável, remover o conteúdo num prazo máximo de 48 horas.</p>
+
+      <h3>Conteúdo próprio</h3>
+      <p>O design, código-fonte, estrutura editorial e textos originais do otimismo.pt são © otimismo.pt. A sua reprodução sem autorização é proibida.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── MODAIS LEGAIS ────────────────────────────────────────
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e, id) {
+  if (e.target === document.getElementById('modal-' + id)) closeModal(id);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    ['privacidade','termos','direitos'].forEach(id => {
+      const el = document.getElementById('modal-' + id);
+      if (el && el.classList.contains('open')) closeModal(id);
+    });
+  }
+});
+</script>
