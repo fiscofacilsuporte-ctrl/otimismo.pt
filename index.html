@@ -204,6 +204,8 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
 .footer-desc { font-size:.85rem; line-height:1.6; }
 .footer-col h4 { color:#fff; font-size:.85rem; font-weight:600; margin-bottom:12px; text-transform:uppercase; letter-spacing:.06em; }
 .footer-col a { display:block; font-size:.85rem; color:#8DA4B8; text-decoration:none; margin-bottom:6px; transition:color .2s; }
+.footer-link-btn { display:block; font-size:.85rem; color:#8DA4B8; background:none; border:none; padding:0; margin-bottom:6px; cursor:pointer; font-family:inherit; text-align:left; transition:color .2s; }
+.footer-link-btn:hover { color:#fff; }
 .footer-col a:hover { color:#fff; }
 .footer-bottom { border-top:1px solid rgba(255,255,255,.08); padding:16px 24px; text-align:center; font-size:.78rem; color:#5C7A96; max-width:1200px; margin:0 auto; }
 
@@ -222,9 +224,8 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
 }
 
 /* ── MODAL LEGAL ── */
-.modal-overlay { display:none; position:fixed; inset:0; background:rgba(26,43,60,.55); z-index:9000; align-items:center; justify-content:center; padding:20px; }
-.modal-overlay.open { display:flex; }
-.modal-box { background:var(--white); border-radius:var(--radius-lg); max-width:680px; width:100%; max-height:88vh; overflow-y:auto; box-shadow:0 20px 60px rgba(0,0,0,.22); animation:fadeUp .25s ease; }
+.modal-overlay { display:none; position:fixed; top:0;left:0;right:0;bottom:0; background:rgba(26,43,60,.7); z-index:99999; align-items:center; justify-content:center; padding:16px; }
+.modal-box { background:var(--white); border-radius:12px; max-width:680px; width:100%; max-height:90vh; overflow-y:auto; -webkit-overflow-scrolling:touch; box-shadow:0 20px 60px rgba(0,0,0,.3); }
 .modal-head { position:sticky; top:0; background:var(--white); display:flex; align-items:center; justify-content:space-between; padding:20px 28px 16px; border-bottom:1px solid var(--gray-200); z-index:1; }
 .modal-head h2 { font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--navy); }
 .modal-close { background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--gray-400); line-height:1; padding:4px 8px; border-radius:var(--radius-sm); transition:background .15s; }
@@ -510,10 +511,10 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
-      <button onclick="document.getElementById('modal-privacidade').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Política de Privacidade</button>
-      <button onclick="document.getElementById('modal-termos').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Termos de Uso</button>
+      <button type="button" onclick="openModal('privacidade')" class="footer-link-btn">Política de Privacidade</button>
+      <button type="button" onclick="openModal('termos')" class="footer-link-btn">Termos de Uso</button>
       <a href="#contacto">Publicidade</a>
-      <button onclick="document.getElementById('modal-direitos').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Direitos de Autor</button>
+      <button type="button" onclick="openModal('direitos')" class="footer-link-btn">Direitos de Autor</button>
     </div>
   </div>
   <div class="footer-bottom">
@@ -849,35 +850,61 @@ async function translateENNews() {
 
 // ── MODAIS LEGAIS ────────────────────────────────────────
 function openModal(id) {
-  document.getElementById('modal-' + id).classList.add('open');
+  var el = document.getElementById('modal-' + id);
+  if (!el) { console.error('Modal nao encontrado: modal-' + id); return; }
+  el.style.cssText = 'display:flex!important;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(26,43,60,.7);z-index:99999;align-items:center;justify-content:center;padding:16px;';
   document.body.style.overflow = 'hidden';
 }
 function closeModal(id) {
-  document.getElementById('modal-' + id).classList.remove('open');
+  var el = document.getElementById('modal-' + id);
+  if (el) { el.style.display = 'none'; }
   document.body.style.overflow = '';
 }
 function closeModalOutside(e, id) {
-  if (e.target === document.getElementById('modal-' + id)) closeModal(id);
+  if (e.target && e.target.id === 'modal-' + id) closeModal(id);
 }
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
-    ['privacidade','termos','direitos'].forEach(function(id) {
-      var el = document.getElementById('modal-' + id);
-      if (el) { el.style.display = 'none'; document.body.style.overflow = ''; }
-    });
+    ['privacidade','termos','direitos'].forEach(function(id) { closeModal(id); });
   }
 });
+// ── AUTO-REFRESH de notícias a cada 30 minutos ────────────
+setInterval(function() {
+  console.log('🔄 A verificar novas notícias...');
+  fetch('noticias.json?t=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      if (data.news && data.news.length > 0 && data.last_update) {
+        var tb = document.querySelector('.topbar');
+        if (tb) tb.innerHTML = '<strong>✦ otimismo.pt</strong> <span>— Atualizado em ' + data.last_update + '</span>';
+        var newIds = data.news.map(function(n){ return n.id || n.url; });
+        var oldIds = NEWS.map(function(n){ return n.id || n.url; });
+        var hasNew = newIds.some(function(id){ return oldIds.indexOf(id) === -1; });
+        if (hasNew) {
+          console.log('✅ Novas notícias disponíveis — a recarregar...');
+          NEWS.length = 0;
+          data.news.forEach(function(n, i) {
+            NEWS.push({ id:n.id||i+1, cat:n.cat||'sociedade', title:n.title||'', summary:n.summary||'',
+              source:n.source||'', date:n.date||new Date().toISOString(),
+              url:n.url||'#', img:n.img||null, score:typeof n.score==='number'?n.score:0.85 });
+          });
+          filtered = [...NEWS]; page = 0;
+          renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
+        }
+      }
+    }).catch(function(e){ console.warn('Auto-refresh falhou:', e.message); });
+}, 30 * 60 * 1000);
 </script>
 <!-- Ko-fi: adiciona o teu utilizador em donate() acima -->
 
 <!-- ── MODAIS LEGAIS ── -->
 
 <!-- Política de Privacidade -->
-<div class="modal-overlay" id="modal-privacidade" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
+<div class="modal-overlay" id="modal-privacidade" onclick="closeModalOutside(event,'privacidade')">
   <div class="modal-box">
     <div class="modal-head">
       <h2>🔒 Política de Privacidade</h2>
-      <button class="modal-close" onclick="document.getElementById('modal-privacidade').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="closeModal('privacidade')" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>1. Quem somos</h3>
@@ -900,11 +927,11 @@ document.addEventListener('keydown', function(e) {
 </div>
 
 <!-- Termos de Uso -->
-<div class="modal-overlay" id="modal-termos" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
+<div class="modal-overlay" id="modal-termos" onclick="closeModalOutside(event,'termos')">
   <div class="modal-box">
     <div class="modal-head">
       <h2>📋 Termos de Uso</h2>
-      <button class="modal-close" onclick="document.getElementById('modal-termos').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="closeModal('termos')" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>1. Aceitação dos termos</h3>
@@ -933,11 +960,11 @@ document.addEventListener('keydown', function(e) {
 </div>
 
 <!-- Direitos de Autor -->
-<div class="modal-overlay" id="modal-direitos" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
+<div class="modal-overlay" id="modal-direitos" onclick="closeModalOutside(event,'direitos')">
   <div class="modal-box">
     <div class="modal-head">
       <h2>©️ Direitos de Autor</h2>
-      <button class="modal-close" onclick="document.getElementById('modal-direitos').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="closeModal('direitos')" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>Modelo editorial do otimismo.pt</h3>
