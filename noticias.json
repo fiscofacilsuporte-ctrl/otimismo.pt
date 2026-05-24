@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 11:56 UTC",
+  "last_update": "24/05/2026 13:47 UTC",
   "total": 27,
   "news": [
     {
@@ -146,26 +146,15 @@
       "score": 0.76
     },
     {
-      "id": "1b47f868",
-      "cat": "ambiente",
-      "title": "NASA surpresa quando estranha explosão de rádio solar dura 19 dias",
-      "summary": "Os cientistas da NASA ficaram surpresos quando um estranho sinal de rádio do Sol se recusou a desaparecer. Em vez de durar algumas horas ou dias como as explosões normais de rádio solar, esta persistiu por surpreendentes 19 dias – quebrando o recorde anterior. Usando uma frota de espaçonaves espalhadas pelo sistema solar",
-      "source": "ScienceDaily",
-      "date": "Sat, 23 May 2026 08:06:50 EDT",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260522023120.htm",
-      "img": "https://www.sciencedaily.com/images/1920/helmet-streamer.webp",
-      "score": 0.76
-    },
-    {
-      "id": "39305c1b",
-      "cat": "ciencia",
-      "title": "“Células zumbis” nem sempre são ruins e isso pode transformar a medicina antienvelhecimento",
-      "summary": "Os cientistas estão a descobrir uma verdade surpreendente sobre o envelhecimento das células: algumas podem danificar o corpo, enquanto outras ajudam a protegê-lo. A descoberta está a alimentar uma nova onda de terapias anti-envelhecimento de precisão destinadas a remover apenas as células “zumbis” nocivas, sem perturbar os sistemas naturais de reparação do corpo.",
-      "source": "ScienceDaily",
-      "date": "Fri, 22 May 2026 00:28:12 EDT",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260521072402.htm",
-      "img": "https://www.sciencedaily.com/images/1920/aptamers-zombie-cells.webp",
-      "score": 0.76
+      "id": "bcd22d8e",
+      "cat": "tecnologia",
+      "title": "13h. Dia de final da Taça. Já há festa no Jamor",
+      "summary": "É um das grandes tradições da final da Taça. Ainda, a Presidente da Comissão Europeia saúda os aparentes progressos nas negociações entre Estados Unidos e Irão.",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 13:10:22 +0100",
+      "url": "https://observador.pt/programas/noticiario/as-noticias-das-13h-2335/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
+      "score": 0.73
     },
     {
       "id": "6f39e4c9",
@@ -190,17 +179,6 @@
       "score": 0.73
     },
     {
-      "id": "2d2574df",
-      "cat": "tecnologia",
-      "title": "Trump anuncia que acordo com Irão está quase negociado e inclui reabertura de Ormuz",
-      "summary": "Presidente dos EUA diz que a minuta do acordo com o Irão inclui a reabertura do estreito de Ormuz.",
-      "source": "Jornal de Negócios",
-      "date": "Sun, 24 May 2026 10:11:16 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/detalhe/trump-anuncia-que-acordo-com-irao-esta-quase-negociado-e-inclui-reabertura-de-ormuz",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-15-16-34-12-523719.jpg",
-      "score": 0.73
-    },
-    {
       "id": "59abbf54",
       "cat": "desporto",
       "title": "Taça de Portugal. Favorito Sporting defronta `secundário` Torreense na final",
@@ -209,6 +187,17 @@
       "date": "Sun, 24 May 2026 09:36:25 +0100",
       "url": "https://www.rtp.pt/noticias/taca-de-portugal/taca-de-portugal-favorito-sporting-defronta-secundario-torreense-na-final_d1743163",
       "img": "https://cdn-images.rtp.pt/icm/noticias/images/9a/9a2d524a8c7502bee9bb73e1f3b105dc?w=350&amp;q=50&amp;rect=0,42,1500,822&amp;auto=format",
+      "score": 0.73
+    },
+    {
+      "id": "d2076fad",
+      "cat": "cultura",
+      "title": "Demasiado Seguro para Crescer",
+      "summary": "Durante anos, o setor segurador e de fundos de pensões em Portugal habituou-se a confundir estabilidade com sucesso. Num contexto de elevada regulação, sobretudo por parte da Autoridade de Supervisão de Seguros e Fundos de Pensões, criou-se a ideia confortável de que não crescer é, no limite, um efe",
+      "source": "ECO",
+      "date": "Sun, 24 May 2026 12:16:10 +0000",
+      "url": "https://eco.sapo.pt/opiniao/demasiado-seguro-para-crescer/",
+      "img": "https://ecoonline.s3.amazonaws.com/uploads/2024/09/nuno-matos_opiniao.png",
       "score": 0.73
     },
     {
@@ -223,14 +212,25 @@
       "score": 0.73
     },
     {
-      "id": "f97b6454",
-      "cat": "tecnologia",
-      "title": "Lei da Nacionalidade ameaça investimento de americanos",
-      "summary": "As alterações à Lei da Nacionalidade têm sido um fator que tem posto algum travão nas decisões de investimento dos EUA, admite a cofundadora da RedBridge Lisbon Filipa Pinto Carvalho, em entrevista à Lusa. Criada há quatro anos, a RedBridge é uma comunidade de empreendedores, profissionais e investi",
-      "source": "ECO",
-      "date": "Sun, 24 May 2026 09:10:13 +0000",
-      "url": "https://eco.sapo.pt/2026/05/24/lei-da-nacionalidade-ameaca-investimento-de-americanos/",
-      "img": "https://eco.imgix.net/uploads/2025/07/cropped-44138901-scaled-1.jpg",
+      "id": "6ec35dff",
+      "cat": "ciencia",
+      "title": "Os cientistas podem ter encontrado a fonte do neutrino mais poderoso já detectado",
+      "summary": "Uma misteriosa partícula vinda do espaço profundo deixou os cientistas entusiasmados depois que o neutrino mais energético já detectado atingiu o Mar Mediterrâneo. Agora, os pesquisadores acham que podem ter identificado os “culpados” cósmicos por trás disso: blazares – buracos negros supermassivos que lançam jatos de matéria diretamente a reboque.",
+      "source": "ScienceDaily",
+      "date": "Sun, 24 May 2026 06:56:54 EDT",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260523103912.htm",
+      "img": "https://www.sciencedaily.com/images/1920/active-black-hole-jet.webp",
+      "score": 0.73
+    },
+    {
+      "id": "11b355cb",
+      "cat": "ciencia",
+      "title": "O “buraco de minhoca” de Einstein pode realmente revelar um espelho oculto do tempo",
+      "summary": "E se os buracos de minhoca nunca tivessem sido túneis cósmicos? Uma nova pesquisa sugere que a famosa “ponte” de Einstein e Rosen pode na verdade revelar algo ainda mais estranho: o próprio tempo poderia fluir em duas direções ao mesmo tempo. Em vez de conectar lugares distantes no espaço, essas pontes podem conectar versões espelhadas de ti",
+      "source": "ScienceDaily",
+      "date": "Fri, 22 May 2026 09:09:27 EDT",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260522023129.htm",
+      "img": "https://www.sciencedaily.com/images/1920/time-mirror-wormhole-astrophysics.webp",
       "score": 0.73
     },
     {
@@ -245,36 +245,36 @@
       "score": 0.73
     },
     {
-      "id": "bc6bf298",
+      "id": "bc1472ed",
       "cat": "tecnologia",
-      "title": "Viviane Gornick: Nova Iorque a seus pés",
-      "summary": "Será um livro de memórias, mas não será tradicional. \"A Mulher Singular e a Cidade\" parece mais a memória articulada, erigida em tom quase ensaístico, sobre a vida, a sós ou não.",
+      "title": "Quatro detidos na chegada de ativistas da flotilha a Bilbau",
+      "summary": "A chegada de ativistas que integraram a flotilha a Bilbau ficou marcada por um incidente com a polícia basca. Israel chama encarregada de negócios para \"clarificar\" situação.",
       "source": "Observador",
-      "date": "Sun, 24 May 2026 12:48:45 +0100",
-      "url": "https://observador.pt/2026/05/24/viviane-gornick-nova-iorque-a-seus-pes/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1500:843:nowe:0:77/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/22181002/vivian-gornick.webp",
+      "date": "Sun, 24 May 2026 14:42:28 +0100",
+      "url": "https://observador.pt/2026/05/24/chegada-de-ativistas-da-flotilha-a-bilbau-marcada-por-agressao-violenta-da-policia-basca-israel-critica-hipocrisia-espanhola/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4093:2304:nowe:3:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24115840/gettyimages-2277850507-scaled.jpg",
       "score": 0.7
     },
     {
-      "id": "a01c969b",
+      "id": "4431416a",
       "cat": "tecnologia",
-      "title": "SATA realiza voos extraordinários para repor normalidade",
-      "summary": "O grupo SATA vai realizar voos extraordinários para reforçar a capacidade operacional e \"mitigar o impacto causado aos passageiros\" devido aos constrangimentos na operação, motivados pelo nevoeiro.",
+      "title": "MAI. Secretário-geral adjunto denuncia \"irregularidades\"",
+      "summary": "Secretário-geral adjunto do Ministério da Administração Interna (MAI), António Pombeiro, pediu exoneração do cargo no mesmo dia em que voltou a ser nomeado para o SIRESP o general Paulo Viegas Nunes.",
       "source": "Observador",
-      "date": "Sun, 24 May 2026 12:39:41 +0100",
-      "url": "https://observador.pt/2026/05/24/sata-realiza-voos-extraordinarios-para-repor-normalidade-na-operacao-afetada-pelo-nevoeiro/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1124:nowe:0:112/q:70/plain/https://s3.observador.pt/wp-content/uploads/2017/05/01105805/22162315.jpg",
+      "date": "Sun, 24 May 2026 14:31:25 +0100",
+      "url": "https://observador.pt/2026/05/24/mai-secretario-geral-adjunto-demite-se-e-denuncia-irregularidades-envolvendo-general-que-regressa-ao-siresp/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2019/06/07010425/siresp_770x433_acf_cropped.jpg",
       "score": 0.7
     },
     {
-      "id": "5cf46edc",
-      "cat": "saude",
-      "title": "Greve geral. Madeira pede ao Governo serviços mínimos",
-      "summary": "Governo Regional da Madeira solicitou ao Executivo que sejam garantidos os serviços mínimos na greve geral de 3 de junho, para assegurar o abastecimento de bens alimentares e de saúde à população.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 12:36:57 +0100",
-      "url": "https://observador.pt/2026/05/24/madeira-pediu-a-republica-garantia-de-servicos-minimos-de-abastecimento-na-greve-de-3-de-junho/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2303:nowe:0:213/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/03/23232156/dventura-noite-eleitoral-psd-16-scaled.jpg",
+      "id": "b13f9158",
+      "cat": "tecnologia",
+      "title": "Finanças dizem que imóveis vendidos pelo Estado superaram em 21,9% o valor base",
+      "summary": "Após a notícia do Público, que aponta para a realização de vendas de imóveis do Estado abaixo do preço de mercado, o Ministério das Finanças dizem que os valores ficaram acima dos preços base definidos para os leilões dos dois edifícios que já foram, efetivamente, vendidos.",
+      "source": "Jornal de Negócios",
+      "date": "Sun, 24 May 2026 14:22:09 +0100",
+      "url": "https://www.jornaldenegocios.pt/empresas/detalhe/financas-dizem-que-imoveis-vendidos-pelo-estado-superaram-em-21-9-o-valor-base",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-13-11-42-44-523523.jpg",
       "score": 0.7
     },
     {
