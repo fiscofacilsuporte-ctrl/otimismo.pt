@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 14:28 UTC",
+  "last_update": "24/05/2026 14:34 UTC",
   "total": 27,
   "news": [
     {
@@ -23,17 +23,6 @@
       "url": "https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/",
       "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Unsplash-community.jpg",
       "score": 0.82
-    },
-    {
-      "id": "dce505e4",
-      "cat": "tecnologia",
-      "title": "Agência de notação financeira DBRS altera ‘rating’ dos Açores de estável para positivo",
-      "summary": "A agência de notação financeira DBRS Morningstar alterou a perspetiva do &#8216;rating&#8217; dos Açores de &#8220;estável&#8221; para &#8220;positiva&#8221;, pelos progressos ao nível da consolidação orçamental e da recuperação económica e confirmou a notação de crédito em BBB&#8221;, segundo um co",
-      "source": "ECO",
-      "date": "Sun, 24 May 2026 08:03:32 +0000",
-      "url": "https://eco.sapo.pt/2026/05/24/agencia-de-notacao-financeira-dbrs-altera-rating-dos-acores-de-estavel-para-positivo/",
-      "img": "https://eco.imgix.net/uploads/2025/10/cropped-doc2022010535158996pdl15.jpg",
-      "score": 0.79
     },
     {
       "id": "bf5ac06c",
@@ -220,6 +209,17 @@
       "date": "Sun, 24 May 2026 11:53:05 +0000",
       "url": "https://eco.sapo.pt/2026/05/24/assembleia-da-republica-instituiu-10-de-maio-como-dia-nacional-do-seguro/",
       "img": "https://eco.imgix.net/uploads/2026/03/cropped-doc2020100729750623-cot7821.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "f97b6454",
+      "cat": "tecnologia",
+      "title": "Lei da Nacionalidade ameaça investimento de americanos",
+      "summary": "As alterações à Lei da Nacionalidade têm sido um fator que tem posto algum travão nas decisões de investimento dos EUA, admite a cofundadora da RedBridge Lisbon Filipa Pinto Carvalho, em entrevista à Lusa. Criada há quatro anos, a RedBridge é uma comunidade de empreendedores, profissionais e investi",
+      "source": "ECO",
+      "date": "Sun, 24 May 2026 09:10:13 +0000",
+      "url": "https://eco.sapo.pt/2026/05/24/lei-da-nacionalidade-ameaca-investimento-de-americanos/",
+      "img": "https://eco.imgix.net/uploads/2025/07/cropped-44138901-scaled-1.jpg",
       "score": 0.73
     },
     {
