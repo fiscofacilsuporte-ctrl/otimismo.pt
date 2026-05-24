@@ -510,10 +510,10 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
     </div>
     <div class="footer-col">
       <h4>Legal</h4>
-      <a href="#" onclick="openModal('privacidade');return false;">Política de Privacidade</a>
-      <a href="#" onclick="openModal('termos');return false;">Termos de Uso</a>
-      <a href="#">Publicidade</a>
-      <a href="#" onclick="openModal('direitos');return false;">Direitos de Autor</a>
+      <button onclick="document.getElementById('modal-privacidade').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Política de Privacidade</button>
+      <button onclick="document.getElementById('modal-termos').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Termos de Uso</button>
+      <a href="#contacto">Publicidade</a>
+      <button onclick="document.getElementById('modal-direitos').style.display='flex';document.body.style.overflow='hidden';" style="background:none;border:none;font-size:.85rem;color:#8DA4B8;text-decoration:none;margin-bottom:6px;cursor:pointer;padding:0;font-family:inherit;display:block;text-align:left;">Direitos de Autor</button>
     </div>
   </div>
   <div class="footer-bottom">
@@ -863,7 +863,7 @@ document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') {
     ['privacidade','termos','direitos'].forEach(function(id) {
       var el = document.getElementById('modal-' + id);
-      if (el && el.classList.contains('open')) closeModal(id);
+      if (el) { el.style.display = 'none'; document.body.style.overflow = ''; }
     });
   }
 });
@@ -873,11 +873,11 @@ document.addEventListener('keydown', function(e) {
 <!-- ── MODAIS LEGAIS ── -->
 
 <!-- Política de Privacidade -->
-<div class="modal-overlay" id="modal-privacidade" onclick="closeModalOutside(event,'privacidade')">
+<div class="modal-overlay" id="modal-privacidade" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
   <div class="modal-box">
     <div class="modal-head">
       <h2>🔒 Política de Privacidade</h2>
-      <button class="modal-close" onclick="closeModal('privacidade')" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="document.getElementById('modal-privacidade').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>1. Quem somos</h3>
@@ -900,11 +900,11 @@ document.addEventListener('keydown', function(e) {
 </div>
 
 <!-- Termos de Uso -->
-<div class="modal-overlay" id="modal-termos" onclick="closeModalOutside(event,'termos')">
+<div class="modal-overlay" id="modal-termos" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
   <div class="modal-box">
     <div class="modal-head">
       <h2>📋 Termos de Uso</h2>
-      <button class="modal-close" onclick="closeModal('termos')" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="document.getElementById('modal-termos').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>1. Aceitação dos termos</h3>
@@ -933,11 +933,11 @@ document.addEventListener('keydown', function(e) {
 </div>
 
 <!-- Direitos de Autor -->
-<div class="modal-overlay" id="modal-direitos" onclick="closeModalOutside(event,'direitos')">
+<div class="modal-overlay" id="modal-direitos" onclick="if(event.target===this){this.style.display='none';document.body.style.overflow=''}" style="display:none;position:fixed;inset:0;background:rgba(26,43,60,.55);z-index:9000;align-items:center;justify-content:center;padding:20px;">
   <div class="modal-box">
     <div class="modal-head">
       <h2>©️ Direitos de Autor</h2>
-      <button class="modal-close" onclick="closeModal('direitos')" aria-label="Fechar">✕</button>
+      <button class="modal-close" onclick="document.getElementById('modal-direitos').style.display='none';document.body.style.overflow=''" aria-label="Fechar">✕</button>
     </div>
     <div class="modal-body">
       <h3>Modelo editorial do otimismo.pt</h3>
