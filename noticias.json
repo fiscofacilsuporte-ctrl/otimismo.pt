@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 13:47 UTC",
+  "last_update": "24/05/2026 14:11 UTC",
   "total": 27,
   "news": [
     {
@@ -146,6 +146,17 @@
       "score": 0.76
     },
     {
+      "id": "1e72ef3f",
+      "cat": "tecnologia",
+      "title": "\"Até no fim de Salazar houve medo: medo de dizer a verdade\"",
+      "summary": "\"Pai Nosso — Os Últimos Dias de Salazar\" estreia-se a 28 de maio. Falámos com o realizador sobre o período histórico retratado, São Bento como cenário de verdade e ficção e a teatralização do regime.",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 14:53:47 +0100",
+      "url": "https://observador.pt/especiais/jose-filipe-costa-e-o-filme-sobre-a-grande-encenacao-ate-no-fim-de-salazar-houve-medo-medo-de-dizer-a-verdade-ao-ditador/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1920:1077:nowe:22:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/21155526/pai-nosso-2.jpg",
+      "score": 0.73
+    },
+    {
       "id": "bcd22d8e",
       "cat": "tecnologia",
       "title": "13h. Dia de final da Taça. Já há festa no Jamor",
@@ -165,17 +176,6 @@
       "date": "Sun, 24 May 2026 11:00:00 +0100",
       "url": "https://www.jornaldenegocios.pt/economia/detalhe/nao-esta-nas-prioridades-da-cuf-avancar-para-as-ppp",
       "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-22-16-35-35-524141.jpg",
-      "score": 0.73
-    },
-    {
-      "id": "aa0266ad",
-      "cat": "tecnologia",
-      "title": "\"É possível que, nas próximas horas, o mundo receba uma boa notícia\"",
-      "summary": "Marco Rubio revela que o acordo poderá ser fechado ainda este domingo. E diz que tratará das preocupações dos Estados Unidos com o Estreito de Ormuz, bloqueado pelas forças iranianas.",
-      "source": "Jornal de Negócios",
-      "date": "Sun, 24 May 2026 10:19:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/detalhe/e-possivel-que-nas-proximas-horas-o-mundo-receba-uma-boa-noticia",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-06-11-29-56-523138.png",
       "score": 0.73
     },
     {
@@ -256,14 +256,14 @@
       "score": 0.7
     },
     {
-      "id": "4431416a",
+      "id": "1ecc058a",
       "cat": "tecnologia",
-      "title": "MAI. Secretário-geral adjunto denuncia \"irregularidades\"",
-      "summary": "Secretário-geral adjunto do Ministério da Administração Interna (MAI), António Pombeiro, pediu exoneração do cargo no mesmo dia em que voltou a ser nomeado para o SIRESP o general Paulo Viegas Nunes.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 14:31:25 +0100",
-      "url": "https://observador.pt/2026/05/24/mai-secretario-geral-adjunto-demite-se-e-denuncia-irregularidades-envolvendo-general-que-regressa-ao-siresp/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2019/06/07010425/siresp_770x433_acf_cropped.jpg",
+      "title": "Nomeação para liderança do SIRESP vale demissão no MAI",
+      "summary": "António Pombeiro pediu a demissão de secretário-geral adjunto após a renomeação do General Paulo Viegas Nunes para a liderança do SIRESP. Aponta um conjunto de “graves irregularidades” e práticas “eticamente reprováveis” à liderança de Viegas Nunes.",
+      "source": "Jornal de Negócios",
+      "date": "Sun, 24 May 2026 14:57:26 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/detalhe/nomeacao-para-lideranca-do-siresp-vale-demissao-no-mai",
+      "img": "https://cdn.jornaldenegocios.pt/images/2025-08/img_100x100uu2025-08-19-11-34-45-507662.jpg",
       "score": 0.7
     },
     {
