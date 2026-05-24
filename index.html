@@ -846,6 +846,27 @@ async function translateENNews() {
   renderTicker();
   console.log('✅ Tradução concluída para ' + toTranslate.length + ' notícias EN');
 }
+
+// ── MODAIS LEGAIS ────────────────────────────────────────
+function openModal(id) {
+  document.getElementById('modal-' + id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(id) {
+  document.getElementById('modal-' + id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOutside(e, id) {
+  if (e.target === document.getElementById('modal-' + id)) closeModal(id);
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    ['privacidade','termos','direitos'].forEach(function(id) {
+      var el = document.getElementById('modal-' + id);
+      if (el && el.classList.contains('open')) closeModal(id);
+    });
+  }
+});
 </script>
 <!-- Ko-fi: adiciona o teu utilizador em donate() acima -->
 
@@ -939,27 +960,5 @@ async function translateENNews() {
   </div>
 </div>
 
-<script>
-// ── MODAIS LEGAIS ────────────────────────────────────────
-function openModal(id) {
-  document.getElementById('modal-' + id).classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(id) {
-  document.getElementById('modal-' + id).classList.remove('open');
-  document.body.style.overflow = '';
-}
-function closeModalOutside(e, id) {
-  if (e.target === document.getElementById('modal-' + id)) closeModal(id);
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') {
-    ['privacidade','termos','direitos'].forEach(function(id) {
-      var el = document.getElementById('modal-' + id);
-      if (el && el.classList.contains('open')) closeModal(id);
-    });
-  }
-});
-</script>
 </body>
 </html>
