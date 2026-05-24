@@ -388,8 +388,9 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
           <div id="baroLabel" style="font-family:var(--font-serif);font-weight:700;font-size:1rem;color:var(--navy);">Positivo</div>
           <div id="baroSub" style="font-size:.75rem;color:var(--gray-400);margin-top:2px;">índice de hoje</div>
         </div>
-        <div style="position:relative;height:12px;background:linear-gradient(to right,#ef4444,#f59e0b,#22c55e);border-radius:20px;overflow:hidden;">
-          <div id="baroNeedle" style="position:absolute;top:-4px;width:20px;height:20px;background:#fff;border:3px solid var(--navy);border-radius:50%;transform:translateX(-50%);transition:left 1s cubic-bezier(.34,1.56,.64,1);left:50%;box-shadow:0 2px 8px rgba(0,0,0,.2);"></div>
+        <div style="position:relative;height:12px;margin:0 10px;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to right,#ef4444,#f59e0b,#22c55e);border-radius:20px;"></div>
+          <div id="baroNeedle" style="position:absolute;top:50%;transform:translate(-50%,-50%);width:22px;height:22px;background:#fff;border:3px solid var(--navy);border-radius:50%;transition:left 1.2s cubic-bezier(.34,1.56,.64,1);left:50%;box-shadow:0 2px 8px rgba(0,0,0,.25);z-index:2;"></div>
         </div>
         <div style="display:flex;justify-content:space-between;margin-top:6px;font-size:10px;color:var(--gray-400);letter-spacing:.06em;">
           <span>Negativo</span><span>Neutro</span><span>Positivo</span>
@@ -576,6 +577,11 @@ async function loadNews() {
 
   filtered = [...NEWS];
   document.getElementById('statTotal').textContent = NEWS.length;
+  const avgScore = Math.round(NEWS.reduce((s,n)=>s+n.score,0)/NEWS.length*100);
+  document.getElementById('statScore').textContent = avgScore + '%';
+  const uniqueSources = new Set(NEWS.map(n=>n.source)).size;
+  const srcEl = document.getElementById('statSources');
+  if (srcEl) srcEl.textContent = uniqueSources;
   renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
   checkDeepLink();
   // Traduz notícias em inglês em background (não bloqueia o render inicial)
@@ -600,9 +606,8 @@ function renderFeatured() {
   const top = [...NEWS].sort((a,b)=>b.score-a.score);
   const main = top[0], s1 = top[1], s2 = top[2];
   const grid = document.getElementById('featuredGrid');
-  const bgStyle = main.img
-    ? 'background-image:linear-gradient(160deg,rgba(26,43,60,.72) 0%,rgba(26,95,138,.80) 100%),url('+main.img+');background-size:cover;background-position:center;'
-    : '';
+  const bgUrl = main.img || UNSPLASH_FALLBACK[main.cat] || UNSPLASH_FALLBACK.default;
+  const bgStyle = 'background-image:linear-gradient(160deg,rgba(26,43,60,.72) 0%,rgba(26,95,138,.80) 100%),url('+bgUrl+');background-size:cover;background-position:center;';
   grid.innerHTML =
     '<a href="'+main.url+'" class="featured-main" style="text-decoration:none;'+bgStyle+'" target="_blank">'
     +'<span class="feat-badge">'+CATS[main.cat]+'</span>'
@@ -616,9 +621,8 @@ function renderFeatured() {
 }
 function fsmCard(n) {
   const em = catEmoji(n.cat);
-  const thumb = n.img
-    ? '<img src="'+n.img+'" data-em="'+em+'" data-cat="'+n.cat+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" class="img-fallback">'
-    : '<div class="thumb">'+em+'</div>';
+  const src = n.img || UNSPLASH_FALLBACK[n.cat] || UNSPLASH_FALLBACK.default;
+  const thumb = '<img src="'+src+'" data-real="'+(n.img||'')+'" data-cat="'+n.cat+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" class="img-fallback">';
   return '<a href="'+n.url+'" class="feat-card-sm" target="_blank">'
     +thumb
     +'<div class="info"><div class="cat-tag">'+CATS[n.cat]+'</div>'
@@ -638,9 +642,8 @@ function renderGrid(reset) {
     const card = document.createElement('a');
     card.className='news-card'; card.href=n.url; card.target='_blank'; card.onclick=(e)=>{ history.replaceState(null,null,'#noticia='+getNewsId(n)); }; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
-    const imgHtml = n.img
-      ? '<img class="thumb img-fallback" src="'+n.img+'" data-em="'+catEmoji(n.cat)+'" data-cat="'+n.cat+'" alt="" loading="lazy">'
-      : '<div class="thumb">'+catEmoji(n.cat)+'</div>';
+    const imgSrc = n.img || UNSPLASH_FALLBACK[n.cat] || UNSPLASH_FALLBACK.default;
+    const imgHtml = '<img class="thumb img-fallback" src="'+imgSrc+'" data-cat="'+n.cat+'" alt="" loading="lazy">';
     card.innerHTML=imgHtml
       +'<div class="body"><span class="cat-pill '+n.cat+'">'+CATS[n.cat]+'</span>'
       +'<div class="card-title">'+n.title+'</div>'
