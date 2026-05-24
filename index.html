@@ -245,7 +245,7 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
       <a href="#contacto">Contacto</a>
     </nav>
     <div class="header-actions">
-      <a href="#apoiar" class="btn-apoiar">Apoiar Projeto</a>
+      <a href="https://ko-fi.com/otimismopt" target="_blank" class="btn-apoiar" onclick="showToast('Obrigado por apoiares a positividade! 🌟')">❤️ Apoiar</a>
       <button class="hamburger" id="menuBtn">
         <span></span><span></span><span></span>
       </button>
@@ -258,7 +258,7 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
   <a href="#">Início</a>
   <a href="#sobre">Sobre Nós</a>
   <a href="#contacto">Contacto</a>
-  <a href="#apoiar">Apoiar Projeto</a>
+  <a href="https://ko-fi.com/otimismopt" target="_blank">❤️ Apoiar</a>
 </div>
 
 <!-- CATEGORY TABS -->
@@ -364,7 +364,7 @@ footer { background:var(--navy); color:#8DA4B8; margin-top:48px; }
       <div class="apoiar-icon">🌟</div>
       <div class="apoiar-title">Apoiar a Positividade</div>
       <div class="apoiar-desc">Este projeto é gratuito e independente. Cada contribuição ajuda-nos a continuar a partilhar histórias que inspiram e fazem a diferença.</div>
-      <button class="btn-apoiar-main" onclick="donate()">💛 Apoiar a Positividade</button>
+      <button class="btn-apoiar-main" onclick="donate()">💛 Apoie o Positivismo</button>
     </div>
 
     <div class="sidebar-card">
@@ -570,6 +570,8 @@ async function loadNews() {
   document.getElementById('statTotal').textContent = NEWS.length;
   renderFeatured(); renderGrid(true); renderTrending(); renderTicker();
   checkDeepLink();
+  // Traduz notícias em inglês em background (não bloqueia o render inicial)
+  translateENNews();
 }
 
 function checkMobile() {
@@ -606,13 +608,9 @@ function renderFeatured() {
 }
 function fsmCard(n) {
   const em = catEmoji(n.cat);
-  let thumb;
-  if (n.img) {
-    thumb = '<img src="'+n.img+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" '
-      +'onerror="this.parentNode.replaceChild(Object.assign(document.createElement(\'div\'),{innerHTML:\''+em+'\',style:\'width:64px;height:64px;border-radius:6px;background:var(--blue-100);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;\'}),this)">';
-  } else {
-    thumb = '<div class="thumb">'+em+'</div>';
-  }
+  const thumb = n.img
+    ? '<img src="'+n.img+'" data-em="'+em+'" style="width:64px;height:64px;border-radius:var(--radius-sm);object-fit:cover;flex-shrink:0;" class="img-fallback">'
+    : '<div class="thumb">'+em+'</div>';
   return '<a href="'+n.url+'" class="feat-card-sm" target="_blank">'
     +thumb
     +'<div class="info"><div class="cat-tag">'+CATS[n.cat]+'</div>'
@@ -633,7 +631,7 @@ function renderGrid(reset) {
     card.className='news-card'; card.href=n.url; card.target='_blank'; card.onclick=(e)=>{ history.replaceState(null,null,'#noticia='+getNewsId(n)); }; card.style.animationDelay=(i*.07)+'s';
     const dots = [1,2,3,4,5].map(d=>'<div class="score-dot'+(d<=Math.round(n.score*5)?' filled':'')+'"></div>').join('');
     const imgHtml = n.img
-      ? '<img class="thumb" src="'+n.img+'" alt="" loading="lazy" onerror="this.parentNode.replaceChild(Object.assign(document.createElement(\'div\'),{className:\'thumb\',textContent:\''+catEmoji(n.cat)+'\'}),this)">'
+      ? '<img class="thumb img-fallback" src="'+n.img+'" data-em="'+catEmoji(n.cat)+'" alt="" loading="lazy">'
       : '<div class="thumb">'+catEmoji(n.cat)+'</div>';
     card.innerHTML=imgHtml
       +'<div class="body"><span class="cat-pill '+n.cat+'">'+CATS[n.cat]+'</span>'
@@ -743,6 +741,78 @@ function fmtDate(d) {
 function catEmoji(c) {
   const m = {ciencia:'🔬',tecnologia:'💻',ambiente:'🌿',saude:'🏥',sociedade:'🤝',economia:'📈',desporto:'🏆',cultura:'🎭'};
   return m[c] || '📰';
+}
+
+// ── DEEP LINK / ID HELPERS ───────────────────────────────
+function getNewsId(n) { return n.id || ''; }
+function checkDeepLink() { /* reservado para navegação por hash */ }
+
+// ── IMAGENS: delegação global de erro ─────────────────────
+// Substitui qualquer <img class="img-fallback"> que falhe pelo emoji da categoria
+document.addEventListener('error', function(e) {
+  const el = e.target;
+  if (el.tagName !== 'IMG' || !el.classList.contains('img-fallback')) return;
+  const em = el.dataset.em || '📰';
+  const fb = document.createElement('div');
+  fb.className = 'thumb';
+  fb.textContent = em;
+  // Copia dimensões inline se existirem (para os cards de destaque)
+  if (el.style.width) {
+    fb.style.cssText = 'width:'+el.style.width+';height:'+el.style.height
+      +';border-radius:var(--radius-sm);background:var(--blue-100)'
+      +';display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;';
+  }
+  if (el.parentNode) el.parentNode.replaceChild(fb, el);
+}, true);
+
+// ── TRADUÇÃO EN → PT (MyMemory API, gratuita) ────────────
+const _tCache = {};
+
+async function translateText(text, cacheKey) {
+  if (!text || !text.trim()) return text;
+  if (_tCache[cacheKey]) return _tCache[cacheKey];
+  try {
+    const url = 'https://api.mymemory.translated.net/get?q='
+      + encodeURIComponent(text.slice(0, 450)) + '&langpair=en|pt-PT';
+    const r = await fetch(url);
+    const d = await r.json();
+    const tr = d && d.responseData && d.responseData.translatedText;
+    // MyMemory devolve o original se não conseguir traduzir
+    if (tr && tr !== text && !tr.toLowerCase().includes('mymemory')) {
+      _tCache[cacheKey] = tr;
+      return tr;
+    }
+  } catch(e) { /* silencioso — mantém original */ }
+  return text;
+}
+
+async function translateENNews() {
+  const EN_SOURCES = new Set(['Good News Network','Positive News','BBC News','Reuters','ScienceDaily']);
+  const toTranslate = NEWS.filter(n => EN_SOURCES.has(n.source) && !n._translated);
+  if (!toTranslate.length) return;
+
+  // Traduz em paralelo (máx 3 de cada vez para não bloquear a API)
+  const BATCH = 3;
+  for (let i = 0; i < toTranslate.length; i += BATCH) {
+    const batch = toTranslate.slice(i, i + BATCH);
+    await Promise.all(batch.map(async n => {
+      const [tTitle, tSummary] = await Promise.all([
+        translateText(n.title,   n.id + '_t'),
+        translateText(n.summary, n.id + '_s'),
+      ]);
+      n.title   = tTitle;
+      n.summary = tSummary;
+      n._translated = true;
+    }));
+  }
+
+  // Re-renderiza com os textos já em português
+  filtered = [...NEWS];
+  renderFeatured();
+  renderGrid(true);
+  renderTrending();
+  renderTicker();
+  console.log('✅ Tradução concluída para ' + toTranslate.length + ' notícias EN');
 }
 </script>
 <!-- Ko-fi: adiciona o teu utilizador em donate() acima -->
