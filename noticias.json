@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 20:46 UTC",
+  "last_update": "24/05/2026 21:15 UTC",
   "total": 27,
   "news": [
     {
@@ -234,36 +234,36 @@
       "score": 0.73
     },
     {
-      "id": "02b9c060",
-      "cat": "desporto",
-      "title": "\"Demonstrámos muita qualidade e chegamos ao fim sem troféus\"",
-      "summary": "Depois de ter alertado e assumido o nervosismos, Borges acabou por assumir que a derrota passou por aí e deu a cara pela época sem troféus. \"Estamos tão tristes como os adeptos\", disse o técnico.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 21:17:29 +0100",
-      "url": "https://observador.pt/2026/05/24/os-jogadores-demonstraram-muita-qualidade-e-chegam-ao-fim-sem-conquistas-rui-borges-assume-responsabilidade-e-parabeniza-torreense/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2299:nowe:0:37/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24211157/gettyimages-2277471697-scaled.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "52dc752e",
-      "cat": "desporto",
-      "title": "Golos bem anulados? Cartões bem mostrados? Os casos da final",
-      "summary": "António Nobre dirigiu pela primeira vez final da Taça de Portugal entre Sporting e Torreense, num encontro que teve alguns lances reclamados por ambas as equipas entre golos anulados por fora de jogo.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 21:14:32 +0100",
-      "url": "https://observador.pt/2026/05/24/golos-bem-anulados-cartoes-bem-mostrados-a-inacio-e-maxi-veja-aqui-os-casos-da-final-da-taca-de-portugal/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1500:841:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24211324/antonio-nobre-sporting-torreense.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "0d43a431",
+      "id": "670b0952",
       "cat": "tecnologia",
-      "title": "Mundial, Taça e um sonho: o ano extraordinário de Stopira",
-      "summary": "O central de 38 anos marcou o golo que deu a Taça de Portugal ao Torreense — meses depois de também ter marcado no jogo que levou Cabo Verde ao Mundial. Agora, falta o sonho da subida à Primeira Liga.",
+      "title": "As notícias das 22h",
+      "summary": "As notícias na Rádio Observador. Aconteça o que acontecer.",
       "source": "Observador",
-      "date": "Sun, 24 May 2026 21:04:36 +0100",
-      "url": "https://observador.pt/2026/05/24/o-mundial-a-convocatoria-a-taca-e-o-sonho-por-cumprir-o-ano-extraordinario-de-stopira-continua-a-surpreender/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:3993:2240:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24210209/gettyimages-2277479025.jpg",
+      "date": "Sun, 24 May 2026 22:14:18 +0100",
+      "url": "https://observador.pt/programas/noticiario/as-noticias-das-22h-1778/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
+      "score": 0.7
+    },
+    {
+      "id": "762342a7",
+      "cat": "tecnologia",
+      "title": "SCP X Torreense. \"Penálti e vermelho bem dados\"",
+      "summary": "Pedro Henriques elogia decisões cruciais da equipa de arbitragem na expulsão de Maxi Araújo e no penálti assinalado. O áudio-árbitro diz ainda que os assistentes estiveram muito bem nos foras de jogo.",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 22:05:44 +0100",
+      "url": "https://observador.pt/programas/sem-falta/scp-x-torreense-penalti-e-vermelho-bem-dados/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/05/23172325/770-podcast-sem-falta-betclic.jpg",
+      "score": 0.7
+    },
+    {
+      "id": "092fcc00",
+      "cat": "tecnologia",
+      "title": "\"Aconteceu a maior história da história da competição\"",
+      "summary": "Luís Francisco considera este triunfo inédito e destaca a alteração estrutural ao acesso às competições europeias. Diz que o apuramento direto para a Liga Europa é uma péssima notícia para o Benfica.",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 21:46:17 +0100",
+      "url": "https://observador.pt/programas/relat-rio-de-jogo/aconteceu-a-maior-historia-da-historia-da-competicao/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/09/20121259/770-podcast-relatorio-de-jogoainda-bem.jpg",
       "score": 0.7
     },
     {
