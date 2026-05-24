@@ -1,5 +1,5 @@
 {
-  "last_update": "24/05/2026 14:11 UTC",
+  "last_update": "24/05/2026 14:28 UTC",
   "total": 27,
   "news": [
     {
@@ -36,14 +36,14 @@
       "score": 0.79
     },
     {
-      "id": "aacd109a",
+      "id": "bf5ac06c",
       "cat": "ciencia",
-      "title": "O aumento de avistamentos das duas maiores espécies de baleias do mundo dizimadas pela caça proporciona uma nova esperança de sobrevivência",
-      "summary": "O aumento dos avistamentos das duas maiores espécies de baleias do mundo oferece uma nova esperança para o futuro dos ameaçados gigantes oceânicos. Mais de 40 anos desde o fim da caça comercial às baleias, novas pesquisas revelam um aumento recente nos avistamentos de baleias azuis e-comuns no sudeste do Atlântico. Pesquisa",
+      "title": "Medicamento usado para tratar asma e alergias também pode ajudar a combater cânceres agressivos",
+      "summary": "Um medicamento frequentemente utilizado para tratar asma e alergias também pode ajudar a combater cancros agressivos, de acordo com uma nova investigação nos EUA. O estudo revelou como os tumores sequestram glóbulos brancos comuns para escapar da imunoterapia. Cientistas dizem que suas descobertas em ratos e tecidos humanos apontam para uma nova maneira de melhorar o tratamento",
       "source": "Good News Network",
-      "date": "Sun, 24 May 2026 11:00:40 +0000",
-      "url": "https://www.goodnewsnetwork.org/increased-sightings-of-worlds-two-largest-whale-species-decimated-by-hunting-provides-hope/",
-      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Fin-Whale-by-Sara-Golaski-for-the-Dolphin-Project-SWNS.jpg",
+      "date": "Sun, 24 May 2026 14:10:47 +0000",
+      "url": "https://www.goodnewsnetwork.org/drug-used-to-treat-asthma-and-allergies-may-also-fight-aggressive-cancers/",
+      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2025/08/Laboratory-Research-chemistry-viles-Fotolia-licensed-low-res.jpg",
       "score": 0.79
     },
     {
@@ -146,6 +146,17 @@
       "score": 0.76
     },
     {
+      "id": "edf60338",
+      "cat": "tecnologia",
+      "title": "Temporada chega ao fim com duelo inédito no Estádio Nacional",
+      "summary": "A 86.ª final da prova rainha coloca frente a frente Sporting e Torreense, que se vão defrontar pela primeira vez no Jamor. Leão procura 19.ª Taça, torreenses querem fazer história. Siga em direto.",
+      "source": "Observador",
+      "date": "Sun, 24 May 2026 15:15:02 +0100",
+      "url": "https://observador.pt/liveblogs/sporting-torreense-temporada-chega-ao-fim-com-duelo-inedito-no-estadio-nacional/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1121:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2024/05/08153932/42583820.jpg",
+      "score": 0.73
+    },
+    {
       "id": "1e72ef3f",
       "cat": "tecnologia",
       "title": "\"Até no fim de Salazar houve medo: medo de dizer a verdade\"",
@@ -243,17 +254,6 @@
       "url": "https://reasonstobecheerful.world/cycling-helps-kids-focus/",
       "img": "https://reasonstobecheerful.world/wp-content/uploads/2026/05/R4F-Silver-Stallion-Bicycle-and-Coffee-Works-in-Gallup-New-Mexico.jpg",
       "score": 0.73
-    },
-    {
-      "id": "bc1472ed",
-      "cat": "tecnologia",
-      "title": "Quatro detidos na chegada de ativistas da flotilha a Bilbau",
-      "summary": "A chegada de ativistas que integraram a flotilha a Bilbau ficou marcada por um incidente com a polícia basca. Israel chama encarregada de negócios para \"clarificar\" situação.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 14:42:28 +0100",
-      "url": "https://observador.pt/2026/05/24/chegada-de-ativistas-da-flotilha-a-bilbau-marcada-por-agressao-violenta-da-policia-basca-israel-critica-hipocrisia-espanhola/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4093:2304:nowe:3:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24115840/gettyimages-2277850507-scaled.jpg",
-      "score": 0.7
     },
     {
       "id": "1ecc058a",
