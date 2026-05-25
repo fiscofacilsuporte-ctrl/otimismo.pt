@@ -28,24 +28,16 @@ FETCH_TIMEOUT  = 12
 MAX_PER_SOURCE = 3
 
 FEEDS = [
-    ("https://feeds.feedburner.com/PublicoCienciaETecnologia", "Público",                "ciencia",    False),
-    ("https://www.publico.pt/api/rss/ambiente",                "Público",                "ambiente",   False),
-    ("https://www.publico.pt/api/rss/economia",                "Público",                "economia",   False),
-    ("https://observador.pt/tag/tecnologia/feed/",             "Observador",             "tecnologia", False),
-    ("https://observador.pt/tag/ciencia/feed/",                "Observador",             "ciencia",    False),
-    ("https://observador.pt/tag/saude/feed/",                  "Observador",             "saude",      False),
-    ("https://observador.pt/seccao/desporto/feed/",            "Observador",             "desporto",   False),
+    ("http://feeds.feedburner.com/PublicoRSS", "Público",                "geral",    False),
+    ("https://feeds.feedburner.com/obs-ultimas",             "Observador",             "geral",    False),
     ("https://www.jornaldenegocios.pt/rss",                    "Jornal de Negócios",     "economia",   False),
-    ("https://www.tsf.pt/rss/",                                "TSF",                    "sociedade",  False),
+    ("http://feeds.tsf.pt/TSF-Ultimas",                                "TSF",                    "sociedade",  False),
     ("https://www.rtp.pt/noticias/rss/desporto",               "RTP",                    "desporto",   False),
     ("https://eco.pt/feed/",                                   "ECO",                    "ambiente",   False),
-    ("https://www.dn.pt/rss/",                                 "Diário de Notícias",     "sociedade",  False),
-    ("https://shifter.sapo.pt/feed/",                          "Shifter",                "tecnologia", False),
     ("https://www.goodnewsnetwork.org/feed/",                  "Good News Network",      "sociedade",  True),
     ("https://www.positive.news/feed/",                        "Positive News",          "sociedade",  True),
     ("http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "BBC News",         "ciencia",    True),
     ("http://feeds.bbci.co.uk/news/health/rss.xml",            "BBC News",               "saude",      True),
-    ("https://feeds.reuters.com/reuters/scienceNews",          "Reuters",                "ciencia",    True),
     ("https://www.sciencedaily.com/rss/top/science.xml",       "ScienceDaily",           "ciencia",    True),
     ("https://reasonstobecheerful.world/feed/",                "Reasons to be Cheerful", "sociedade",  True),
 ]
@@ -269,3 +261,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+        
