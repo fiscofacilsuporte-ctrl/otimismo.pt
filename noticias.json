@@ -1,7 +1,29 @@
 {
-  "last_update": "24/05/2026 21:32 UTC",
-  "total": 27,
+  "last_update": "25/05/2026 08:24 UTC",
+  "total": 30,
   "news": [
+    {
+      "id": "e508c8ef",
+      "cat": "tecnologia",
+      "title": "Kimi Antonelli vence pela quarta vez consecutiva no Mundial de Fórmula 1",
+      "summary": "O italiano Kimi Antonelli (Mercedes) tornou-se hoje no primeiro piloto a conquistar as primeiras quatro vitórias da carreira de forma consecutiva após vencer o Grande Prémio do Canadá de Fórmula 1, quinta ronda da temporada.",
+      "source": "RTP",
+      "date": "Mon, 25 May 2026 10:11:23 +0100",
+      "url": "https://www.rtp.pt/noticias/motores/kimi-antonelli-vence-pela-quarta-vez-consecutiva-no-mundial-de-formula-1_d1743286",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/94/94b57ea256505f9795fca9caef0ec28a?w=350&amp;q=50&amp;rect=0,258,5007,2745&amp;auto=format",
+      "score": 0.82
+    },
+    {
+      "id": "7b252ab7",
+      "cat": "tecnologia",
+      "title": "Boas novas na história, 25 de Maio",
+      "summary": "Há 40 anos, foi realizado o evento de arrecadação de fundos Hands Across America, na esperança de criar uma corrente humana em todo o país. Realizado no fim de semana do Memorial Day, a esperança era arrecadar dezenas de milhões para combater a fome e a falta de moradia, com voluntários incentivados a doar para um espaço na rede.",
+      "source": "Good News Network",
+      "date": "Mon, 25 May 2026 07:00:00 +0000",
+      "url": "https://www.goodnewsnetwork.org/events060525/",
+      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2025/05/The-Hands-Across-America-event-in-Philadelphia-CC-3.0.-SA-Buchoamerica-e1748159220244.jpg",
+      "score": 0.82
+    },
     {
       "id": "0c1953e4",
       "cat": "ciencia",
@@ -12,28 +34,6 @@
       "url": "https://www.goodnewsnetwork.org/scientist-discovers-new-species-of-wildflower-that-only-grows-in-nj/",
       "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/New-Jersey-wildflower-Triantha-novacaesariensis-Supplied-By-Yianni-Laskaris-for-Temple-University.jpg",
       "score": 0.82
-    },
-    {
-      "id": "95bd6870",
-      "cat": "tecnologia",
-      "title": "IA usada para identificar assinaturas de calor de baleias para evitar colisões de navios na Baía de São Francisco",
-      "summary": "Cientistas na Califórnia estão usando IA com detecção de calor para salvar baleias cinzentas em trânsito pela Baía de São Francisco. Cada vez mais avistamentos de baleias cinzentas, uma barbatana de tamanho médio que pode crescer entre 12 e 15 metros, estão sendo registrados na baía, e os conservacionistas estão ansiosos para desenvolver métodos para mais",
-      "source": "Good News Network",
-      "date": "Fri, 22 May 2026 18:30:21 +0000",
-      "url": "https://www.goodnewsnetwork.org/ai-employed-to-pinpoint-whale-heat-signatures-in-san-francisco-bay-to-prevent-ship-collisions/",
-      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Unsplash-community.jpg",
-      "score": 0.82
-    },
-    {
-      "id": "85ba91d5",
-      "cat": "desporto",
-      "title": "Mundial de futebol. \"Estamos muito perto\" de uma \"conquista inédita\", diz Montenegro",
-      "summary": "Antes do início do jogo pela Taça de Portugal no Jamor, entre Sporting e Torreense, perante um estádio com lotação esgotada, o primeiro-ministro destacou a aposta &quot;como nunca&quot; que o executivo tem feito no desporto, referindo que, apesar de melhorias recentes, o país &quot;tem pouca prática",
-      "source": "RTP",
-      "date": "Sun, 24 May 2026 18:11:47 +0100",
-      "url": "https://www.rtp.pt/noticias/desporto/mundial-de-futebol-estamos-muito-perto-de-uma-conquista-inedita-diz-montenegro_v1743215",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/05/05d94afd3d52c8e04240836f2cd0b1ab?w=350&amp;q=50&amp;rect=0,164,1500,822&amp;auto=format",
-      "score": 0.79
     },
     {
       "id": "bf5ac06c",
@@ -69,6 +69,17 @@
       "score": 0.79
     },
     {
+      "id": "0e08eb4a",
+      "cat": "ciencia",
+      "title": "Adorável minúsculo polvo azul encontrado quase 6.000 pés abaixo de Galápagos",
+      "summary": "Um misterioso polvo azul descoberto a quase 2.000 metros de profundidade nas águas das Ilhas Galápagos foi oficialmente identificado como uma espécie totalmente nova. Mais ou menos do tamanho de uma bola de golfe, a pequena criatura surpreendeu os pesquisadores durante uma expedição em alto mar quando apareceu de repente na câmera, rastejando",
+      "source": "ScienceDaily",
+      "date": "Mon, 25 May 2026 02:17:15 EDT",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260525000446.htm",
+      "img": "https://www.sciencedaily.com/images/1920/blue-octopus-from-galapagos-islands.webp",
+      "score": 0.79
+    },
+    {
       "id": "ca98c319",
       "cat": "ciencia",
       "title": "Cientistas descobrem a temperatura perfeita para manter as mangas frescas por muito mais tempo",
@@ -80,14 +91,47 @@
       "score": 0.79
     },
     {
-      "id": "5df59179",
+      "id": "0725644b",
+      "cat": "tecnologia",
+      "title": "Prejuizos da TAP caíram para 39,9 milhões de euros",
+      "summary": "TAP destaca o crescimento de 11% das receitas operacionais, para 914,4 milhões de euro, impulsionadas sobretudo pelo aumento das receitas de passagens e pela melhoria das receitas unitárias.",
+      "source": "Observador",
+      "date": "Mon, 25 May 2026 08:32:40 +0100",
+      "url": "https://observador.pt/2026/05/25/prejuizos-da-tap-cairam-para-399-milhoes-de-euros-no-1-o-trimestre/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1122:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/07/10171124/44783254.jpg",
+      "score": 0.76
+    },
+    {
+      "id": "b8ce3df3",
+      "cat": "tecnologia",
+      "title": "Cães no anexo e avós sem reforma: o brilhantismo português",
+      "summary": "O país está salvo: entre cães em anexos e o plano da Reconquista de cortar pensões para os avós não votarem PS, as ideias de génio não param de aterrar por cá.",
+      "source": "Observador",
+      "date": "Mon, 25 May 2026 08:31:58 +0100",
+      "url": "https://observador.pt/programas/momentos-de-glria/caes-no-anexo-e-avos-sem-reforma-o-brilhantismo-portugues/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/10/13004433/770-podcast-momentos-de-gloria-sem-rita.jpg",
+      "score": 0.76
+    },
+    {
+      "id": "0f77f969",
+      "cat": "tecnologia",
+      "title": "Franceses querem investir 800 milhões em combustível verde para aviões na Figueira da Foz",
+      "summary": "A francesa Elyse Energy avançou com a fase preliminar do licenciamento ambiental para uma fábrica de combustível sustentável para aviação na Figueira da Foz. Projeto prevê produzir 200 mil toneladas de SAF por ano e deverá consumir quase 4% da eletricidade usada anualmente em Portugal.",
+      "source": "Jornal de Negócios",
+      "date": "Mon, 25 May 2026 09:04:50 +0100",
+      "url": "https://www.jornaldenegocios.pt/empresas/energia/detalhe/franceses-querem-investir-800-milhoes-em-combustivel-verde-para-avioes-na-figueira-da-foz",
+      "img": "https://cdn.jornaldenegocios.pt/images/2023-01/img_100x100uu2023-01-04-21-09-24-443539.jpg",
+      "score": 0.76
+    },
+    {
+      "id": "38513b36",
       "cat": "desporto",
-      "title": "Torreense é o primeiro secundário a conquistar o troféu",
+      "title": "Torreense é o primeiro secundário a conquistar a Taça de Portugal",
       "summary": "O Torrense tornou-se o primeiro clube abaixo da divisão principal a conquistar a Taça de Portugal de futebol, após seis derrotas de representantes secundários, ao vencer na final o Sporting, por 2-1, após prolongamento.",
       "source": "RTP",
       "date": "Sun, 24 May 2026 22:27:47 +0100",
-      "url": "https://www.rtp.pt/noticias/desporto/torreense-e-o-primeiro-secundario-a-conquistar-o-trofeu_v1743251",
-      "img": "https://cdn-images.rtp.pt/icm/images/78/7863c91ae27ae52ded0382ab7c738e19_N.jpg?",
+      "url": "https://www.rtp.pt/noticias/desporto/torreense-e-o-primeiro-secundario-a-conquistar-a-taca-de-portugal_v1743251",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/f5/f54871da209a0198707f2b987bd655b3?w=350&amp;q=50&amp;rect=0,140,1500,822&amp;auto=format",
       "score": 0.76
     },
     {
@@ -99,6 +143,17 @@
       "date": "Sun, 24 May 2026 20:36:52 +0100",
       "url": "https://www.rtp.pt/noticias/futebol-internacional/arsenal-campeao-fim-de-um-jejum-de-22-anos_d1743235",
       "img": "https://cdn-images.rtp.pt/icm/noticias/images/20/207a46cf209d53bd370a0b26f5a7082a?w=350&amp;q=50&amp;rect=0,67,1233,676&amp;auto=format",
+      "score": 0.76
+    },
+    {
+      "id": "2c315096",
+      "cat": "tecnologia",
+      "title": "TAP regista prejuízo de 40 milhões no arranque do ano. Preço do combustível “pressionará os próximos trimestres”",
+      "summary": "A TAP reportou esta segunda-feira um prejuízo de 39,9 milhões de euros no primeiro trimestre do ano. Ainda assim, o resultado representa uma melhoria de 63,1% face ao prejuízo de 108,2 milhõesque tinha registado no arranque do ano passado, “refletindo sobretudo a forte melhoria da performance operac",
+      "source": "ECO",
+      "date": "Mon, 25 May 2026 06:49:08 +0000",
+      "url": "https://eco.sapo.pt/2026/05/25/tap-regista-prejuizo-de-40-milhoes-no-arranque-do-ano-preco-do-combustivel-pressionara-os-proximos-trimestres/",
+      "img": "https://eco.imgix.net/uploads/2026/01/cropped-aeroporto51.jpg",
       "score": 0.76
     },
     {
@@ -146,69 +201,91 @@
       "score": 0.76
     },
     {
-      "id": "5fda504c",
+      "id": "1a037ed7",
+      "cat": "ciencia",
+      "title": "A cidade francesa que defende suas árvores",
+      "summary": "“Acho que fica ali, à direita, mas o terreno é tão grande que não tenho certeza de onde fica exatamente”, diz Anna Massong, diretora de serviços técnicos da Prefeitura de Sceaux, enquanto estudamos um mapa ao lado dos grandes portões de ferro de entrada da Escola Lakanal. Construída no... O post A cidade francesa que Cha",
+      "source": "Reasons to be Cheerful",
+      "date": "Mon, 25 May 2026 08:00:32 +0000",
+      "url": "https://reasonstobecheerful.world/sceaux-tree-charter/",
+      "img": "https://reasonstobecheerful.world/wp-content/uploads/2026/05/The-cherry-blossom-in-Sceaux-scaled-e1779299512874.jpg",
+      "score": 0.76
+    },
+    {
+      "id": "5f245365",
       "cat": "tecnologia",
-      "title": "\"Imortalizados\". Tralhão diz ainda não ter noção do que fez",
-      "summary": "O feito é histórico, mas há quem diga que \"não é irrepetível\": Torreense venceu a sua primeira Taça de Portugal e é a primeira equipa da Segunda Liga a consegui-lo. Segue-se uma \"festa rija\".",
+      "title": "PSD retira competências sobre “barrigas de aluguer” a órgão que emite pareceres",
+      "summary": "Projecto de lei sobre novos estatutos do Conselho Nacional de Procriação Medicamente Assistida deixa cair menções à gestação de substituição — que continua na “gaveta” do Governo para regulamentar.",
+      "source": "Público",
+      "date": "Mon, 25 May 2026 06:14:00 GMT",
+      "url": "https://www.publico.pt/2026/05/25/politica/noticia/psd-retira-competencias-barrigas-aluguer-orgao-emite-pareceres-2175859",
+      "img": "https://imagens.publico.pt/imagens.aspx/2090646?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "score": 0.73
+    },
+    {
+      "id": "77bbd710",
+      "cat": "tecnologia",
+      "title": "8h. Marco Rubio diz que Estados Unidos estão perto de acordo",
+      "summary": "Declarações do secretário de Estado norte-americano, em Nova Deli. Ainda, maioria dos portugueses rejeita a proposta de alteração da lei laboral apresentada pelo Governo.",
       "source": "Observador",
-      "date": "Sun, 24 May 2026 22:20:10 +0100",
-      "url": "https://observador.pt/2026/05/24/ainda-nao-tenho-nocao-do-que-atingimos-104-degraus-dois-comboios-e-a-historia-que-o-torreense-escreveu-no-jamor/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2298:nowe:0:432/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24220306/gettyimages-2277490730-scaled.jpg",
+      "date": "Mon, 25 May 2026 08:12:55 +0100",
+      "url": "https://observador.pt/programas/noticiario/as-noticias-das-8h-2407/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
       "score": 0.73
     },
     {
-      "id": "50b5bbe6",
-      "cat": "tecnologia",
-      "title": "Torreense bate Sporting e conquista a Taça de Portugal",
-      "summary": "Sp. Braga começa na 2.ª pré da Liga Conferência e Famalicão (5.º classificado) fica sem Europa",
+      "id": "e92e1bb0",
+      "cat": "economia",
+      "title": "Petróleo em queda acentuada. Ouro avança com cautela de olho no Médio Oriente",
+      "summary": "Acompanhe, ao minuto, a evolução dos mercados nesta segunda-feira.",
       "source": "Jornal de Negócios",
-      "date": "Sun, 24 May 2026 20:23:12 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/desporto/detalhe/torreense-bate-sporting-e-conquista-a-taca-de-portugal",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-24-20-20-45-524163.jpg",
+      "date": "Mon, 25 May 2026 09:03:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/mercados/mercados-num-minuto/detalhe/acordo-a-vista-no-irao-anima-bolsas-da-asia-japao-bate-novo-recorde-e-ultrapassa-os-65-mil-pontos",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-18-12-13-55-523788.jpg",
       "score": 0.73
     },
     {
-      "id": "8266dbfa",
+      "id": "45cd0f9f",
       "cat": "tecnologia",
-      "title": "OPA da Uber avalia Delivery Hero em 10 mil milhões de euros",
-      "summary": "O setor da entrega de comida está a passar por um processo de consolidação global, impulsionado pela desaceleração do crescimento e pela forte concorrência, e vários concorrentes da Delivery Hero na Europa têm sido alvo de aquisições.",
+      "title": "Meo exige 82 milhões ao Estado por exclusão da Huawei do 5G",
+      "summary": "Operadora da Altice Portugal quer ser compensada pelos custos associados à substituição de equipamentos da Huawei nas redes 5G, na sequência das decisões de segurança tomadas pelo Estado em 2023. A Meo fala em \"danos especiais e anormais\" e já avançou com uma ação judicial no Tribunal Administrativo",
       "source": "Jornal de Negócios",
-      "date": "Sun, 24 May 2026 19:31:50 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/tecnologias/detalhe/opa-da-uber-avalia-delivery-hero-em-10-mil-milhoes-de-euros",
-      "img": "https://cdn.jornaldenegocios.pt/images/2024-12/img_100x100uu2024-12-05-15-27-25-491507.jpg",
+      "date": "Mon, 25 May 2026 08:46:06 +0100",
+      "url": "https://www.jornaldenegocios.pt/empresas/telecomunicacoes/detalhe/meo-exige-82-milhoes-ao-estado-por-exclusao-da-huawei-do-5g",
+      "img": "https://cdn.jornaldenegocios.pt/images/2023-12/img_100x100uu2023-12-27-17-24-31-466945.jpg",
       "score": 0.73
     },
     {
-      "id": "ae88e35e",
+      "id": "a12d86fd",
       "cat": "tecnologia",
-      "title": "EUA pré-anunciam acordo com o Irão que reabrirá estreito de Ormuz",
-      "summary": "O Presidente dos EUA, Donald Trump, diz que as “negociações estão a decorrer de forma ordenada e construtiva”.",
-      "source": "Jornal de Negócios",
-      "date": "Sun, 24 May 2026 18:13:57 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/mundo/asia/detalhe/eua-pre-anunciam-acordo-com-o-irao-que-reabrira-estreito-de-ormuz",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-22-07-26-30-524066.jpg",
+      "title": "Morreu Arnaldo Trindade, histórico editor de música e fundador da Orfeu",
+      "summary": "Produziu trabalhos de José Afonso, Adriano Correia de Oliveira, Sérgio Godinho, Fausto, Vitorino, Fanhais, José Mário Branco ou José Niza.",
+      "source": "TSF",
+      "date": "Mon, 08 Jan 2024 14:49:00 Z",
+      "url": "https://www.tsf.pt/portugal/sociedade/morreu-arnaldo-trindade-fundador-da-orfeu-17625516.html",
+      "img": "https://static.globalnoticias.pt/tsf/image.jpg?brand=TSF&type=generate&guid=f1efa3b6-8573-4486-b03d-10ae87867f13&w=600&h=232&t=20240201072011",
       "score": 0.73
     },
     {
-      "id": "a541430e",
+      "id": "8ab25b4c",
       "cat": "tecnologia",
-      "title": "Secretário-geral da JSD João Pedro Luís é o novo presidente da ‘jota’",
-      "summary": "O atual secretário-geral da Juventude Social Democrata (JSD) João Pedro Luís foi eleito presidente da estrutura jovem do PSD com 58% dos votos, no Congresso que decorre em Viseu. De acordo com os resultados oficiais, a lista de João Pedro Luís à Comissão Política Nacional da JSD obteve 58% do total(",
+      "title": "Meo exige 82 milhões ao Estado por exclusão da Huawei do 5G",
+      "summary": "A Meo avançou com uma ação judicial contra o Estado português para reclamar uma indemnização de 81,7 milhões de euros relacionada com a exclusão da Huawei das redes 5G, avança o Público (acesso pago) A operadora da Altice Portugal alega que as decisões tomadas pela Comissão de Avaliação de Segurança",
       "source": "ECO",
-      "date": "Sun, 24 May 2026 15:31:37 +0000",
-      "url": "https://eco.sapo.pt/2026/05/24/secretario-geral-da-jsd-joao-pedro-luis-e-o-novo-presidente-da-jota/",
-      "img": "https://eco.imgix.net/uploads/2026/05/cropped-47169035-scaled-1.jpg",
+      "date": "Mon, 25 May 2026 08:12:41 +0000",
+      "url": "https://eco.sapo.pt/2026/05/25/meo-exige-82-milhoes-ao-estado-por-exclusao-da-huawei-do-5g/",
+      "img": "https://eco.imgix.net/uploads/2026/05/cropped-whatsapp-image-2026-05-07-at-182426.jpeg",
       "score": 0.73
     },
     {
-      "id": "d2076fad",
-      "cat": "cultura",
-      "title": "Demasiado Seguro para Crescer",
-      "summary": "Durante anos, o setor segurador e de fundos de pensões em Portugal habituou-se a confundir estabilidade com sucesso. Num contexto de elevada regulação, sobretudo por parte da Autoridade de Supervisão de Seguros e Fundos de Pensões, criou-se a ideia confortável de que não crescer é, no limite, um efe",
+      "id": "982120da",
+      "cat": "desporto",
+      "title": "O reverso do negócio do futebol",
+      "summary": "O diagnóstico do futebol profissional em Portugal há muito que deixou de ser puramente desportivo para se tornar um caso grave de insolvência económica latente. Sob a capa dos sucessos esporádicos além-fronteiras e da inesgotável capacidade de exportar talento, esconde-se um ecossistema financeirame",
       "source": "ECO",
-      "date": "Sun, 24 May 2026 12:16:10 +0000",
-      "url": "https://eco.sapo.pt/opiniao/demasiado-seguro-para-crescer/",
-      "img": "https://ecoonline.s3.amazonaws.com/uploads/2024/09/nuno-matos_opiniao.png",
+      "date": "Mon, 25 May 2026 07:38:04 +0000",
+      "url": "https://eco.sapo.pt/opiniao/o-reverso-do-negocio-do-futebol/",
+      "img": "https://ecoonline.s3.amazonaws.com/uploads/2024/05/ricardo-valente_opiniao.png",
       "score": 0.73
     },
     {
@@ -223,17 +300,6 @@
       "score": 0.73
     },
     {
-      "id": "11b355cb",
-      "cat": "ciencia",
-      "title": "O “buraco de minhoca” de Einstein pode realmente revelar um espelho oculto do tempo",
-      "summary": "E se os buracos de minhoca nunca tivessem sido túneis cósmicos? Uma nova pesquisa sugere que a famosa “ponte” de Einstein e Rosen pode na verdade revelar algo ainda mais estranho: o próprio tempo poderia fluir em duas direções ao mesmo tempo. Em vez de conectar lugares distantes no espaço, essas pontes podem conectar versões espelhadas de ti",
-      "source": "ScienceDaily",
-      "date": "Fri, 22 May 2026 09:09:27 EDT",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260522023129.htm",
-      "img": "https://www.sciencedaily.com/images/1920/time-mirror-wormhole-astrophysics.webp",
-      "score": 0.73
-    },
-    {
       "id": "cd1057af",
       "cat": "tecnologia",
       "title": "Ride It Out: como o ciclismo ajuda as crianças a se concentrarem",
@@ -245,58 +311,25 @@
       "score": 0.73
     },
     {
-      "id": "71138b3b",
+      "id": "fe66ddea",
       "cat": "tecnologia",
-      "title": "Dos insultos a Vieira à tensão entre adeptos e jogadores",
-      "summary": "Presença de Vieira não passou ao lado dos adeptos do Sporting na central mas foco chegou após passagem pela escadaria do Jamor, com alguns bate bocas entre jogadores indignados e adeptos revoltados.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 22:15:44 +0100",
-      "url": "https://observador.pt/2026/05/24/insultos-a-vieira-na-central-assobios-e-o-momento-de-maior-tensao-entre-adeptos-e-jogadores-do-sporting-o-outro-lado-da-final-da-taca/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1500:842:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/24221012/rui-borges-1.jpg",
+      "title": "O Coração Ainda Bate. A caixa de lenços",
+      "summary": "Os bons psicólogos inventam janelas num mundo que asfixia. Crónica de Inês Meneses",
+      "source": "Público",
+      "date": "Mon, 25 May 2026 07:04:00 GMT",
+      "url": "https://www.publico.pt/2026/05/25/impar/cronica/coracao-bate-caixa-lencos-2175869",
+      "img": "https://imagens.publico.pt/imagens.aspx/1740629?tp=UH&db=IMAGENS&type=PNG&share=1&o=BarraFacebook_Impar.png",
       "score": 0.7
     },
     {
-      "id": "670b0952",
-      "cat": "tecnologia",
-      "title": "22h. Torreense vence aTaça de Portugal. Sporting perde 2-1",
-      "summary": "A equipa de Torres Vedras fez hoje história ao tornar-se na 1ª equipa da 2ª Liga a vencer uma Taça de Portugal. Ainda, Donald Trump confirma que entendimento com o Irão não está fechado.",
-      "source": "Observador",
-      "date": "Sun, 24 May 2026 22:14:18 +0100",
-      "url": "https://observador.pt/programas/noticiario/as-noticias-das-22h-1778/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "cd1f05a9",
-      "cat": "ambiente",
-      "title": "O que já se sabe sobre a compra de caças para substituir os F-16?",
-      "summary": "",
-      "source": "ECO",
-      "date": "Sun, 24 May 2026 16:20:28 +0000",
-      "url": "https://eco.sapo.pt/descodificador/o-que-ja-se-sabe-sobre-a-compra-de-cacas-para-substituir-os-f-16/",
-      "img": "https://eco.imgix.net/uploads/2026/05/f-16-substituicao-2000x1125-1.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "da40832a",
-      "cat": "ambiente",
-      "title": "Superhot Rock detém a energia do futuro",
-      "summary": "Esta história foi co-publicada pela Reasons to be Cheerful e pela Outrider Foundation. O Vulcão Newberry, no centro de Oregon, está situado em meio a uma paisagem deslumbrante de antigos fluxos de lava, lagos e florestas de pinheiros. Todos os anos, multidões de turistas vêm admirar o fenômeno geológico que se formou",
-      "source": "Reasons to be Cheerful",
-      "date": "Thu, 21 May 2026 08:00:35 +0000",
-      "url": "https://reasonstobecheerful.world/geothermal-energy-new-tech/",
-      "img": "https://reasonstobecheerful.world/wp-content/uploads/2026/05/DJI_20250711052517_0002_D-scaled.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "19c984ae",
-      "cat": "ambiente",
-      "title": "O que estamos lendo: um minúsculo dispositivo que mantém os microplásticos fora dos oceanos",
-      "summary": "Bem-vindo de volta à nossa visão semanal dos bastidores sobre o que está fazendo nossa equipe falar. Conte-nos o que você está lendo em info@reasonstobecheerful.world e talvez possamos apresentá-lo aqui. Os microplásticos genéricos estão em quase toda parte, inclusive em cerca de 69% de nossas roupas. Quando aqueles",
-      "source": "Reasons to be Cheerful",
-      "date": "Wed, 20 May 2026 08:00:21 +0000",
-      "url": "https://reasonstobecheerful.world/what-were-reading-washing-machine-microplastic-filter/",
-      "img": "https://reasonstobecheerful.world/wp-content/uploads/2026/05/shutterstock_2767045989-scaled.jpg",
+      "id": "149206b3",
+      "cat": "saude",
+      "title": "Portugal habituou-se ao cansaço e isso deve preocupar-nos",
+      "summary": "Num momento em que tanto se discute saúde mental, burnout, produtividade e exaustão coletiva, talvez devêssemos refletir melhor sobre aquilo que estamos a normalizar. Opinião de Paula Freitas",
+      "source": "Público",
+      "date": "Mon, 25 May 2026 07:04:00 GMT",
+      "url": "https://www.publico.pt/2026/05/25/impar/opiniao/portugal-habituouse-cansaco-preocuparnos-2175170",
+      "img": "https://imagens.publico.pt/imagens.aspx/2089240?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Impar.png",
       "score": 0.7
     }
   ]
