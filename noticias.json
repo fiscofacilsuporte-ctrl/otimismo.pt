@@ -1,5 +1,5 @@
 {
-  "last_update": "25/05/2026 08:24 UTC",
+  "last_update": "25/05/2026 08:32 UTC",
   "total": 30,
   "news": [
     {
@@ -71,7 +71,7 @@
     {
       "id": "0e08eb4a",
       "cat": "ciencia",
-      "title": "Adorável minúsculo polvo azul encontrado quase 6.000 pés abaixo de Galápagos",
+      "title": "Adorável minúsculo polvo azul encontrado a quase 6.000 pés abaixo de Galápagos",
       "summary": "Um misterioso polvo azul descoberto a quase 2.000 metros de profundidade nas águas das Ilhas Galápagos foi oficialmente identificado como uma espécie totalmente nova. Mais ou menos do tamanho de uma bola de golfe, a pequena criatura surpreendeu os pesquisadores durante uma expedição em alto mar quando apareceu de repente na câmera, rastejando",
       "source": "ScienceDaily",
       "date": "Mon, 25 May 2026 02:17:15 EDT",
@@ -89,6 +89,17 @@
       "url": "https://www.sciencedaily.com/releases/2026/05/260522023136.htm",
       "img": "https://www.sciencedaily.com/images/1920/mangoes-on-wood-table.webp",
       "score": 0.79
+    },
+    {
+      "id": "75131593",
+      "cat": "tecnologia",
+      "title": "Prejuizos da TAP caíram para 39,9 milhões de euros no primeiro trimestre",
+      "summary": "Em comunicado, a companhia aérea portuguesa destaca o crescimento de 11% das receitas operacionais, para 914,4 milhões de euros.",
+      "source": "Público",
+      "date": "Mon, 25 May 2026 07:53:26 GMT",
+      "url": "https://www.publico.pt/2026/05/25/economia/noticia/prejuizos-tap-cairam-399-milhoes-euros-trimestre-2175882",
+      "img": "https://imagens.publico.pt/imagens.aspx/2090676?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "score": 0.76
     },
     {
       "id": "0725644b",
@@ -212,14 +223,14 @@
       "score": 0.76
     },
     {
-      "id": "5f245365",
+      "id": "e925f01e",
       "cat": "tecnologia",
-      "title": "PSD retira competências sobre “barrigas de aluguer” a órgão que emite pareceres",
-      "summary": "Projecto de lei sobre novos estatutos do Conselho Nacional de Procriação Medicamente Assistida deixa cair menções à gestação de substituição — que continua na “gaveta” do Governo para regulamentar.",
+      "title": "Luiz Caracol homenageia José Mário Branco com uma versão de Eu vi este povo a lutar",
+      "summary": "No dia em que José Mário Branco (1942-2019) faria 84 anos, o cantor e compositor Luiz Caracol publica uma versão sua da canção Eu vi este povo a lutar em parceria com Pedro Pity.",
       "source": "Público",
-      "date": "Mon, 25 May 2026 06:14:00 GMT",
-      "url": "https://www.publico.pt/2026/05/25/politica/noticia/psd-retira-competencias-barrigas-aluguer-orgao-emite-pareceres-2175859",
-      "img": "https://imagens.publico.pt/imagens.aspx/2090646?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Mon, 25 May 2026 08:00:00 GMT",
+      "url": "https://www.publico.pt/2026/05/25/culturaipsilon/noticia/luiz-caracol-homenageia-jose-mario-branco-versao-vi-povo-lutar-2175866",
+      "img": "https://imagens.publico.pt/imagens.aspx/2090661?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
       "score": 0.73
     },
     {
@@ -311,25 +322,14 @@
       "score": 0.73
     },
     {
-      "id": "fe66ddea",
+      "id": "73a95901",
       "cat": "tecnologia",
-      "title": "O Coração Ainda Bate. A caixa de lenços",
-      "summary": "Os bons psicólogos inventam janelas num mundo que asfixia. Crónica de Inês Meneses",
+      "title": "Em dia com 35 graus, sete concelhos de Faro em perigo máximo de incêndio",
+      "summary": "Segundo o IPMA, o perigo de incêndio rural vai manter-se elevado pelo menos até sexta-feira devido à previsão de tempo quente.",
       "source": "Público",
-      "date": "Mon, 25 May 2026 07:04:00 GMT",
-      "url": "https://www.publico.pt/2026/05/25/impar/cronica/coracao-bate-caixa-lencos-2175869",
-      "img": "https://imagens.publico.pt/imagens.aspx/1740629?tp=UH&db=IMAGENS&type=PNG&share=1&o=BarraFacebook_Impar.png",
-      "score": 0.7
-    },
-    {
-      "id": "149206b3",
-      "cat": "saude",
-      "title": "Portugal habituou-se ao cansaço e isso deve preocupar-nos",
-      "summary": "Num momento em que tanto se discute saúde mental, burnout, produtividade e exaustão coletiva, talvez devêssemos refletir melhor sobre aquilo que estamos a normalizar. Opinião de Paula Freitas",
-      "source": "Público",
-      "date": "Mon, 25 May 2026 07:04:00 GMT",
-      "url": "https://www.publico.pt/2026/05/25/impar/opiniao/portugal-habituouse-cansaco-preocuparnos-2175170",
-      "img": "https://imagens.publico.pt/imagens.aspx/2089240?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Impar.png",
+      "date": "Mon, 25 May 2026 08:09:54 GMT",
+      "url": "https://www.publico.pt/2026/05/25/azul/noticia/dia-35-graus-sete-concelhos-faro-perigo-maximo-incendio-2175881",
+      "img": "https://imagens.publico.pt/imagens.aspx/2090677?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Azul.png",
       "score": 0.7
     }
   ]
