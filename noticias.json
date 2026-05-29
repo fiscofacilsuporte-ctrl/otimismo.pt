@@ -1,5 +1,5 @@
 {
-  "last_update": "29/05/2026 09:04 UTC",
+  "last_update": "29/05/2026 12:29 UTC",
   "total": 30,
   "news": [
     {
@@ -23,6 +23,28 @@
       "url": "https://www.sciencedaily.com/releases/2026/05/260528082453.htm",
       "img": "https://www.sciencedaily.com/images/1920/juvenile-st-kilda-wren.webp",
       "score": 0.82
+    },
+    {
+      "id": "bd1e4504",
+      "cat": "economia",
+      "title": "Aceleração do investimento manteve economia à tona no primeiro trimestre",
+      "summary": "INE confirma crescimento nulo no arranque do ano, com as despesas das famílias a travarem.",
+      "source": "Jornal de Negócios",
+      "date": "Fri, 29 May 2026 11:30:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/conjuntura/detalhe/aceleracao-do-investimento-manteve-economia-a-tona-no-primeiro-trimestre",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-04/img_100x100uu2026-04-08-16-18-56-521722.jpg",
+      "score": 0.79
+    },
+    {
+      "id": "e9bb0d3f",
+      "cat": "tecnologia",
+      "title": "Planta britânica rara faz retorno extraordinário da beira da extinção",
+      "summary": "Os conservacionistas estão celebrando a notável recuperação de uma importante e única flor britânica conhecida como erva-leiteira de Kentish, após registrar um aumento populacional de sete vezes durante a recente estação de cultivo. 1.245 plantas auto-semeadas foram registradas este ano em um local de cultivo crucial, agora o maior po",
+      "source": "Good News Network",
+      "date": "Fri, 29 May 2026 11:00:38 +0000",
+      "url": "https://www.goodnewsnetwork.org/rare-british-plant-makes-extraordinary-comeback-from-brink-of-extinction/",
+      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Kentish-milkwort-credit-Stephen-Weeks-©-released.jpg",
+      "score": 0.79
     },
     {
       "id": "521b5883",
@@ -69,25 +91,25 @@
       "score": 0.79
     },
     {
-      "id": "0f1d18d6",
-      "cat": "tecnologia",
-      "title": "Al Nassr confirma saída do treinador Jorge Jesus",
-      "summary": "O treinador português Jorge Jesus vai deixar o Al Nassr, depois de ter conquistado o título de campeão de futebol da Arábia Saudita, confirmou hoje o clube dos compatriotas Cristiano Ronaldo e João Félix.",
-      "source": "RTP",
-      "date": "Thu, 28 May 2026 23:06:29 +0100",
-      "url": "https://www.rtp.pt/noticias/futebol-internacional/al-nassr-confirma-saida-do-treinador-jorge-jesus_d1744170",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/a5/a5160f525d48c694873bf74d7b710f14?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "id": "a31fef2a",
+      "cat": "economia",
+      "title": "PIB com variação nula: investimento acelera, mas faz disparar as importações",
+      "summary": "Com o PRR a chegar ao fim, o investimento acelerou no primeiro trimestre deste ano. Em simultâneo, contudo, o aumento das importações contribuiu de forma decisiva para o abrandamento da economia.",
+      "source": "Público",
+      "date": "Fri, 29 May 2026 11:25:30 GMT",
+      "url": "https://www.publico.pt/2026/05/29/economia/noticia/pib-variacao-nula-investimento-acelera-faz-disparar-importacoes-2176452",
+      "img": "https://imagens.publico.pt/imagens.aspx/2091873?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.76
     },
     {
-      "id": "178de1f8",
+      "id": "f10152d5",
       "cat": "tecnologia",
-      "title": "Apoios sociais. Governo vai forçar beneficiários a “trabalho social”",
-      "summary": "O Governo de António Costa inscreveu no Plano de Recuperação e Resiliência (PRR) a criação da Prestação Social Única (PSU), que prometia fundir pelo menos oito prestações sociais não contributivas. Na reunião desta sexta-feira, o Executivo de Luís Montenegro vai aprovar essa medida em Conselho de Mi",
-      "source": "ECO",
-      "date": "Fri, 29 May 2026 07:47:44 +0000",
-      "url": "https://eco.sapo.pt/2026/05/29/apoios-sociais-governo-vai-forcar-beneficiarios-a-trabalho-social/",
-      "img": "https://eco.imgix.net/uploads/2025/06/cropped-44176893-scaled-1.jpg",
+      "title": "O crescimento da produtividade da IA ​​​​não vai igualar a revolução dos computadores",
+      "summary": "A questão mais profunda não é simplesmente que a IA possa estar errada. É que o custo dos erros está a mudar.",
+      "source": "Jornal de Negócios",
+      "date": "Fri, 29 May 2026 13:15:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/opiniao/economistas/detalhe/o-crescimento-da-produtividade-da-ia-nao-vai-igualar-a-revolucao-dos-computadores",
+      "img": "https://cdn.jornaldenegocios.pt/images/2024-11/img_394x514uu2024-11-07-09-41-57-489209.png",
       "score": 0.76
     },
     {
@@ -99,17 +121,6 @@
       "date": "Thu, 28 May 2026 15:30:30 +0000",
       "url": "https://www.goodnewsnetwork.org/all-electric-truck-completes-milestone-canberra-to-sydney-haul-cutting-84-in-fuel-costs/",
       "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/The-New-Energy-Transport-electric-truck-credit-released-by-NET.jpg",
-      "score": 0.76
-    },
-    {
-      "id": "53f7caf0",
-      "cat": "tecnologia",
-      "title": "Projeto de restauração de Everglades em andamento há mais de 20 anos obtém enorme sucesso na reconstituição",
-      "summary": "Uma enorme área dos Everglades que foi drenada na tentativa de convertê-la em subúrbio foi restaurada para um ecossistema um tanto nativo após 2 décadas de engenharia paisagística reversa. Picayune Strand é um retângulo grande e quase perfeito do pântano do sul da Flórida, localizado a noroeste da nação Everglades.",
-      "source": "Good News Network",
-      "date": "Thu, 28 May 2026 11:00:18 +0000",
-      "url": "https://www.goodnewsnetwork.org/everglades-restoration-project-ongoing-for-20-plus-years-sees-huge-rewilding-success/",
-      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Florida-panthers-in-the-Picayune-Strand-credit-David-Shindle-Conservancy-of-Southwest-Florida.jpg",
       "score": 0.76
     },
     {
@@ -138,7 +149,7 @@
       "id": "70747965",
       "cat": "ambiente",
       "title": "O que estamos lendo: a mais nova fonte de energia limpa de Denver será o esgoto",
-      "summary": "Bem-vindo de volta à nossa visão semanal dos bastidores sobre o que está fazendo nossa equipe falar. Conte-nos o que você está lendo em info@reasonstobecheerful.world e talvez possamos apresentá-lo aqui. Energia limpa e imunda O objetivo de Denver é reduzir seus gases de efeito estufa a zero até 2040, o que significa",
+      "summary": "Bem-vindo de volta à nossa visão semanal dos bastidores sobre o que está fazendo nossa equipe falar. Conte-nos o que você está lendo em info@reasonstobecheerful.world e talvez possamos apresentá-lo aqui. Energia limpa e suja O objetivo de Denver é reduzir seus gases de efeito estufa a zero até 2040, o que significa",
       "source": "Reasons to be Cheerful",
       "date": "Wed, 27 May 2026 08:00:15 +0000",
       "url": "https://reasonstobecheerful.world/what-were-reading-denvers-newest-clean-energy-source-will-be-sewage/",
@@ -157,91 +168,47 @@
       "score": 0.76
     },
     {
-      "id": "24d0b986",
+      "id": "7bd17c1c",
       "cat": "tecnologia",
-      "title": "Pequenos investidores contribuem para uma maior incerteza no ouro",
-      "summary": "Tendências passadas com activos de refúgio, como o ouro, não se estão a repetir, nota o Banco Central Europeu. Exposição indirecta ao metal precioso amplifica movimentos.",
+      "title": "Paixão por Anselm Kiefer, entre o chumbo de Valência e o ouro de Braga",
+      "summary": "O Centro de Arte Hortensia Herrero dedica uma exposição ao artista alemão. Nas 11 obras de Valência e nas oito do Muzeu de Braga, vemos Kiefer a lidar com o peso da história, a paisagem e a alquimia.",
       "source": "Público",
-      "date": "Fri, 29 May 2026 08:22:45 GMT",
-      "url": "https://www.publico.pt/2026/05/29/economia/noticia/investidores-contribuem-maior-incerteza-ouro-2176350",
-      "img": "https://imagens.publico.pt/imagens.aspx/2091703?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Fri, 29 May 2026 10:33:00 GMT",
+      "url": "https://www.publico.pt/2026/05/29/culturaipsilon/noticia/paixao-anselm-kiefer-chumbo-valencia-ouro-braga-2175912",
+      "img": "https://imagens.publico.pt/imagens.aspx/2090986?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
       "score": 0.73
     },
     {
-      "id": "30005970",
+      "id": "c833e5cd",
       "cat": "tecnologia",
-      "title": "Foguetão da Blue Origin explode na plataforma de lançamento",
-      "summary": "Empresa espacial de Jeff Bezos quer colocar em órbita 48 satélites. “Foguetões são difíceis”, responde Musk, principal “rival” de Bezos na exploração espacial.",
+      "title": "Força Aérea insiste e volta a indicar F-35 como única solução para substituir os F-16",
+      "summary": "Caça norte-americano é visto como ponta-de-lança do plano de modernização da Força Aérea, apesar de o Governo ainda não ter iniciado o processo formal de decisão. Saab e Airbus mantêm-se na corrida.",
       "source": "Público",
-      "date": "Fri, 29 May 2026 07:30:12 GMT",
-      "url": "https://www.publico.pt/2026/05/29/ciencia/noticia/foguetao-blue-origin-explode-plataforma-lancamento-2176425",
-      "img": "https://imagens.publico.pt/imagens.aspx/2091840?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Fri, 29 May 2026 09:55:27 GMT",
+      "url": "https://www.publico.pt/2026/05/29/politica/noticia/forca-aerea-insiste-volta-indicar-f35-unica-solucao-substituir-f16-2176437",
+      "img": "https://imagens.publico.pt/imagens.aspx/2091856?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.73
     },
     {
-      "id": "111eb183",
+      "id": "f090b0e6",
       "cat": "tecnologia",
-      "title": "Lisboa recebe duelo solidário entre Ronaldinho Gaúcho e Deco",
-      "summary": "Ex-companheiros na conquista da Champions League de 2006, pelo Barcelona, estarão em lados opostos no Jogo das Estrelas, nesta sexta, 29. Famílias afetadas pelas chuvas em Leiria serão beneficiadas.",
-      "source": "Público",
-      "date": "Fri, 29 May 2026 07:14:32 GMT",
-      "url": "https://www.publico.pt/2026/05/29/publico-brasil/noticia/lisboa-recebe-duelo-solidario-ronaldinho-gaucho-deco-2176427",
-      "img": "https://imagens.publico.pt/imagens.aspx/2091843?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Brasil.png",
-      "score": 0.73
-    },
-    {
-      "id": "cea325f9",
-      "cat": "tecnologia",
-      "title": "Cancro. Infarmed recusa tratamento inovador a mulheres",
-      "summary": "Medicamento inovador permitiria aumentar o tempo de vida de mulheres com a forma mais agressiva de cancro da mama. Apesar de estar num programa experimental gratuito, Infarmed recusou.",
+      "title": "“O líder natural do espaço à direita chama-se Montenegro”",
+      "summary": "Em entrevista ao Observador, no programa Vichyssoise, Diogo Feio desvaloriza as palavras de Passos Coelho, sai em defesa do atual primeiro-ministro e pede menos divisão à direita.",
       "source": "Observador",
-      "date": "Fri, 29 May 2026 08:59:46 +0100",
-      "url": "https://observador.pt/2026/05/29/infarmed-recusa-tratamento-inovador-e-gratuito-a-mulheres-com-forma-agressiva-de-cancro-da-mama/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1440:809:nowe:0:75/q:70/plain/https://s3.observador.pt/wp-content/uploads/2024/11/06143621/infarmed-ordena-retirada-do-mercado-de-cinco-lotes-do-antidepressivo-fluoextina.jpg",
+      "date": "Fri, 29 May 2026 11:47:43 +0100",
+      "url": "https://observador.pt/programas/vichyssoise/o-lider-natural-do-espaco-a-direita-chama-se-montenegro/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13151448/770-podcast-vichyssoise.jpg",
       "score": 0.73
     },
     {
-      "id": "b17e2c64",
+      "id": "1010d296",
       "cat": "tecnologia",
-      "title": "8h. Plano de Emergência e Transformação da Saúde a 60%",
-      "summary": "O Grupo de Acompanhamento criado pelo Ministério da Saúde não reúne há um ano. Ainda, Ursula von der Leyen entende que Moscovo passou limites após drone russo ter colidido com um prédio na Roménia.",
-      "source": "Observador",
-      "date": "Fri, 29 May 2026 08:20:51 +0100",
-      "url": "https://observador.pt/programas/noticiario/as-noticias-das-8h-2411/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
-      "score": 0.73
-    },
-    {
-      "id": "806edda1",
-      "cat": "geral",
-      "title": "Japão regista queda recorde de população em cinco anos",
-      "summary": "Os responsáveis japoneses têm tentado incentivar o casamento e a natalidade. Contudo, em 2025, registaram-se três milhões de pessoas a menos do que no censo anterior, em 2020.",
-      "source": "Observador",
-      "date": "Fri, 29 May 2026 08:13:15 +0100",
-      "url": "https://observador.pt/2026/05/29/japao-regista-queda-recorde-de-populacao-em-cinco-anos/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1123:nowe:0:212/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/29052710/45092639.jpg",
-      "score": 0.73
-    },
-    {
-      "id": "e02b6fa1",
-      "cat": "tecnologia",
-      "title": "Encíclica papal: um manifesto político para travar a Grande Máquina",
-      "summary": "Papa lança um olhar atualizado sobre a “questão operária” do século XXI, o poder que deixou de estar nas mãos dos governos, a necessidade de abrandar o ritmo dos avanços tecnológicos e de “desarmar” a inteligência artificial.",
+      "title": "\"Investigação é bem-vinda\". Carlos Moedas reage a buscas na Carris",
+      "summary": "O presidente da Câmara Municipal de Lisboa garante que a autarquia não é alvo da investigação. No Canal NOW, Carlos Moedas referiu ainda que estão em curso auditorias internas e externas na Carris.",
       "source": "Jornal de Negócios",
-      "date": "Fri, 29 May 2026 10:00:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/mundo/detalhe/enciclica-papal-um-manifesto-politico-para-travar-a-grande-maquina",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-26-10-08-17-524241.jpg",
-      "score": 0.73
-    },
-    {
-      "id": "1db9ade1",
-      "cat": "tecnologia",
-      "title": "A destruição criativa na era da inteligência artificial",
-      "summary": "No contexto da inovação, a utilização de IA deve ser integrada na estratégia das organizações e não substituí-la.",
-      "source": "Jornal de Negócios",
-      "date": "Fri, 29 May 2026 09:15:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/opiniao/detalhe/a-destruicao-criativa-na-era-da-inteligencia-artificial",
-      "img": "https://cdn.jornaldenegocios.pt/images/2025-03/img_394x514uu2025-03-20-19-06-51-498117.png",
+      "date": "Fri, 29 May 2026 13:04:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/justica/detalhe/investigacao-e-bem-vinda-carlos-moedas-reage-a-buscas-na-carris",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-29-13-16-08-524536.jpg",
       "score": 0.73
     },
     {
@@ -278,14 +245,25 @@
       "score": 0.73
     },
     {
-      "id": "35e7ed51",
+      "id": "0ecb51be",
       "cat": "ambiente",
-      "title": "REN prevê investimento de 400 milhões para ligar novos consumidores à rede",
-      "summary": "O ministério do Ambiente e Energia confirma que as manifestações de interesse da parte de consumidores que se querem ligar à rede correspondem, de momento, a uma capacidade de 4,6 gigawatts. &#8220;A REN apresentou ao Governo a necessidade de um investimento de aproximadamente 400 milhões de euros p",
+      "title": "O que se sabe sobre o possível acordo entre EUA e Irão",
+      "summary": "",
       "source": "ECO",
-      "date": "Fri, 29 May 2026 08:50:09 +0000",
-      "url": "https://eco.sapo.pt/2026/05/29/ren-preve-investimento-de-400-milhoes-para-ligar-novos-consumidores-a-rede/",
-      "img": "https://eco.imgix.net/uploads/2026/02/cropped-doc2026020446489361-aps8010-1.jpg",
+      "date": "Fri, 29 May 2026 11:31:58 +0000",
+      "url": "https://eco.sapo.pt/descodificador/o-que-se-sabe-sobre-o-possivel-acordo-entre-eua-e-irao/",
+      "img": "https://eco.imgix.net/uploads/2026/05/irao-usa-acordo-2000x1125-1.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "59cf3867",
+      "cat": "tecnologia",
+      "title": "Estrangeiros voltam a segurar crescimento do turismo com mais canadianos e holandeses",
+      "summary": "O setor do alojamento turístico registou 2,9 milhões de hóspedes e 7,2 milhões de dormidas, o que traduz um crescimento homólogo de 2,4% e 0,6%, respetivamente, revelam os dados do Instituto Nacional de Estatística (INE). À semelhança do que já tinha acontecido em março, o crescimento foi suportado ",
+      "source": "ECO",
+      "date": "Fri, 29 May 2026 10:44:13 +0000",
+      "url": "https://eco.sapo.pt/2026/05/29/estrangeiros-voltam-a-segurar-crescimento-do-turismo-com-mais-canadianos-e-holandeses/",
+      "img": "https://eco.imgix.net/uploads/2026/03/cropped-45212881-scaled-1.jpg",
       "score": 0.73
     },
     {
@@ -322,14 +300,36 @@
       "score": 0.73
     },
     {
-      "id": "63b76f87",
+      "id": "688c50ff",
+      "cat": "geral",
+      "title": "Neves na mira, Passos hardcore e Rato aflito",
+      "summary": "As confusões no SIRESP são a primeira mancha na ficha do ministro. Passos ultrapassou uma linha que se julgava inultrapassável. Buscas no PS condicionam Carneiro.",
+      "source": "Observador",
+      "date": "Fri, 29 May 2026 12:06:43 +0100",
+      "url": "https://observador.pt/programas/vichyssoise/neves-na-mira-passos-hardcore-e-rato-aflito/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13151448/770-podcast-vichyssoise.jpg",
+      "score": 0.7
+    },
+    {
+      "id": "7c2bee36",
+      "cat": "cultura",
+      "title": "ICA pede a autarquias que ajudem exibição de cinema",
+      "summary": "Segundo um novo estudo, 41% dos inquiridos não viram um filme português no último ano (e 45% têm referências negativas sobre cinema nacional) e apenas 26% viram um ou dois filmes num ano.",
+      "source": "Observador",
+      "date": "Fri, 29 May 2026 12:03:45 +0100",
+      "url": "https://observador.pt/2026/05/29/presidente-do-ica-pede-a-autarquias-que-ajudem-exibicao-de-cinema-portugues/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1440:810:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2022/02/23092032/13163446.jpg",
+      "score": 0.7
+    },
+    {
+      "id": "c8ced442",
       "cat": "tecnologia",
-      "title": "Banca investe em IA, mas os acionistas querem resultados",
-      "summary": "A utilização da inteligência artificial está a reconfigurar o negócio bancário, acreditam os responsáveis do setor.",
-      "source": "Jornal de Negócios",
-      "date": "Fri, 29 May 2026 09:30:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/detalhe/banca-investe-mas-os-acionistas-querem-resultados",
-      "img": "https://cdn.jornaldenegocios.pt/images/2022-11/img_100x100uu2022-11-14-19-34-13-440398.jpg",
+      "title": "Soldados ingénuos, como formigas no Chapitô",
+      "summary": "As Formigas é o novo espetáculo de teatro da Companhia do Chapitô,, em Lisboa, na Costa do Castelo, estreia esta noite, de quinta feira 11 de janeiro.",
+      "source": "TSF",
+      "date": "Thu, 11 Jan 2024 07:30:00 Z",
+      "url": "https://www.tsf.pt/portugal/cultura/soldados-ingenuos-como-formigas-no-chapito-17638842.html",
+      "img": "https://static.globalnoticias.pt/tsf/image.jpg?brand=TSF&type=generate&guid=b375751b-322c-4c9e-8e30-8731053255db&w=600&h=232&t=20240201072011",
       "score": 0.7
     }
   ]
