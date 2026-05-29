@@ -1,5 +1,5 @@
 {
-  "last_update": "29/05/2026 08:58 UTC",
+  "last_update": "29/05/2026 09:04 UTC",
   "total": 30,
   "news": [
     {
@@ -223,6 +223,17 @@
       "score": 0.73
     },
     {
+      "id": "e02b6fa1",
+      "cat": "tecnologia",
+      "title": "Encíclica papal: um manifesto político para travar a Grande Máquina",
+      "summary": "Papa lança um olhar atualizado sobre a “questão operária” do século XXI, o poder que deixou de estar nas mãos dos governos, a necessidade de abrandar o ritmo dos avanços tecnológicos e de “desarmar” a inteligência artificial.",
+      "source": "Jornal de Negócios",
+      "date": "Fri, 29 May 2026 10:00:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/mundo/detalhe/enciclica-papal-um-manifesto-politico-para-travar-a-grande-maquina",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-26-10-08-17-524241.jpg",
+      "score": 0.73
+    },
+    {
       "id": "1db9ade1",
       "cat": "tecnologia",
       "title": "A destruição criativa na era da inteligência artificial",
@@ -252,7 +263,7 @@
       "source": "RTP",
       "date": "Fri, 29 May 2026 10:56:41 +0100",
       "url": "https://www.rtp.pt/noticias/futebol-internacional/liga-dos-campeoes-psg-conta-com-dembele-e-hakimi-para-a-final-contra-o-arsenal_d1744246",
-      "img": "https://cdn-images.rtp.pt/noticias/images/rtp-deporto_default.png?w=350&amp;q=50&amp;auto=format",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/1d/1ddd76a1694be5faa9d9a93708e1a766?w=350&amp;q=50&amp;rect=0,254,4765,2612&amp;auto=format",
       "score": 0.73
     },
     {
@@ -319,17 +330,6 @@
       "date": "Fri, 29 May 2026 09:30:00 +0100",
       "url": "https://www.jornaldenegocios.pt/empresas/detalhe/banca-investe-mas-os-acionistas-querem-resultados",
       "img": "https://cdn.jornaldenegocios.pt/images/2022-11/img_100x100uu2022-11-14-19-34-13-440398.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "bd820e95",
-      "cat": "tecnologia",
-      "title": "Dono do Novobanco em negociações exclusivas para comprar a GamaLife",
-      "summary": "Grupo francês dono do Novobanco está em negociações exclusivas para adquirir a GamaLife ao fundo Apax Partners. Negócio poderá ser fechado em breve e reflete a tendência crescente de regresso dos bancos ao negócio segurador na Europa.",
-      "source": "Jornal de Negócios",
-      "date": "Fri, 29 May 2026 09:27:34 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/banca---financas/detalhe/dono-do-novobanco-em-negociacoes-exclusivas-para-comprar-a-gamalife",
-      "img": "https://cdn.jornaldenegocios.pt/images/2025-08/img_100x100uu2025-08-08-07-28-00-507120.jpg",
       "score": 0.7
     }
   ]
