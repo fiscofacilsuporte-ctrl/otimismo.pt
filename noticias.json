@@ -1,5 +1,5 @@
 {
-  "last_update": "30/05/2026 15:57 UTC",
+  "last_update": "30/05/2026 21:39 UTC",
   "total": 30,
   "news": [
     {
@@ -58,17 +58,6 @@
       "score": 0.79
     },
     {
-      "id": "07f8c414",
-      "cat": "economia",
-      "title": "Após uma época de jejum, Liverpool quer “avançar” e fá-lo-á sem Arne Slot",
-      "summary": "Treinador neerlandês foi despedido neste sábado, culminando uma temporada de investimento-recorde com poucos dividendos desportivos. Segue-se Andoni Iraola?",
-      "source": "Público",
-      "date": "Sat, 30 May 2026 15:01:50 GMT",
-      "url": "https://www.publico.pt/2026/05/30/desporto/noticia/apos-epoca-jejum-liverpool-quer-avancar-faloa-arne-slot-2176610",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092158?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
-      "score": 0.76
-    },
-    {
       "id": "854a70c8",
       "cat": "tecnologia",
       "title": "Raúl Fernández vence corrida sprint do Grande Prémio de Itália de MotoGP",
@@ -80,14 +69,14 @@
       "score": 0.76
     },
     {
-      "id": "9da20f3c",
-      "cat": "tecnologia",
-      "title": "Arsenal e PSG em final de Campeões",
-      "summary": "O Paris Saint-Germain, de Nuno Mendes, João Neves, Vitinha e Gonçalo Ramos, procura voltar a erguer a Liga dos Campeões, numa final em que o Arsenal busca o seu primeiro título europeu.",
-      "source": "RTP",
-      "date": "Sat, 30 May 2026 16:31:30 +0100",
-      "url": "https://www.rtp.pt/noticias/liga-dos-campeoes/arsenal-e-psg-em-final-de-campeoes_d1744516",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/c5/c595e731c592836824b89fd77cd05a5a?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "id": "b8bbe5b5",
+      "cat": "economia",
+      "title": "“Temos a capacidade de fazer da SAP Portugal uma empresa maior do que o mercado português”",
+      "summary": "Nuno Saramago, diretor-geral da SAP Portugal, afirma que a tecnológica alemã vai fazer um “maior investimento” para reforçar a equipa de cloud soberana que trabalha em Portugal. Em entrevista ao ECO, o gestor admite que todos os novos clientes conquistados nos últimos quatro anos em Portugal “vieram",
+      "source": "ECO",
+      "date": "Sat, 30 May 2026 17:03:10 +0000",
+      "url": "https://eco.sapo.pt/entrevista/temos-a-capacidade-de-fazer-da-sap-portugal-uma-empresa-maior-do-que-o-mercado-portugues/",
+      "img": "https://eco.imgix.net/uploads/2026/05/cropped-sap-nuno-saramago-01.jpg",
       "score": 0.76
     },
     {
@@ -179,25 +168,58 @@
       "score": 0.76
     },
     {
-      "id": "d562e079",
-      "cat": "tecnologia",
-      "title": "Intérpretes de Stranger Things , Hacks e Big Mistakes pedem mais histórias LGBT+",
-      "summary": "Foi a 3.ª Celebração do Cinema e Televisão LGBTQ+, feita pela Critics Choice Association em Los Angeles.",
+      "id": "4c34b2b5",
+      "cat": "cultura",
+      "title": "O PSG tornou-se bicampeão europeu da marca de penálti",
+      "summary": "Arsenal marcou cedo, sofreu o empate na segunda parte e estendeu o jogo até ao desempate por penáltis. Nuno Mendes ainda falhou, mas o título não escapou aos franceses.",
       "source": "Público",
-      "date": "Sat, 30 May 2026 15:00:06 GMT",
-      "url": "https://www.publico.pt/2026/05/30/culturaipsilon/noticia/interpretes-stranger-things-hacks-big-mistakes-pedem-historias-lgbt-2176613",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092157?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
+      "date": "Sat, 30 May 2026 19:03:08 GMT",
+      "url": "https://www.publico.pt/2026/05/30/desporto/cronica_de_jogo/psg-tornouse-bicampeao-europeu-marca-penalti-2176622",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092187?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.73
     },
     {
-      "id": "b5b1091c",
+      "id": "75a4c743",
       "cat": "tecnologia",
-      "title": "Carneiro exige “comportamentos irrepreensíveis” a titulares de cargos do PS",
-      "summary": "Líder socialista avança com “criação de um código de ética” e quer que o Governo adopte medidas que permitam fazer face ao aumento dos juros no crédito à habitação.",
+      "title": "Râguebi: Cascais volta a conquistar Taça de Portugal, 33 anos depois",
+      "summary": "Cascalenses venceram o Belenenses na final da competição, por cinco pontos de diferença. Foi o quinto troféu do palmarés.",
       "source": "Público",
-      "date": "Sat, 30 May 2026 14:36:00 GMT",
-      "url": "https://www.publico.pt/2026/05/30/politica/noticia/carneiro-exige-comportamentos-irrepreensiveis-titulares-cargos-ps-2176611",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092152?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Sat, 30 May 2026 18:01:39 GMT",
+      "url": "https://www.publico.pt/2026/05/30/desporto/noticia/raguebi-cascais-volta-conquistar-taca-portugal-33-anos-2176627",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092213?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "score": 0.73
+    },
+    {
+      "id": "5636edeb",
+      "cat": "tecnologia",
+      "title": "Cruyff, o coletivo e quatro finais. O sucesso dos espanhóis",
+      "summary": "Entre masculino e feminino, 4 finais europeias contaram com treinadores espanhóis. Entre a influência de Cruyff, o lado intelectual do jogo e a importância do coletivo, existem motivos para o sucesso.",
+      "source": "Observador",
+      "date": "Sat, 30 May 2026 20:13:43 +0100",
+      "url": "https://observador.pt/2026/05/30/cruyff-a-obsessao-pelo-coletivo-e-quatro-finais-europeias-como-se-explica-o-sucesso-dos-treinadores-espanhois/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1200:673:nowe:0:62/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/30171327/gettyimages-2278219586.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "dfc21115",
+      "cat": "tecnologia",
+      "title": "20h. PSG vence a Liga dos Campeões",
+      "summary": "O PSG é bicampeão europeu, após vencer o Arsenal nas grandes deliberações. Ainda assim, a CGTP acusa o governo de “desvirtuar” as prestações sociais com a implementação da Prestação Social Única.",
+      "source": "Observador",
+      "date": "Sat, 30 May 2026 20:12:52 +0100",
+      "url": "https://observador.pt/programas/noticiario/as-noticias-das-20h-1961/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "948b8ceb",
+      "cat": "desporto",
+      "title": "PSG vence Arsenal nos penáltis e volta a conquistar a Champions",
+      "summary": "Parisienses revalidaram a conquista da Liga dos Campeões e os ingleses perderam a oportunidade de ganhar a sua primeira Champions 20 anos depois de ter perdido no jogo decisivo frente ao Barcelona. Nuno Mendes, Vitinha, João Neves e Gonçalo Ramos são bicampeões europeus.",
+      "source": "Jornal de Negócios",
+      "date": "Sat, 30 May 2026 20:00:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/empresas/desporto/detalhe/psg-vence-o-arsenal-e-conquista-a-champions",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-30-20-35-47-524600.png",
       "score": 0.73
     },
     {
@@ -223,14 +245,25 @@
       "score": 0.73
     },
     {
-      "id": "67d47596",
+      "id": "f0df8a29",
       "cat": "tecnologia",
-      "title": "Suíço Simon Ehammer com melhor marca do ano no salto em comprimento",
-      "summary": "O suíço Simon Ehammer, campeão e recordista mundial do heptatlo em pista coberta, estabeleceu a melhor marca do ano no salto em comprimento, com 8,51 metros.",
+      "title": "Paris Saint-Germain é bicampeão da Europa",
+      "summary": "O Paris Saint-Germain conquistou a Liga dos Campeões pela segunda vez consecutiva ao vencer na final o Arsenal, por 4-3 nos penáltis, após o empate 1-1 no tempo regulamentar e no prolongamento, em Budapeste.",
       "source": "RTP",
-      "date": "Sat, 30 May 2026 17:24:01 +0100",
-      "url": "https://www.rtp.pt/noticias/outras-modalidades/suico-simon-ehammer-com-melhor-marca-do-ano-no-salto-em-comprimento_d1744523",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/1b/1b6d0690d8fa2d0a3f793a07819c1871?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "date": "Sat, 30 May 2026 21:04:23 +0100",
+      "url": "https://www.rtp.pt/noticias/liga-dos-campeoes/paris-saint-germain-e-bicampeao-da-europa_d1744541",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/f5/f56e137477af656cdef5184a6876c9d4?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "score": 0.73
+    },
+    {
+      "id": "340b20b5",
+      "cat": "tecnologia",
+      "title": "Cascais quebra jejum de 33 anos e vence Taça de Portugal em râguebi",
+      "summary": "O Cascais voltou a conquistar a Taça de Portugal de râguebi, 33 anos depois, ao vencer o Belenenses, por 25-20, na final disputada no Complexo Desportivo do Jamor, em Oeiras.",
+      "source": "RTP",
+      "date": "Sat, 30 May 2026 20:17:21 +0100",
+      "url": "https://www.rtp.pt/noticias/outras-modalidades/cascais-quebra-jejum-de-33-anos-e-vence-taca-de-portugal-em-raguebi_d1744537",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/5a/5a26ffa2a7b7701855b3f758325b56b5?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
       "score": 0.73
     },
     {
@@ -242,17 +275,6 @@
       "date": "Sat, 30 May 2026 14:47:43 +0000",
       "url": "https://eco.sapo.pt/2026/05/30/88-dos-proprietarios-tem-seguro-multirriscos-mas-a-maioria-nao-sabe-o-que-cobre/",
       "img": "https://eco.imgix.net/uploads/2024/05/cropped-home_1200x628-1.png",
-      "score": 0.73
-    },
-    {
-      "id": "742d24f4",
-      "cat": "tecnologia",
-      "title": "Ministério Público vai recorrer da absolvição do Benfica e de Vieira no processo ‘Saco Azul’",
-      "summary": "O Ministério Público vai recorrer da absolvição do Benfica e Luís Filipe Vieira no caso ‘Saco Azul’, confirmou este sábado à Agência Lusa a Procuradoria-Geral da República (PGR). “O Ministério Público vai interpor recurso da decisão que refere. O processo em causa foi declarado de excecional complex",
-      "source": "ECO",
-      "date": "Sat, 30 May 2026 13:47:33 +0000",
-      "url": "https://eco.sapo.pt/2026/05/30/ministerio-publico-vai-recorrer-da-absolvicao-de-benfica-e-de-vieira-no-processo-saco-azul/",
-      "img": "https://eco.imgix.net/uploads/2025/11/cropped-44744105-scaled-3.jpg",
       "score": 0.73
     },
     {
@@ -289,47 +311,25 @@
       "score": 0.73
     },
     {
-      "id": "2cf910cb",
+      "id": "ca946939",
       "cat": "tecnologia",
-      "title": "No berço dos imortais há sempre lugar para um canibal",
-      "summary": "Vingegaard arrumou com o Giro na subida que viu nascer Pantanini e confirmou mais um talento português: ao seu ritmo, Eulálio meteu Piganzoli em sentido para vencer a juventude e ser sexto na geral.",
-      "source": "Observador",
-      "date": "Sat, 30 May 2026 15:29:13 +0100",
-      "url": "https://observador.pt/2026/05/30/no-berco-dos-imortais-ha-sempre-lugar-para-um-canibal-vingegaard-fecha-giro-com-mais-uma-vitoria-dominadora-eulalio-garante-top-6-e-branca/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2297:nowe:0:15/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/30152722/gettyimages-2278922639-scaled.jpg",
+      "title": "Airbus contrapõe interesse europeu ao ‘namoro’ da Força Aérea com o F-35",
+      "summary": "Líder do consórcio Eurofighter argumenta que escolher o seu caça para substituir os F-16 é investir na indústria europeia, opção “sem dependências críticas fora da base industrial” do continente.",
+      "source": "Público",
+      "date": "Sat, 30 May 2026 20:36:55 GMT",
+      "url": "https://www.publico.pt/2026/05/30/politica/noticia/airbus-contrapoe-interesse-europeu-namoro-forca-aerea-f35-2176625",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092242?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.7
     },
     {
-      "id": "5c4a9023",
+      "id": "c8610b1e",
       "cat": "tecnologia",
-      "title": "Vereadores PS de Lisboa arguidos na Imergente",
-      "summary": "Sérgio Cintra e Carla Madeira foram constituídos arguidos após buscas domiciliárias. Ao contrário de Miguel Coelho, nenhum tenciona suspender o atual mandato na CML.",
+      "title": "O triunfo natural dos que veem finais com naturalidade",
+      "summary": "Para o Arsenal, era uma surpresa ganhar. Para o PSG, era natural ganhar. No fim, foi isso que fez a diferença: os franceses venceram os ingleses nos penáltis e são bicampeões europeus (1-1, 4-3).",
       "source": "Observador",
-      "date": "Sat, 30 May 2026 15:08:47 +0100",
-      "url": "https://observador.pt/2026/05/30/dois-vereadores-do-ps-em-lisboa-arguidos-na-operacao-imergente/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1699:958:nowe:1661:460/q:70/plain/https://s3.observador.pt/wp-content/uploads/2025/10/10213639/jporfirio-eleicoes-autarquicas-ps-descida-chiado-10-10-02-8-scaled.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "30171987",
-      "cat": "tecnologia",
-      "title": "15h. Montenegro desvaloriza críticas de Passos Coelho à AD",
-      "summary": "Luis Montenegro garante que o partido está bem e desvaloriza as críticas de Passos Coelho. Ainda assim, a ministra da Saúde atrasou a ideia de falhas recorrentes no socorro por parte do INEM.",
-      "source": "Observador",
-      "date": "Sat, 30 May 2026 15:03:33 +0100",
-      "url": "https://observador.pt/programas/noticiario/as-noticias-das-15h-2353/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
-      "score": 0.7
-    },
-    {
-      "id": "06f39f86",
-      "cat": "tecnologia",
-      "title": "Como funciona o Sistema de Entrada/Saída que está a causar filas nos aeroportos?",
-      "summary": "A falta de efetivos e falhas técnicas na implementação do Sistema de Entrada/Saída (EES) são apontados como as principais causas das longas filas nos aeroportos europeus, incluindo Portugal. O explicador da semana esclarece tudo sobre o funcionamento do novo sistema.",
-      "source": "Jornal de Negócios",
-      "date": "Sat, 30 May 2026 15:00:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/transportes/aviacao/detalhe/como-funciona-o-sistema-de-entrada-saida-que-esta-a-causar-filas-nos-aeroportos",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-28-14-10-29-524384.png",
+      "date": "Sat, 30 May 2026 20:11:23 +0100",
+      "url": "https://observador.pt/2026/05/30/o-triunfo-natural-dos-que-olham-para-as-finais-com-naturalidade-a-cronica-da-final-da-liga-dos-campeoes/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2299:nowe:0:204/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/30200911/gettyimages-2278954560-scaled.jpg",
       "score": 0.7
     }
   ]
