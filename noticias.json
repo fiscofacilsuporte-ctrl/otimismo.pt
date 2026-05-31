@@ -1,29 +1,7 @@
 {
-  "last_update": "31/05/2026 10:00 UTC",
+  "last_update": "31/05/2026 15:58 UTC",
   "total": 30,
   "news": [
-    {
-      "id": "e23db867",
-      "cat": "ciencia",
-      "title": "Um cemitério de Nova York escondia mais de 5 milhões de abelhas escavadoras, uma das maiores concentrações do mundo",
-      "summary": "Com cerca de 5,5 milhões de habitantes, uma colónia de abelhas que nidificam no solo que os cientistas descobriram sob um cemitério de Nova Iorque pode ser uma das maiores agregações de abelhas alguma vez documentadas. Pesquisas subsequentes mostraram que as abelhas provavelmente viveram lá por mais de 100 anos, prosperando na área intocada do cemitério.",
-      "source": "Good News Network",
-      "date": "Fri, 29 May 2026 13:00:46 +0000",
-      "url": "https://www.goodnewsnetwork.org/a-new-york-cemetery-was-hiding-over-5-million-burrowing-bees-one-of-the-worlds-largest-concentrations/",
-      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Andrena-regularis-bee-nesting-near-the-east-lawn-cemetery-entrance-credit-Bryan-Danforth-e1780035138608.jpg",
-      "score": 0.79
-    },
-    {
-      "id": "e9bb0d3f",
-      "cat": "tecnologia",
-      "title": "Planta britânica rara faz retorno extraordinário da beira da extinção",
-      "summary": "Os conservacionistas estão celebrando a recuperação notável de uma importante e única flor britânica conhecida como erva-leiteira de Kentish, após registrar um aumento populacional de sete vezes durante a recente estação de cultivo. 1.245 plantas auto-semeadas foram registradas este ano em um local de cultivo crucial, agora o maior po",
-      "source": "Good News Network",
-      "date": "Fri, 29 May 2026 11:00:38 +0000",
-      "url": "https://www.goodnewsnetwork.org/rare-british-plant-makes-extraordinary-comeback-from-brink-of-extinction/",
-      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Purple-wildflower-Polygala-amarella-by-Algirdas-wikipedia-CC-BY-SA-3.jpg",
-      "score": 0.79
-    },
     {
       "id": "521b5883",
       "cat": "tecnologia",
@@ -47,47 +25,25 @@
       "score": 0.79
     },
     {
-      "id": "04c79f76",
-      "cat": "tecnologia",
-      "title": "Esta estranha nova fase da matéria pode transformar a tecnologia quântica",
-      "summary": "Ao empilhar nanopartículas de prata personalizadas, como peças de LEGO em nanoescala, os cientistas estabilizaram uma misteriosa fase cristalina que nunca havia sido observada antes. O material não apenas resolve um enigma de longa data na ciência dos materiais, mas também exibe propriedades quânticas promissoras à temperatura ambiente.",
+      "id": "d510a3dd",
+      "cat": "ciencia",
+      "title": "Chimpanzés e bonobos têm círculos de amigos semelhantes aos humanos, segundo estudo",
+      "summary": "Os grandes primatas parecem construir amizades da mesma forma que os humanos. Ao estudar o comportamento de preparação, os investigadores descobriram que os chimpanzés e os bonobos formam círculos internos próximos, juntamente com redes mais amplas de ligações sociais mais fracas. Os chimpanzés concentram-se em alguns parceiros de confiança e tornam-se mais seletivos com um",
       "source": "ScienceDaily",
-      "date": "Sat, 30 May 2026 03:31:15 EDT",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260529043638.htm",
-      "img": "https://www.sciencedaily.com/images/1920/strange-quantum-material-new-phase-state.webp",
+      "date": "Sun, 31 May 2026 11:03:38 EDT",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260530053432.htm",
+      "img": "https://www.sciencedaily.com/images/1920/chimpanzees-grooming.webp",
       "score": 0.79
     },
     {
-      "id": "854a70c8",
+      "id": "16211938",
       "cat": "tecnologia",
-      "title": "Raúl Fernández vence corrida sprint do Grande Prémio de Itália de MotoGP",
-      "summary": "O espanhol Raúl Fernández (Aprilia) chegou em primeiro lugar ao final da corrida sprint do Grande Prémio de Itália de MotoGP, sétima das 22 etapas do Mundial de motociclismo de velocidade, ao dominar da primeira à última volta em Mugello.",
-      "source": "RTP",
-      "date": "Sat, 30 May 2026 16:49:58 +0100",
-      "url": "https://www.rtp.pt/noticias/motores/raul-fernandez-vence-corrida-sprint-do-grande-premio-de-italia-de-motogp_d1744520",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/07/07f1bd6286fc8fe8464fd005c36a9354?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
-      "score": 0.76
-    },
-    {
-      "id": "b8bbe5b5",
-      "cat": "economia",
-      "title": "“Temos a capacidade de fazer da SAP Portugal uma empresa maior do que o mercado português”",
-      "summary": "Nuno Saramago, diretor-geral da SAP Portugal, afirma que a tecnológica alemã vai fazer um “maior investimento” para reforçar a equipa de cloud soberana que trabalha em Portugal. Em entrevista ao ECO, o gestor admite que todos os novos clientes conquistados nos últimos quatro anos em Portugal “vieram",
-      "source": "ECO",
-      "date": "Sat, 30 May 2026 17:03:10 +0000",
-      "url": "https://eco.sapo.pt/entrevista/temos-a-capacidade-de-fazer-da-sap-portugal-uma-empresa-maior-do-que-o-mercado-portugues/",
-      "img": "https://eco.imgix.net/uploads/2026/05/cropped-sap-nuno-saramago-01.jpg",
-      "score": 0.76
-    },
-    {
-      "id": "78a06d8f",
-      "cat": "tecnologia",
-      "title": "PSG em busca de ‘bis’ europeu, Arsenal procura ser feliz pela primeira vez",
-      "summary": "O Paris Saint-Germain, de Nuno Mendes, João Neves, Vitinha e Gonçalo Ramos, procura hoje voltar a erguer a Liga dos Campeões de futebol, numa final em que o Arsenal busca o seu primeiro título europeu. Na Arena Puskás, em Budapeste, em jogo com início às 17:00 (horas de Lisboa), o PSG, treinado por ",
-      "source": "ECO",
-      "date": "Sat, 30 May 2026 14:07:38 +0000",
-      "url": "https://eco.sapo.pt/2026/05/30/psg-em-busca-de-bis-europeu-arsenal-procura-ser-feliz-pela-primeira-vez/",
-      "img": "https://eco.imgix.net/uploads/2026/05/cropped-47202090-scaled-1.jpg",
+      "title": "Superbikes: Nicolò Bulega domina em Aragão e amplia recorde de vitórias seguidas",
+      "summary": "Piloto italiano somou 18.º triunfo de 2026, chegando aos 22 consecutivos no Campeonato do Mundo.",
+      "source": "Público",
+      "date": "Sun, 31 May 2026 15:16:33 GMT",
+      "url": "https://www.publico.pt/2026/05/31/desporto/noticia/superbikes-nicolo-bulega-domina-aragao-amplia-recorde-vitorias-seguidas-2176668",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092324?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.76
     },
     {
@@ -99,6 +55,17 @@
       "date": "Sat, 30 May 2026 14:00:50 +0000",
       "url": "https://www.goodnewsnetwork.org/louisville-restaurant-donates-100-of-profits-over-100k-in-its-first-year-to-local-nonprofits/",
       "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Noahs-Kitchen-owner-Adam-Urspring-submitted.jpg",
+      "score": 0.76
+    },
+    {
+      "id": "bf177ac2",
+      "cat": "tecnologia",
+      "title": "Corujas encontradas prosperando em mina de carvão abandonada enquanto a vida selvagem recupera o patrimônio industrial",
+      "summary": "Novas fotos mostram corujas e animais selvagens recuperando uma mina de carvão abandonada 50 anos após seu fechamento. A mina Chatterley Whitfield em Staffordshire, Inglaterra, produziu carvão pela última vez em 1976. Agora, meio século depois, o filho de um mineiro de carvão que lá trabalhou regressou para documentar o regresso da natureza. O edifício",
+      "source": "Good News Network",
+      "date": "Sat, 30 May 2026 11:00:50 +0000",
+      "url": "https://www.goodnewsnetwork.org/owls-thriving-in-abandoned-coal-mine-as-wildlife-reclaims-site/",
+      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Chatterley-Whitfield-mine-in-Staffordshire-England-reclaimed-by-roses-and-owls-by-Andrew-Mason-via-SWNS-.jpg",
       "score": 0.76
     },
     {
@@ -124,6 +91,17 @@
       "score": 0.76
     },
     {
+      "id": "d9ce9fe4",
+      "cat": "tecnologia",
+      "title": "Novo avanço na dessalinização solar torna a água doce sem salmoura tóxica",
+      "summary": "Os cientistas desenvolveram um sistema de dessalinização solar que transforma a água do mar em água potável sem criar salmoura prejudicial ao meio ambiente. Painéis especiais de metal com textura a laser usam a luz solar para evaporar a água enquanto afastam automaticamente os depósitos de sal da superfície de trabalho, evitando entupimentos.",
+      "source": "ScienceDaily",
+      "date": "Sun, 31 May 2026 10:22:38 EDT",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260530053418.htm",
+      "img": "https://www.sciencedaily.com/images/1920/solar-desalination-device-with-laser-etched-superwicking.webp",
+      "score": 0.76
+    },
+    {
       "id": "d7f2fd31",
       "cat": "ciencia",
       "title": "Astrônomos finalmente resolvem o mistério da rotação de Saturno que dura há décadas",
@@ -132,17 +110,6 @@
       "date": "Fri, 29 May 2026 04:36:58 EDT",
       "url": "https://www.sciencedaily.com/releases/2026/05/260529043658.htm",
       "img": "https://www.sciencedaily.com/images/1920/saturn-asymmetric-temperature-structure.webp",
-      "score": 0.76
-    },
-    {
-      "id": "65f54519",
-      "cat": "ciencia",
-      "title": "A cafeína reverteu problemas de memória causados ​​pela privação de sono",
-      "summary": "Os cientistas descobriram que a privação do sono danifica um circuito cerebral responsável pela memória social, tornando mais difícil o reconhecimento de indivíduos familiares. Em estudos de laboratório, a cafeína restaurou a comunicação entre os neurônios dessa via e reverteu os déficits de memória causados ​​pela perda de sono. O",
-      "source": "ScienceDaily",
-      "date": "Sat, 30 May 2026 01:27:08 EDT",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260529043654.htm",
-      "img": "https://www.sciencedaily.com/images/1920/tired-man-with-messy-hair-drinking-morning-coffee.webp",
       "score": 0.76
     },
     {
@@ -168,58 +135,69 @@
       "score": 0.76
     },
     {
-      "id": "32f3682a",
+      "id": "fb146a0b",
       "cat": "tecnologia",
-      "title": "Palcos da semana: A Porta aberta a danças em quintais com Laurie Anderson",
-      "summary": "A nova criação de Lia Rodrigues, os festivais Gil Vicente e a voz de Laurie Anderson destacam-se numa semana em que Leiria abre A Porta e Odemira vai por Quintais Adentro",
+      "title": "Trump endurece condições para acordo com o Irão",
+      "summary": "Não se conhece o teor das alterações que terão sido enviadas a Teerão, mas o impacto principal será o prolongamento do impasse.",
       "source": "Público",
-      "date": "Sun, 31 May 2026 07:15:00 GMT",
-      "url": "https://www.publico.pt/2026/05/31/culturaipsilon/noticia/palcos-semana-porta-aberta-dancas-quintais-laurie-anderson-2176479",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092018?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
+      "date": "Sun, 31 May 2026 14:36:35 GMT",
+      "url": "https://www.publico.pt/2026/05/31/mundo/noticia/trump-endurece-condicoes-acordo-irao-2176661",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092306?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
       "score": 0.73
     },
     {
-      "id": "ee08c9d5",
+      "id": "482b811b",
+      "cat": "sociedade",
+      "title": "FC Porto chama escolas ao museu, alinhando-se com Ministério da Educação",
+      "summary": "Portistas são os primeiros a alinhar a oferta educativa do museu com directrizes do Ministério da Educação, conferindo valor pedagógica às visitas e permitindo visitas de estudo.",
+      "source": "Público",
+      "date": "Sun, 31 May 2026 14:26:49 GMT",
+      "url": "https://www.publico.pt/2026/05/31/desporto/noticia/fc-porto-chama-escolas-museu-alinhandose-ministerio-educacao-2176657",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092303?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "score": 0.73
+    },
+    {
+      "id": "95d86c15",
       "cat": "tecnologia",
-      "title": "Bombeiros. Investigadores alertam para riscos ocupacionais",
-      "summary": "Os bombeiros que passam mais tempo no \"teatro de operações\" de incêndios florestais poderão ter risco acrescido de efeitos na saúde associados à exposição ocupacional, concluiu uma investigação.",
+      "title": "Filipe Albuquerque conquistou primeiro pódio da temporada",
+      "summary": "O piloto português da Cadillac conquistou o primeiro pódio da temporada no Campeonato Norte-Americano de Resistência (IMSA), quinta ronda da temporada, ao terminar em terceiro.",
       "source": "Observador",
-      "date": "Sun, 31 May 2026 09:48:30 +0100",
-      "url": "https://observador.pt/2026/05/31/investigadores-alertam-para-riscos-ocupacionais-nos-bombeiros-portugueses/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2048:1151:nowe:0:192/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/03/17232513/bombeiros-beja.jpg",
+      "date": "Sun, 31 May 2026 13:58:49 +0100",
+      "url": "https://observador.pt/2026/05/31/filipe-albuquerque-conquistou-primeiro-podio-da-temporada-em-detroit/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1363:768:nowe:288:566/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/31120349/45156582.jpg",
       "score": 0.73
     },
     {
-      "id": "016a9125",
+      "id": "b8c8c4b4",
       "cat": "tecnologia",
-      "title": "Atividade manufatureira chinesa perde força em maio",
-      "summary": "A atividade industrial da China situou-se em maio no limiar entre expansão e contração, após perder dinamismo em relação ao mês anterior, mas setor não industrial voltou a terreno positivo.",
+      "title": "Histórico da Renamo quer forçar saída do líder",
+      "summary": "António Muchanga sugeriu a retirada forçada de Ossufo Momade da presidência, referindo que perdeu condições para dirigir a formação política e está a \"matar a relíquia\" deixada por Dhlakama.",
       "source": "Observador",
-      "date": "Sun, 31 May 2026 09:41:25 +0100",
-      "url": "https://observador.pt/2026/05/31/atividade-manufatureira-chinesa-perde-forca-em-maio-e-fica-no-limiar-da-contracao/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1122:nowe:0:144/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/31044143/47180533.jpg",
+      "date": "Sun, 31 May 2026 13:55:18 +0100",
+      "url": "https://observador.pt/2026/05/31/historico-da-renamo-quer-forcar-saida-do-lider-para-travar-morte-do-partido-mocambicano/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1124:nowe:0:128/q:70/plain/https://s3.observador.pt/wp-content/uploads/sites/5/2014/06/17690747.jpg",
       "score": 0.73
     },
     {
-      "id": "ca0eb9b8",
-      "cat": "geral",
-      "title": "Trump terá pedido alterações à proposta de acordo com Teerão",
-      "summary": "Presidente dos EUA solicitou que fossem alterados alguns aspetos de um futuro acordo de paz com o Irão relativos ao programa nuclear de Teerão e à reabertura do Estreito de Ormuz.",
-      "source": "Observador",
-      "date": "Sun, 31 May 2026 09:24:58 +0100",
-      "url": "https://observador.pt/liveblogs/israel-anuncia-que-operacao-no-libano-esta-a-alargar-se-a-outras-zonas/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1124:nowe:0:105/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/27204337/47188897.jpg",
-      "score": 0.73
-    },
-    {
-      "id": "948b8ceb",
-      "cat": "desporto",
-      "title": "PSG vence Arsenal nos penáltis e volta a conquistar a Champions",
-      "summary": "Parisienses revalidaram a conquista da Liga dos Campeões e os ingleses perderam a oportunidade de ganhar a sua primeira Champions 20 anos depois de ter perdido no jogo decisivo frente ao Barcelona. Nuno Mendes, Vitinha, João Neves e Gonçalo Ramos são bicampeões europeus.",
+      "id": "ecb5097b",
+      "cat": "tecnologia",
+      "title": "Porquinho mealheiro faz crescer pouco as poupanças",
+      "summary": "Neste dia da criança, conheça as melhores formas de começar um pé de meia a que os pequenos possam, mais tarde, recorrer. E os produtos especialmente desenhados podem não ser a solução mais rentável.",
       "source": "Jornal de Negócios",
-      "date": "Sat, 30 May 2026 20:00:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/empresas/desporto/detalhe/psg-vence-o-arsenal-e-conquista-a-champions",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-30-20-35-47-524600.png",
+      "date": "Sun, 31 May 2026 14:00:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/mercados/investidor-privado/detalhe/porquinho-mealheiro-faz-crescer-pouco-as-poupancas",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-29-10-26-49-524487.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "38410b08",
+      "cat": "tecnologia",
+      "title": "Coreia do Sul e Japão afinam parceria de apoio militar e logístico",
+      "summary": "Informação foi avançada este domingo pelo ministro da Defesa da Coreia do Sul após encontro com o homólogo japonês.",
+      "source": "Jornal de Negócios",
+      "date": "Sun, 31 May 2026 11:47:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/mundo/asia/detalhe/coreia-do-sul-e-japao-afinam-parceria-de-apoio-militar-e-logistico",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-31-11-41-55-524603.jpg",
       "score": 0.73
     },
     {
@@ -234,6 +212,28 @@
       "score": 0.73
     },
     {
+      "id": "f57d71e7",
+      "cat": "desporto",
+      "title": "Toluca conquista Liga dos Campeões da CONCACAF",
+      "summary": "O Toluca, clube do português Paulinho, conquistou no sábado a Liga dos Campeões da CONCACAF ao vencer na final o Tigres, num jogo decidido nos penáltis, com o avançado luso a ser eleito melhor jogador e marcador da prova.",
+      "source": "RTP",
+      "date": "Sun, 31 May 2026 16:16:00 +0100",
+      "url": "https://www.rtp.pt/noticias/futebol-internacional/toluca-conquista-liga-dos-campeoes-da-concacaf_d1744615",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/15/1504d5db1bf0e7506567df26293afb6e?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "score": 0.73
+    },
+    {
+      "id": "bbaaa82d",
+      "cat": "tecnologia",
+      "title": "Bezzecchi triunfa em Itália e reforça liderança do Mundial de MotoGP",
+      "summary": "O piloto italiano Marco Bezzecchi (Aprilia) venceu o Grande Prémio de Itália de MotoGP, sétima ronda da temporada, e cimentou a liderança do Mundial.",
+      "source": "RTP",
+      "date": "Sun, 31 May 2026 16:10:38 +0100",
+      "url": "https://www.rtp.pt/noticias/motores/bezzecchi-triunfa-em-italia-e-reforca-lideranca-do-mundial-de-motogp_d1744614",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/e4/e442e3a0f50535d78157e933dd4b7a62?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "score": 0.73
+    },
+    {
       "id": "78a70259",
       "cat": "tecnologia",
       "title": "Pelo menos 79 detidos em Paris nas comemorações da vitória do PSG",
@@ -245,14 +245,14 @@
       "score": 0.73
     },
     {
-      "id": "f0df8a29",
+      "id": "8bbd1924",
       "cat": "tecnologia",
-      "title": "Paris Saint-Germain é bicampeão da Europa",
-      "summary": "O Paris Saint-Germain conquistou a Liga dos Campeões pela segunda vez consecutiva ao vencer na final o Arsenal, por 4-3 nos penáltis, após o empate 1-1 no tempo regulamentar e no prolongamento, em Budapeste.",
-      "source": "RTP",
-      "date": "Sat, 30 May 2026 21:04:23 +0100",
-      "url": "https://www.rtp.pt/noticias/liga-dos-campeoes/paris-saint-germain-e-bicampeao-da-europa_d1744541",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/f5/f56e137477af656cdef5184a6876c9d4?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
+      "title": "César do Paço entra na Global Media com 20% e promete respeitar independência editorial",
+      "summary": "César do Paço vai tornar-se acionista da Global Media Group, com uma participação de 20% no capital, defendendo que o investimento tem como objetivo contribuir para o fortalecimento de um jornalismo &#8220;livre, rigoroso e credível&#8221; e garantindo que a independência editorial dos títulos do gr",
+      "source": "ECO",
+      "date": "Sun, 31 May 2026 14:39:12 +0000",
+      "url": "https://eco.sapo.pt/2026/05/31/cesar-do-paco-entra-no-global-media-com-20/",
+      "img": "https://eco.imgix.net/uploads/2023/12/cropped-cropped-cropped-globalmedia-2-2.jpg",
       "score": 0.73
     },
     {
@@ -264,6 +264,17 @@
       "date": "Sun, 31 May 2026 09:18:30 +0000",
       "url": "https://eco.sapo.pt/2026/05/31/atividade-industrial-chinesa-perde-forca-em-maio-e-fica-no-limiar-da-contracao/",
       "img": "https://eco.imgix.net/uploads/2026/05/cropped-47180533-scaled-2.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "2c85e006",
+      "cat": "tecnologia",
+      "title": "O primeiro pomar de móveis da Grã-Bretanha produz cadeiras diretamente nas árvores (ASSISTA)",
+      "summary": "Um casal britânico passou 20 anos aperfeiçoando a prática de esculpir árvores para que crescessem no formato de assentos prontos, projetados com galhos vivos. Alice e Gavin Munro começaram a criar o “pomar de móveis” em uma fazenda inglesa de dois acres em 2006, mas a colheita normalmente leva de 6 a 9 anos.",
+      "source": "Good News Network",
+      "date": "Sun, 31 May 2026 13:29:38 +0000",
+      "url": "https://www.goodnewsnetwork.org/britains-first-furniture-orchard-grows-trees-into-chairs/",
+      "img": "https://www.goodnewsnetwork.org/wp-content/uploads/2026/05/Trees-grown-into-chairs-Gavin-Munro-Full-Grown-SWNS.jpg",
       "score": 0.73
     },
     {
@@ -300,36 +311,25 @@
       "score": 0.73
     },
     {
-      "id": "5a08cecb",
+      "id": "11d6dbc7",
       "cat": "tecnologia",
-      "title": "Vaticano leva a Veneza uma “oração sonora” com Patti Smith, Carminho e FKA Twigs",
-      "summary": "O Ouvido é o Olho da Alma , projecto comissariado por José Tolentino de Mendonça e iluminado pela obra multifacetada da Santa Hildegarda de Bingen, desdobra-se em dois espaços na bienal. Até Novembro.",
-      "source": "Público",
-      "date": "Sun, 31 May 2026 07:30:00 GMT",
-      "url": "https://www.publico.pt/2026/05/31/culturaipsilon/noticia/vaticano-leva-veneza-oracao-sonora-patti-smith-carminho-fka-twigs-2176629",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092221?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
+      "title": "San Antonio Spurs vencem os Thunder e estão na final da NBA",
+      "summary": "Os San Antonio Spurs qualificaram-se no sábado para a final da liga norte-americana de basquetebol (NBA), depois de vencerem os Oklahoma City Thunder, atuais detentores do título, por 111-103.",
+      "source": "Observador",
+      "date": "Sun, 31 May 2026 13:53:24 +0100",
+      "url": "https://observador.pt/2026/05/31/san-antonio-spurs-vencem-os-thunder-e-estao-na-final-da-nba/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1121:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/31113730/47207223.jpg",
       "score": 0.7
     },
     {
-      "id": "65f372c1",
+      "id": "24e123bc",
       "cat": "tecnologia",
-      "title": "As cidades que antes eram desenhadas agora são resolvidas",
-      "summary": "As cidades contemporâneas funcionam cada vez melhor. Mas quando tudo se torna neutro, eficiente e repetível, o que acontece à memória dos lugares? Crónica de Daniela Silva",
-      "source": "Público",
-      "date": "Sun, 31 May 2026 07:16:00 GMT",
-      "url": "https://www.publico.pt/2026/05/31/p3/cronica/cidades-desenhadas-sao-resolvidas-2176236",
-      "img": "https://imagens.publico.pt/imagens.aspx/2091950?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_P3.png",
-      "score": 0.7
-    },
-    {
-      "id": "cb8c8c4e",
-      "cat": "tecnologia",
-      "title": "Historiador Don Watson diz que América está em declínio",
-      "summary": "Historiador australiano defende que Presidente norte-americano, Donald Trump, \"tem algo de muito profundo em comum com Putin e Netanyahu\".",
+      "title": "Responsável militar da NATO diz que \"dinheiro por si só\" não basta, é preciso \"capacidades reais\"",
+      "summary": "Durante o principal fórum de Segurança e Defesa da Ásia - o Diálogo de Shangri-La -, que decorreu em Singapura, Cavo Dragone enfatizou que a NATO está focada em \"transformar\" o aumento das despesas militares em \"capacidades reais\".",
       "source": "Jornal de Negócios",
-      "date": "Sun, 31 May 2026 10:25:00 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/detalhe/entrevista-historiador-don-watson-diz-que-america-esta-em-declinio-c-audio",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-04/img_100x100uu2026-04-30-15-23-45-522898.jpg",
+      "date": "Sun, 31 May 2026 16:19:31 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/defesa/detalhe/responsavel-militar-da-nato-diz-que-dinheiro-por-si-so-nao-basta-e-preciso-capacidades-reais",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-31-16-19-01-524604.jpg",
       "score": 0.7
     }
   ]
