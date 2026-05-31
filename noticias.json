@@ -1,5 +1,5 @@
 {
-  "last_update": "30/05/2026 21:39 UTC",
+  "last_update": "31/05/2026 10:00 UTC",
   "total": 30,
   "news": [
     {
@@ -168,47 +168,47 @@
       "score": 0.76
     },
     {
-      "id": "4c34b2b5",
-      "cat": "cultura",
-      "title": "O PSG tornou-se bicampeão europeu da marca de penálti",
-      "summary": "Arsenal marcou cedo, sofreu o empate na segunda parte e estendeu o jogo até ao desempate por penáltis. Nuno Mendes ainda falhou, mas o título não escapou aos franceses.",
+      "id": "32f3682a",
+      "cat": "tecnologia",
+      "title": "Palcos da semana: A Porta aberta a danças em quintais com Laurie Anderson",
+      "summary": "A nova criação de Lia Rodrigues, os festivais Gil Vicente e a voz de Laurie Anderson destacam-se numa semana em que Leiria abre A Porta e Odemira vai por Quintais Adentro",
       "source": "Público",
-      "date": "Sat, 30 May 2026 19:03:08 GMT",
-      "url": "https://www.publico.pt/2026/05/30/desporto/cronica_de_jogo/psg-tornouse-bicampeao-europeu-marca-penalti-2176622",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092187?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Sun, 31 May 2026 07:15:00 GMT",
+      "url": "https://www.publico.pt/2026/05/31/culturaipsilon/noticia/palcos-semana-porta-aberta-dancas-quintais-laurie-anderson-2176479",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092018?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
       "score": 0.73
     },
     {
-      "id": "75a4c743",
+      "id": "ee08c9d5",
       "cat": "tecnologia",
-      "title": "Râguebi: Cascais volta a conquistar Taça de Portugal, 33 anos depois",
-      "summary": "Cascalenses venceram o Belenenses na final da competição, por cinco pontos de diferença. Foi o quinto troféu do palmarés.",
-      "source": "Público",
-      "date": "Sat, 30 May 2026 18:01:39 GMT",
-      "url": "https://www.publico.pt/2026/05/30/desporto/noticia/raguebi-cascais-volta-conquistar-taca-portugal-33-anos-2176627",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092213?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
-      "score": 0.73
-    },
-    {
-      "id": "5636edeb",
-      "cat": "tecnologia",
-      "title": "Cruyff, o coletivo e quatro finais. O sucesso dos espanhóis",
-      "summary": "Entre masculino e feminino, 4 finais europeias contaram com treinadores espanhóis. Entre a influência de Cruyff, o lado intelectual do jogo e a importância do coletivo, existem motivos para o sucesso.",
+      "title": "Bombeiros. Investigadores alertam para riscos ocupacionais",
+      "summary": "Os bombeiros que passam mais tempo no \"teatro de operações\" de incêndios florestais poderão ter risco acrescido de efeitos na saúde associados à exposição ocupacional, concluiu uma investigação.",
       "source": "Observador",
-      "date": "Sat, 30 May 2026 20:13:43 +0100",
-      "url": "https://observador.pt/2026/05/30/cruyff-a-obsessao-pelo-coletivo-e-quatro-finais-europeias-como-se-explica-o-sucesso-dos-treinadores-espanhois/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:1200:673:nowe:0:62/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/30171327/gettyimages-2278219586.jpg",
+      "date": "Sun, 31 May 2026 09:48:30 +0100",
+      "url": "https://observador.pt/2026/05/31/investigadores-alertam-para-riscos-ocupacionais-nos-bombeiros-portugueses/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2048:1151:nowe:0:192/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/03/17232513/bombeiros-beja.jpg",
       "score": 0.73
     },
     {
-      "id": "dfc21115",
+      "id": "016a9125",
       "cat": "tecnologia",
-      "title": "20h. PSG vence a Liga dos Campeões",
-      "summary": "O PSG é bicampeão europeu, após vencer o Arsenal nas grandes deliberações. Ainda assim, a CGTP acusa o governo de “desvirtuar” as prestações sociais com a implementação da Prestação Social Única.",
+      "title": "Atividade manufatureira chinesa perde força em maio",
+      "summary": "A atividade industrial da China situou-se em maio no limiar entre expansão e contração, após perder dinamismo em relação ao mês anterior, mas setor não industrial voltou a terreno positivo.",
       "source": "Observador",
-      "date": "Sat, 30 May 2026 20:12:52 +0100",
-      "url": "https://observador.pt/programas/noticiario/as-noticias-das-20h-1961/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:770:433:nowe:0:0/q:70/plain/https://s3.observador.pt/wp-content/uploads/2021/04/13113304/770-podcast-noticiario.jpg",
+      "date": "Sun, 31 May 2026 09:41:25 +0100",
+      "url": "https://observador.pt/2026/05/31/atividade-manufatureira-chinesa-perde-forca-em-maio-e-fica-no-limiar-da-contracao/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1122:nowe:0:144/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/31044143/47180533.jpg",
+      "score": 0.73
+    },
+    {
+      "id": "ca0eb9b8",
+      "cat": "geral",
+      "title": "Trump terá pedido alterações à proposta de acordo com Teerão",
+      "summary": "Presidente dos EUA solicitou que fossem alterados alguns aspetos de um futuro acordo de paz com o Irão relativos ao programa nuclear de Teerão e à reabertura do Estreito de Ormuz.",
+      "source": "Observador",
+      "date": "Sun, 31 May 2026 09:24:58 +0100",
+      "url": "https://observador.pt/liveblogs/israel-anuncia-que-operacao-no-libano-esta-a-alargar-se-a-outras-zonas/",
+      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:2000:1124:nowe:0:105/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/27204337/47188897.jpg",
       "score": 0.73
     },
     {
@@ -223,17 +223,6 @@
       "score": 0.73
     },
     {
-      "id": "9fd0fbe2",
-      "cat": "tecnologia",
-      "title": "Montenegro diz ter Governo mais reformista dos últimos 30 anos em Portugal",
-      "summary": "O presidente do PSD caracterizou de “epifenómenos” as críticas vindas do antigo primeiro-ministro Pedro Passos Coelho.",
-      "source": "Jornal de Negócios",
-      "date": "Sat, 30 May 2026 15:47:05 +0100",
-      "url": "https://www.jornaldenegocios.pt/economia/politica/detalhe/montenegro-diz-ter-governo-mais-reformista-dos-ultimos-30-anos-em-portugal",
-      "img": "https://cdn.jornaldenegocios.pt/images/2026-05/img_100x100uu2026-05-21-19-13-40-524056.jpg",
-      "score": 0.73
-    },
-    {
       "id": "a12d86fd",
       "cat": "tecnologia",
       "title": "Morreu Arnaldo Trindade, histórico editor de música e fundador da Orfeu",
@@ -242,6 +231,17 @@
       "date": "Mon, 08 Jan 2024 14:49:00 Z",
       "url": "https://www.tsf.pt/portugal/sociedade/morreu-arnaldo-trindade-fundador-da-orfeu-17625516.html",
       "img": "https://static.globalnoticias.pt/tsf/image.jpg?brand=TSF&type=generate&guid=f1efa3b6-8573-4486-b03d-10ae87867f13&w=600&h=232&t=20240201072011",
+      "score": 0.73
+    },
+    {
+      "id": "78a70259",
+      "cat": "tecnologia",
+      "title": "Pelo menos 79 detidos em Paris nas comemorações da vitória do PSG",
+      "summary": "Pelo menos 79 pessoas foram hoje detidas e um polícia ficou ferido em Paris durante as comemorações do segundo título da Liga dos Campeões do Paris Saint-Germain (PSG), informaram as autoridades locais num balanço provisório.",
+      "source": "RTP",
+      "date": "Sat, 30 May 2026 23:56:29 +0100",
+      "url": "https://www.rtp.pt/noticias/futebol-internacional/pelo-menos-79-detidos-em-paris-nas-comemoracoes-da-vitoria-do-psg_d1744562",
+      "img": "https://cdn-images.rtp.pt/icm/noticias/images/3e/3edaf4404c397a961360892aa20c549a?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
       "score": 0.73
     },
     {
@@ -256,25 +256,14 @@
       "score": 0.73
     },
     {
-      "id": "340b20b5",
+      "id": "23815f86",
       "cat": "tecnologia",
-      "title": "Cascais quebra jejum de 33 anos e vence Taça de Portugal em râguebi",
-      "summary": "O Cascais voltou a conquistar a Taça de Portugal de râguebi, 33 anos depois, ao vencer o Belenenses, por 25-20, na final disputada no Complexo Desportivo do Jamor, em Oeiras.",
-      "source": "RTP",
-      "date": "Sat, 30 May 2026 20:17:21 +0100",
-      "url": "https://www.rtp.pt/noticias/outras-modalidades/cascais-quebra-jejum-de-33-anos-e-vence-taca-de-portugal-em-raguebi_d1744537",
-      "img": "https://cdn-images.rtp.pt/icm/noticias/images/5a/5a26ffa2a7b7701855b3f758325b56b5?w=350&amp;q=50&amp;rect=0,0,1499,822&amp;auto=format",
-      "score": 0.73
-    },
-    {
-      "id": "f5fa8b41",
-      "cat": "tecnologia",
-      "title": "88% dos proprietários tem seguro multirriscos, mas a maioria não sabe o que cobre",
-      "summary": "Agora que o Governo de Montenegro definiu a obrigatoriedade dos seguros multirriscos — medida que contribuirá para a criação de um Fundo de Catástrofes há muito reivindicado pelo setor segurador — na sequência dos danos provocados pelo comboio de tempestades que atravessou Portugal entre 27 de janei",
+      "title": "Atividade industrial chinesa perde força em maio e fica no limiar da contração",
+      "summary": "A atividade industrial da China situou-se em maio no limiar entre expansão e contração, após perder dinamismo em relação ao mês anterior, mas setor não industrial voltou a terreno positivo, segundo dados os oficiais. O índice de gestores de compras (PMI, indicador de referência do setor industrial) ",
       "source": "ECO",
-      "date": "Sat, 30 May 2026 14:47:43 +0000",
-      "url": "https://eco.sapo.pt/2026/05/30/88-dos-proprietarios-tem-seguro-multirriscos-mas-a-maioria-nao-sabe-o-que-cobre/",
-      "img": "https://eco.imgix.net/uploads/2024/05/cropped-home_1200x628-1.png",
+      "date": "Sun, 31 May 2026 09:18:30 +0000",
+      "url": "https://eco.sapo.pt/2026/05/31/atividade-industrial-chinesa-perde-forca-em-maio-e-fica-no-limiar-da-contracao/",
+      "img": "https://eco.imgix.net/uploads/2026/05/cropped-47180533-scaled-2.jpg",
       "score": 0.73
     },
     {
@@ -311,25 +300,36 @@
       "score": 0.73
     },
     {
-      "id": "ca946939",
+      "id": "5a08cecb",
       "cat": "tecnologia",
-      "title": "Airbus contrapõe interesse europeu ao ‘namoro’ da Força Aérea com o F-35",
-      "summary": "Líder do consórcio Eurofighter argumenta que escolher o seu caça para substituir os F-16 é investir na indústria europeia, opção “sem dependências críticas fora da base industrial” do continente.",
+      "title": "Vaticano leva a Veneza uma “oração sonora” com Patti Smith, Carminho e FKA Twigs",
+      "summary": "O Ouvido é o Olho da Alma , projecto comissariado por José Tolentino de Mendonça e iluminado pela obra multifacetada da Santa Hildegarda de Bingen, desdobra-se em dois espaços na bienal. Até Novembro.",
       "source": "Público",
-      "date": "Sat, 30 May 2026 20:36:55 GMT",
-      "url": "https://www.publico.pt/2026/05/30/politica/noticia/airbus-contrapoe-interesse-europeu-namoro-forca-aerea-f35-2176625",
-      "img": "https://imagens.publico.pt/imagens.aspx/2092242?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Publico.png",
+      "date": "Sun, 31 May 2026 07:30:00 GMT",
+      "url": "https://www.publico.pt/2026/05/31/culturaipsilon/noticia/vaticano-leva-veneza-oracao-sonora-patti-smith-carminho-fka-twigs-2176629",
+      "img": "https://imagens.publico.pt/imagens.aspx/2092221?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_Ipsilon.png",
       "score": 0.7
     },
     {
-      "id": "c8610b1e",
+      "id": "65f372c1",
       "cat": "tecnologia",
-      "title": "O triunfo natural dos que veem finais com naturalidade",
-      "summary": "Para o Arsenal, era uma surpresa ganhar. Para o PSG, era natural ganhar. No fim, foi isso que fez a diferença: os franceses venceram os ingleses nos penáltis e são bicampeões europeus (1-1, 4-3).",
-      "source": "Observador",
-      "date": "Sat, 30 May 2026 20:11:23 +0100",
-      "url": "https://observador.pt/2026/05/30/o-triunfo-natural-dos-que-olham-para-as-finais-com-naturalidade-a-cronica-da-final-da-liga-dos-campeoes/",
-      "img": "https://bordalo.observador.pt/v2/rs:fill:770:403/c:4096:2299:nowe:0:204/q:70/plain/https://s3.observador.pt/wp-content/uploads/2026/05/30200911/gettyimages-2278954560-scaled.jpg",
+      "title": "As cidades que antes eram desenhadas agora são resolvidas",
+      "summary": "As cidades contemporâneas funcionam cada vez melhor. Mas quando tudo se torna neutro, eficiente e repetível, o que acontece à memória dos lugares? Crónica de Daniela Silva",
+      "source": "Público",
+      "date": "Sun, 31 May 2026 07:16:00 GMT",
+      "url": "https://www.publico.pt/2026/05/31/p3/cronica/cidades-desenhadas-sao-resolvidas-2176236",
+      "img": "https://imagens.publico.pt/imagens.aspx/2091950?tp=UH&db=IMAGENS&type=JPG&share=1&o=BarraFacebook_P3.png",
+      "score": 0.7
+    },
+    {
+      "id": "cb8c8c4e",
+      "cat": "tecnologia",
+      "title": "Historiador Don Watson diz que América está em declínio",
+      "summary": "Historiador australiano defende que Presidente norte-americano, Donald Trump, \"tem algo de muito profundo em comum com Putin e Netanyahu\".",
+      "source": "Jornal de Negócios",
+      "date": "Sun, 31 May 2026 10:25:00 +0100",
+      "url": "https://www.jornaldenegocios.pt/economia/detalhe/entrevista-historiador-don-watson-diz-que-america-esta-em-declinio-c-audio",
+      "img": "https://cdn.jornaldenegocios.pt/images/2026-04/img_100x100uu2026-04-30-15-23-45-522898.jpg",
       "score": 0.7
     }
   ]
